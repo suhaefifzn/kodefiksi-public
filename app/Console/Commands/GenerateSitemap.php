@@ -78,7 +78,8 @@ class GenerateSitemap extends Command
             }
 
             // Simpan sitemap ke file
-            $sitemap->writeToFile(public_path('sitemap.xml'));
+            $publicHtmlPath = realpath(__DIR__ . '/../../../public_html/sitemap.xml');
+            $sitemap->writeToFile($publicHtmlPath);
 
             $this->info('Sitemap generated successfully.');
         } catch (\Exception $e) {

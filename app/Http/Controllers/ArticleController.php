@@ -38,27 +38,41 @@ class ArticleController extends Controller
         return $response;
     }
 
-    public function home() {
+    public function home(Request $request) {
+        $page = $request->query('page');
+        $response = $page ? $this->articleService->getArticles($page)
+            : $this->articleService->getArticles();
+        $data = $this->decodeJsonResponse($response);
+
         return view('layout.home', [
-            'title' => 'Kode Fiksi'
+            'title' => 'Kode Fiksi',
+            'data' => $data
         ]);
     }
 
-    public function category($categorySlug) {
+    public function category(Request $request, $categorySlug) {
+        $page = $request->query('page');
+        $response = $page ? $this->articleService->getArticlesByCategory($categorySlug, $page)
+            : $this->articleService->getArticlesByCategory($categorySlug);
+        $data = $this->decodeJsonResponse($response);
+
         return view('layout.category', [
             'title' => 'Kategori - ' . ucfirst($categorySlug),
-            'data' => [
-                'category' => $categorySlug
-            ]
+            'data' => $data,
+            'category' => $categorySlug
         ]);
     }
 
-    public function author($username) {
+    public function author(Request $request, $username) {
+        $page = $request->query('page');
+        $response = $page ? $this->articleService->getArticlesByAuthor($username, $page)
+            : $this->articleService->getArticlesByAuthor($username);
+        $data = $this->decodeJsonResponse($response);
+
         return view('layout.author', [
             'title' => 'Penulis - ' . $username,
-            'data' => [
-                'username' => $username
-            ]
+            'data' => $data,
+            'author' => $username
         ]);
     }
 
