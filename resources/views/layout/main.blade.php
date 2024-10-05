@@ -50,6 +50,17 @@
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/assets/css/highlightjs.css">
     <noscript><link rel="stylesheet" href="/assets/css/highlightjs.css"></noscript>
     <script src="/assets/js/highlightjs.js"></script>
+
+    {{-- Google Analytics --}}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1W9MCGQS74"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1W9MCGQS74');
+    </script>
 </head>
 <body>
     {{-- Navigation Bar --}}

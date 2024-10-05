@@ -55,7 +55,7 @@ class ArticleController extends Controller
 
     public function article($articleSlug) {
         $response = $this->articleService->getArticleBySlug($articleSlug);
-        $decodedResponse = $this->decodeJsonResponse($response)['data'];
+        $decodedResponse = $this->decodeJsonResponse($response);
 
         return view('layout.article', [
             'title' => isset($decodedResponse['title']) ? $decodedResponse['title'] : $articleSlug,
