@@ -71,7 +71,7 @@
 
     <div class="clearfix"></div>
 
-    <div class="container mt-5 pt-5 ps-3 pe-3 ps-lg-5 pe-lg-5">
+    <div class="container mt-5 pt-5 ps-3 pe-3">
         @yield('content')
     </div>
 

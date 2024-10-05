@@ -65,15 +65,20 @@
 #articleBody figure {
     position: relative;
     width: 100%;
-    height: 500px;
+    max-height: 500px;
     text-align: center;
 }
 
 #articleBody figure img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
+}
+
+#articleBody ul li {
+    word-break: break-word!important;
+    word-wrap: break-word!important;
 }
 
 .widget-content ul {
@@ -81,15 +86,18 @@
     list-style-type: none;
 }
 
+.widget-content ul li {
+    height: 70px;
+}
+
 .widget-content .item-thumbnail {
     width: 100px;
-    height: 75px;
     position: relative;
 }
 
 .widget-content .item-thumbnail img {
     width: 100px;
-    height: 75px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }

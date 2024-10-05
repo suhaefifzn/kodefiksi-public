@@ -10,7 +10,7 @@
                         <img src="{!! config('app.my_config.api_url') . '/' . $row['img_thumbnail'] !!}" alt="Thumbnail {!! $row['title'] !!}">
                     </div>
                     <div class="item-title d-flex align-items-center">
-                        <a href="{!! route('article', $row['slug']) !!}" class="text-decoration-none text-dark">
+                        <a href="{!! route('article', $row['slug']) !!}" class="text-decoration-none text-dark small">
                             {!! $row['title'] !!}
                         </a>
                     </div>
