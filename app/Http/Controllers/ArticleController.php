@@ -57,6 +57,10 @@ class ArticleController extends Controller
         $response = $this->articleService->getArticleBySlug($articleSlug);
         $decodedResponse = $this->decodeJsonResponse($response);
 
+        if ($decodedResponse['status'] === 'fail') {
+            return abort(404);
+        }
+
         return view('layout.article', [
             'title' => isset($decodedResponse['title']) ? $decodedResponse['title'] : $articleSlug,
             'data' => $decodedResponse
