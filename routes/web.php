@@ -12,6 +12,5 @@ Route::controller(ArticleController::class)
         Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
         Route::get('/category/{slug}', 'category')->name('category');
         Route::get('/author/{slug}', 'author')->name('author');
-        Route::get('/articles', 'articles')->name('articles');
         Route::get('/{slug}', 'article')->name('article');
     });

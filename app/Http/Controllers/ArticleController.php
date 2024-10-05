@@ -15,29 +15,6 @@ class ArticleController extends Controller
         $this->articleService = new ArticleService();
     }
 
-    public function articles(Request $request) {
-        $page = $request->query('page');
-        $category = $request->query('category');
-        $username = $request->query('username');
-        $validatedPageValue = filter_var($page, FILTER_VALIDATE_INT);
-
-        if ($validatedPageValue) {
-            if ($page and $category and !$username) {
-                $response = $this->articleService->getArticlesByCategory($category, $page);
-            }
-
-            if ($page and $username and !$category) {
-                $response = $this->articleService->getArticlesByAuthor($username, $page);
-            }
-
-            if ($page and !$category and !$username) {
-                $response = $this->articleService->getArticles($page);
-            }
-        }
-
-        return $response;
-    }
-
     public function home(Request $request) {
         $page = $request->query('page');
         $response = $page ? $this->articleService->getArticles($page)
