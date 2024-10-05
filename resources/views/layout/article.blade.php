@@ -2,9 +2,9 @@
     'meta' => [
         'author' => isset($data['data']) ? $data['data']['user']['username'] : 'kodefiksi',
         'title' => isset($data['data']) ? $data['data']['title'] : 'Kode Fiksi',
-        'description' => isset($data['data']) $data['data']['excerpt'] : 'Article tidak ditemukan',
+        'description' => isset($data['data']) ? $data['data']['excerpt'] : 'Article tidak ditemukan',
         'url' => isset($data['data']) ? config('app.url') . '/' . $data['data']['slug'] : config('app.url'),
-        'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['img_thumbnail'] : '/assets/favicon.png'
+        'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['data']['img_thumbnail'] : '/assets/favicon.png'
     ]
 ])
 @section('content')
@@ -87,7 +87,9 @@
             </div>
 
             <div class="col-12 mt-3 col-xl-4 mt-xl-0">
-                @include('layout.sidebar', ['data' => $data['data']['newest_articles']])
+                @include('layout.sidebar', [
+                    'data' => $data['data']['newest_articles']
+                ])
             </div>
         </div>
     @else

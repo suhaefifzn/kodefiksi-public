@@ -62,7 +62,7 @@ class ArticleController extends Controller
         }
 
         return view('layout.article', [
-            'title' => isset($decodedResponse['title']) ? $decodedResponse['title'] : $articleSlug,
+            'title' => isset($decodedResponse['data']['title']) ? $decodedResponse['data']['title'] : $articleSlug,
             'data' => $decodedResponse
         ]);
     }
