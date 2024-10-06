@@ -61,6 +61,9 @@
 
         gtag('config', 'G-1W9MCGQS74');
     </script>
+    {{-- Google Adsense --}}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8893101890783934"
+    crossorigin="anonymous"></script>
 
     {{-- Cookie Consent Manager --}}
     {{-- <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/23e83e4cf1746.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script> --}}
