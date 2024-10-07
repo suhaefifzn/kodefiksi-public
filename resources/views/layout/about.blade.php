@@ -3,6 +3,7 @@
         'author' => 'kodefiksi',
         'title' => 'About Us',
         'url' => config('app.url') . '/about',
+        'description' => 'Situs web ini dimiliki dan dibangun oleh Suhaefi Fauzian, dibuat sebagai tujuan dalam mempelajari Framework PHP yaitu Laravel 11 dan situs kodefiksi.com ini adalah proyek yang dikerjakan saat mempelajarinya. Mungkin ibaratnya menyelam sambil minum air, belajar Laravel 11 sekalian dihosting aja gitu buat bagi-bagi pengalaman dalam bentuk tulisan digital.'
     ]
 ])
 @section('content')
