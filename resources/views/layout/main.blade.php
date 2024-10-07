@@ -44,8 +44,6 @@
     <noscript><link rel="stylesheet" href="/assets/css/my.css"></noscript>
     {{-- Feather Icons --}}
     <script src="/assets/js/feather.min.js"></script>
-    {{-- jQuery --}}
-    <script src="/assets/js/jquery.min.js"></script>
     {{-- Highlightjs --}}
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/assets/css/highlightjs.css">
     <noscript><link rel="stylesheet" href="/assets/css/highlightjs.css"></noscript>
