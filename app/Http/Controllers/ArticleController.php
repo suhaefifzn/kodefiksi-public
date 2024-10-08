@@ -36,7 +36,8 @@ class ArticleController extends Controller
         return view('layout.category', [
             'title' => 'Kategori - ' . ucfirst($categorySlug),
             'data' => $data,
-            'category' => $categorySlug
+            'category' => $categorySlug,
+            'url' => config('app.url') . "/category/$categorySlug"
         ]);
     }
 
@@ -49,7 +50,8 @@ class ArticleController extends Controller
         return view('layout.author', [
             'title' => 'Penulis - ' . $username,
             'data' => $data,
-            'author' => $username
+            'author' => $username,
+            'url' => config('app.url') . "/author/$username"
         ]);
     }
 

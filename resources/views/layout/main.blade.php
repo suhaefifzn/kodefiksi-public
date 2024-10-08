@@ -33,6 +33,13 @@
     >
     <meta property="twitter:image" content="{!! isset($meta['thumbnail']) ? $meta['thumbnail'] : '/assets/favicon.png' !!}">
 
+    {{-- Canonical Tags --}}
+    <link
+        rel="canonical"
+        href="{!! Request::is('/') ? config('app.url')
+            : $meta['url'] !!}"
+    >
+
     {{-- Meta Tags - Artikel --}}
     @yield('meta.article')
 

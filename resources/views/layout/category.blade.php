@@ -1,4 +1,8 @@
-@extends('layout.main')
+@extends('layout.main', [
+    'meta' => [
+        'url' => $url,
+    ]
+])
 @section('content')
 {{-- Wrapper untuk breadcrumb --}}
 <div class="border-bottom mb-5" id="breadcrumbWrapper">
