@@ -11,17 +11,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('contact') }}" class="nav-link" title="Contact Us" rel="nofollow">
+                    <a href="{{ route('contact') }}" class="nav-link" title="Contact Us">
                         Contact
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('disclaimer') }}" class="nav-link" title="Disclaimer" rel="nofollow">
+                    <a href="{{ route('disclaimer') }}" class="nav-link" title="Disclaimer">
                         Disclaimer
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('privacy.policy') }}" class="nav-link" title="Privacy Policy" rel="nofollow">
+                    <a href="{{ route('privacy.policy') }}" class="nav-link" title="Privacy Policy">
                         Privacy Policy
                     </a>
                 </li>
