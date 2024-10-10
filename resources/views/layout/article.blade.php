@@ -63,6 +63,11 @@
                         {!! $data['data']['body'] !!}
                     </div>
                 </article>
+
+                {{-- <ShareThis BEGIN --}}
+                <div class="sharethis-inline-share-buttons"></div>
+                {{-- ShareThis END --}}
+
                 <div class="col-12 col-xl-12 mt-3 bg-secondary-subtle rounded p-3" id="articleRelated">
                     <div class="related-title badge bg-secondary p-2 mb-3">
                         <span class="fw-bold fs-6">Artikel Terkait</span>
