@@ -2,7 +2,7 @@
     'meta' => [
         'author' => isset($data['data']) ? $data['data']['user']['username'] : 'kodefiksi',
         'title' => isset($data['data']) ? $data['data']['title'] : 'Kode Fiksi',
-        'description' => isset($data['data']) ? $data['data']['excerpt'] : 'Article tidak ditemukan',
+        'description' => isset($data['data']) ? $data['data']['excerpt'] : 'Artikel tidak ditemukan',
         'url' => isset($data['data']) ? config('app.url') . '/' . $data['data']['slug'] : config('app.url'),
         'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['data']['img_thumbnail'] : '/assets/favicon.png'
     ]
@@ -55,7 +55,7 @@
                             <h1>{!! $data['data']['title'] !!}</h1>
                         </div>
                         <div class="mt-3" id="articleThumbnail">
-                            <img src="{!! config('app.my_config.api_url') . '/' .  $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid">
+                            <img src="{!! $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid">
                         </div>
                     </div>
 
@@ -71,7 +71,7 @@
                         @foreach ($data['data']['related_articles'] as $article)
                             <div class="card col-10 col-xl-3 p-0">
                                 <div class="wrapper-thumbail">
-                                    <img src="{!! config('app.my_config.api_url') . '/' . $article['img_thumbnail'] !!}" alt="Thumbnail {!! $article['title'] !!}" class="card-img-top" loading="lazy">
+                                    <img src="{!! $article['img_thumbnail'] !!}" alt="Thumbnail {!! $article['title'] !!}" class="card-img-top" loading="lazy">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="card-title fs-6 fw-bold">

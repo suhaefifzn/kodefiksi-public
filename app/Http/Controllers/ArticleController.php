@@ -59,12 +59,8 @@ class ArticleController extends Controller
         $response = $this->articleService->getArticleBySlug($articleSlug);
         $decodedResponse = $this->decodeJsonResponse($response);
 
-        if ($decodedResponse['status'] === 'fail') {
-            return abort(404);
-        }
-
         return view('layout.article', [
-            'title' => isset($decodedResponse['data']['title']) ? $decodedResponse['data']['title'] : $articleSlug,
+            'title' => isset($decodedResponse['data']['title']) ? $decodedResponse['data']['title'] : 'Artikel tidak ditemukan',
             'data' => $decodedResponse
         ]);
     }

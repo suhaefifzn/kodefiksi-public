@@ -7,7 +7,7 @@
             @foreach ($data as $row)
                 <li class="d-flex gap-2 rounded overflow-hidden bg-light">
                     <div class="item-thumbnail">
-                        <img src="{!! config('app.my_config.api_url') . '/' . $row['img_thumbnail'] !!}" alt="Thumbnail {!! $row['title'] !!}">
+                        <img src="{!! $row['img_thumbnail'] !!}" alt="Thumbnail {!! $row['title'] !!}">
                     </div>
                     <div class="item-title d-flex align-items-center">
                         <a href="{!! route('article', $row['slug']) !!}" class="text-decoration-none text-dark small">

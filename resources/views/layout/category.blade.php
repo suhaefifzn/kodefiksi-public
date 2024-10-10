@@ -20,7 +20,7 @@
             @foreach ($data['data']['articles'] as $article)
                 <div class="card overflow-hidden col-12 col-md-5 col-lg-4 col-xl-3 m-0 p-0">
                     <div class="wrapper-thumbnail">
-                        <img src="{!! config('app.my_config.api_url') . '/' . $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}">
+                        <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}">
                     </div>
                     <div class="card-body">
                         <h2 class="card-title fs-5 text-align-justify col-12">
