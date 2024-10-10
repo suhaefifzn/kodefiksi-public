@@ -6,6 +6,10 @@
         'description' => 'Situs web ini dimiliki dan dibangun oleh Suhaefi Fauzian, dibuat sebagai tujuan dalam mempelajari Framework PHP yaitu Laravel 11 dan situs kodefiksi.com ini adalah proyek yang dikerjakan saat mempelajarinya. Mungkin ibaratnya menyelam sambil minum air, belajar Laravel 11 sekalian dihosting aja gitu buat bagi-bagi pengalaman dalam bentuk tulisan digital.'
     ]
 ])
+@section('meta.article')
+    <meta property="article:published_time" content="2024-10-05T00:00:00.000Z">
+    <meta property="article:modified_time" content="2024-10-05T00:00:00.000Z">
+@endsection
 @section('content')
     {{-- Wrapper untuk breadcrumb --}}
     <div class="border-bottom mb-4 overflow-hidden" id="breadcrumbWrapper">
@@ -23,16 +27,6 @@
         <div class="article-wrapper d-flex flex-column col-xl-8">
             <article class="d-flex flex-column col-12 col-xl-12">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
-                    <div id="identity" class="small d-flex gap-3">
-                        <div class="identity-category d-flex align-items-center gap-1" title="Tanggal Dibuat">
-                            <i data-feather="calendar" class="thumbnail-icon"></i>
-                            <span>05/10/2024</span>
-                        </div>
-                        <div class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Penulis">
-                            <i data-feather="user" class="thumbnail-icon"></i>
-                            <span>kodefiksi</span>
-                        </div>
-                    </div>
                     <div class="text-center mt-1" id="articleTitle">
                         <h1>About Us</h1>
                     </div>
@@ -40,7 +34,7 @@
 
                 <div class="mt-4" id="articleBody">
                     <p style="text-align: justify">
-                        Situs web ini dimiliki dan dibangun oleh Suhaefi Fauzian, dibuat sebagai tujuan dalam mempelajari Framework PHP yaitu Laravel 11 dan situs <a href="/" class="text-decoration-none">kodefiksi.com</a> ini adalah proyek yang dikerjakan saat mempelajarinya. Mungkin ibaratnya menyelam sambil minum air, belajar Laravel 11 sekalian dihosting aja gitu buat bagi-bagi pengalaman dalam bentuk tulisan digital.
+                        Situs web ini dimiliki dan dibangun oleh Suhaefi Fauzian, dibuat sebagai tujuan dalam mempelajari Framework PHP yaitu Laravel 11 dan situs kodefiksi.com ini adalah proyek yang dikerjakan saat mempelajarinya. Mungkin ibaratnya menyelam sambil minum air, belajar Laravel 11 sekalian dihosting aja gitu buat bagi-bagi pengalaman dalam bentuk tulisan digital.
                     </p>
                     <p style="text-align: justify">
                         Saya memiliki minat pada pemrograman web, tapi saya belum menguasainya. Sampai saat ini saya masih belajar dan metode pembelajaran yang saya terima banyak didapat dari menjelajah di internet, entah itu YouTube, Web, E-Book, media sosial, hingga diskusi dengan AI seperti ChatGPT dan lainnya. Beberapa hal yang pernah saya temui dan dirasa bermanfaat mengenai pemrograman akan saja bagikan di web ini.

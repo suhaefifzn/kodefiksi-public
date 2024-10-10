@@ -71,7 +71,7 @@
     crossorigin="anonymous"></script>
 
     {{-- Cookie Consent Manager --}}
-    {{-- <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/23e83e4cf1746.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script> --}}
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/23e83e4cf1746.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
 </head>
 <body>
     {{-- Navigation Bar --}}

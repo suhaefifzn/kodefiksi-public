@@ -6,6 +6,10 @@
         'description' => 'Seluruh konten yang disediakan di website kodefiksi.com bertujuan sebagai informasi umum. Pengguna diperbolehkan untuk menggunakan ulang konten atau artikel yang ada, namun tidak diperkenankan untuk menyalinnya secara mentah.'
     ]
 ])
+@section('meta.article')
+<meta property="article:published_time" content="2024-10-10T02:05:41.003Z">
+<meta property="article:modified_time" content="2024-10-10T02:05:41.003Z">
+@endsection
 @section('content')
     {{-- Wrapper untuk breadcrumb --}}
     <div class="border-bottom mb-4 overflow-hidden" id="breadcrumbWrapper">
@@ -23,40 +27,43 @@
         <div class="article-wrapper d-flex flex-column col-xl-8">
             <article class="d-flex flex-column col-12 col-xl-12">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
-                    <div id="identity" class="small d-flex gap-3">
-                        <div class="identity-category d-flex align-items-center gap-1" title="Tanggal Dibuat">
-                            <i data-feather="calendar" class="thumbnail-icon"></i>
-                            <span>05/10/2024</span>
-                        </div>
-                        <div class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Penulis">
-                            <i data-feather="user" class="thumbnail-icon"></i>
-                            <span>kodefiksi</span>
-                        </div>
-                    </div>
                     <div class="text-center mt-1" id="articleTitle">
                         <h1>Disclaimer</h1>
                     </div>
                 </div>
 
                 <div class="mt-4" id="articleBody">
-                    <p style="text-align: justify">
-                        Seluruh konten yang disediakan di website <b>kodefiksi.com</b> bertujuan sebagai informasi umum. Pengguna diperbolehkan untuk menggunakan ulang konten atau artikel yang ada, namun tidak diperkenankan untuk menyalinnya secara mentah. Pengguna harus mengolahnya terlebih dahulu sebelum digunakan ulang, kami tidak mempermasalahkan penyertaan sumber saat penggunaan ulang konten atau artikel yang ada pada website ini, namun kami akan sangat berterima kasih apabila sumber aslinya diikut sertakan.
+                    <h2 class="fw-bold fs-4">Disclaimer for Kode Fiksi</h2>
+                    <p>
+                        If you require any more information or have any questions about our site's disclaimer.
                     </p>
-                    <p style="text-align: justify">
-                        Konten atau artikel yang terdapat pada website ini merupakan hasil dari pengolahan pengalaman dan riset penulis. Kami akan berusaha menyediakan tulisan yang berkualitas dan juga mengusahakan untuk menyertakan sumber atau referensi jika memang ada.
+                    <strong class="fs-5">
+                        Disclaimers for kodefiksi.com
+                    </strong>
+                    <p>
+                        All the information on this website is published in good faith and for general information purpose only. kodefiksi.com does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (kodefiksi.com), is strictly at your own risk. kodefiksi.com will not be liable for any losses and/or damages in connection with the use of our website.
                     </p>
-                    <p style="text-align: justify">
-                        Kami dengan tegas menegaskan bahwa kerugian atau kerusakan yang mungkin timbul akibat penggunaan informasi yang disediakan merupakan tanggung jawab pribadi masing-masing pengguna. Kami mendorong pengguna untuk menggunakan informasi dengan cermat dan bijaksana.
+                    <p>
+                        From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone 'bad'.
                     </p>
-                    <p style="text-align: justify">
-                        Kami ingin memberitahukan bahwa konten pada website ini dapat mengalami perubahan, termasuk pernyataan pada disclaimer ini. Pengguna diharapkan untuk memeriksa halaman disclaimer secara berkala.
+                    <p>
+                        Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.
                     </p>
-                    <p style="text-align: justify">
-                        Untuk pertanyaan lebih lanjut atau informasi tambahan, Anda dapat menghubungi kami melalui email di suhaefi21@gmail.com atau melalui akun Instagram @suhaefi.ig.
+                    <strong class="fs-5">
+                        Consent
+                    </strong>
+                    <p>
+                        By using our website, you hereby consent to our disclaimer and agree to its terms.
                     </p>
-                    <p style="text-align: justify">
-                        Kami ingin menekankan bahwa tidak ada jaminan terkait keandalan dan ketersediaan informasi yang disediakan di situs web ini.
+                    <strong class="fs-5">
+                        Update
+                    </strong>
+                    <p>
+                        This site disclaimer was last updated on: October 10, 2024.
                     </p>
+                    <em>
+                        Should we update, amend or make any changes to this document, those changes will be prominently posted here.
+                    </em>
                 </div>
             </article>
         </div>

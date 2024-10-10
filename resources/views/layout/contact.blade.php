@@ -13,7 +13,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{!! route('home') !!}" class="text-decoration-none">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    Disclaimer
+                    Contact Us
                 </li>
             </ol>
         </div>
@@ -23,16 +23,6 @@
         <div class="article-wrapper d-flex flex-column col-xl-8">
             <article class="d-flex flex-column col-12 col-xl-12">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
-                    <div id="identity" class="small d-flex gap-3">
-                        <div class="identity-category d-flex align-items-center gap-1" title="Tanggal Dibuat">
-                            <i data-feather="calendar" class="thumbnail-icon"></i>
-                            <span>05/10/2024</span>
-                        </div>
-                        <div class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Penulis">
-                            <i data-feather="user" class="thumbnail-icon"></i>
-                            <span>kodefiksi</span>
-                        </div>
-                    </div>
                     <div class="text-center mt-1" id="articleTitle">
                         <h1>Contact Us</h1>
                     </div>
