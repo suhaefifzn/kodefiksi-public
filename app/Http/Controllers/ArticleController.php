@@ -37,7 +37,7 @@ class ArticleController extends Controller
             'title' => 'Kategori - ' . ucfirst($categorySlug),
             'data' => $data,
             'category' => $categorySlug,
-            'url' => config('app.url'),
+            'url' => config('app.url') . '/category/' . $categorySlug,
         ]);
     }
 
@@ -51,7 +51,7 @@ class ArticleController extends Controller
             'title' => 'Penulis - ' . $username,
             'data' => $data,
             'author' => $username,
-            'url' => config('app.url'),
+            'url' => config('app.url') .'/author/' .  $username,
         ]);
     }
 

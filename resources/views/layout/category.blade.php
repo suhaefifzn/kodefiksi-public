@@ -1,5 +1,6 @@
 @extends('layout.main', [
     'meta' => [
+        'description' => 'Temukan berbagai macam artikel dengan kategori ' . ucfirst($category) . '.',
         'url' => $url,
     ]
 ])
@@ -16,6 +17,7 @@
 
     {{-- Wrapper untuk article cards --}}
     @if (isset($data['data']['articles']) && count($data['data']['articles']) > 0 && $data['status'] === 'success')
+        <h1 class="fs-3">Kategori {!! ucfirst($category) !!}</h1>
         <div class="d-flex flex-wrap justify-content-center gap-4 mt-5" id="contentWrapper">
             @foreach ($data['data']['articles'] as $article)
                 <div class="card overflow-hidden col-12 col-md-5 col-lg-4 col-xl-3 m-0 p-0">
