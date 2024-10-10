@@ -3,7 +3,7 @@
         'author' => 'kodefiksi',
         'title' => 'Disclaimer',
         'url' => config('app.url') . '/disclaimer',
-        'description' => 'Seluruh konten yang disediakan di website kodefiksi.com bertujuan sebagai informasi umum. Pengguna diperbolehkan untuk menggunakan ulang konten atau artikel yang ada, namun tidak diperkenankan untuk menyalinnya secara mentah.'
+        'description' => 'All the information on this website is published in good faith and for general information purpose only. kodefiksi.com does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (kodefiksi.com), is strictly at your own risk.'
     ]
 ])
 @section('meta.article')

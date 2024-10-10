@@ -3,7 +3,7 @@
         'author' => 'kodefiksi',
         'title' => 'Privacy Policy',
         'url' => config('app.url') . '/privacy-policy',
-        'description' => 'Kodefiksi.com mengumpulkan informasi non-pribadi yang tidak dapat mengidentifikasi secara pribadi pengunjung, seperti preferensi browser, alamat IP, waktu akses, halaman yang dikunjungi, dan informasi serupa. Informasi ini digunakan untuk analisis statistik, perbaikan konten, dan pengalaman pengguna yang lebih baik.',
+        'description' => 'At kodefiksi.com we consider the privacy of our visitors to be extremely important. This privacy policy document describes in detail the types of personal information is collected and recorded by kodefiksi.com and how we use it.',
     ]
 ])
 @section('meta.article')
