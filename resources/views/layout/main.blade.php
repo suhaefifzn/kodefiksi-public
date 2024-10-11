@@ -72,9 +72,6 @@
 
     {{-- Cookie Consent Manager --}}
     <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/23e83e4cf1746.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
-
-    {{-- ShareThis --}}
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6708654d8a5b5b001dc3b3e4&product=inline-share-buttons' async='async'></script>
 </head>
 <body>
     {{-- Navigation Bar --}}
