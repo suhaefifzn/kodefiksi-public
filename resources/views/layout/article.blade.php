@@ -2,6 +2,7 @@
     'meta' => [
         'author' => isset($data['data']) ? $data['data']['user']['username'] : 'kodefiksi',
         'title' => isset($data['data']) ? $data['data']['title'] : 'Kode Fiksi',
+        'keywords' => isset($data['data']) ? $data['data']['title'] : 'Anime, Manga, Game, Pemrograman, Tutorial Pemrograman',
         'description' => isset($data['data']) ? $data['data']['excerpt'] : 'Artikel tidak ditemukan',
         'url' => isset($data['data']) ? config('app.url') . '/' . $data['data']['slug'] : config('app.url'),
         'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['data']['img_thumbnail'] : '/assets/favicon.png'

@@ -10,11 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="content-language" content="id">
     <meta name="author" content="{!! isset($meta['author']) ? $meta['author'] : 'kodefiksi' !!}">
-    <meta name="keywords" content="Anime, Manga, Game, Pemrograman, Tutorial Pemrograman">
+    <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Anime, Manga, Game, Pemrograman, Tutorial Pemrograman' !!}">
     <meta name="description"
         content="{!! isset($meta['description']) ? $meta['description']
             : 'Temukan dunia anime, game, dan pemrograman dalam satu tempat! Jelajahi beragam konten menarik mulai dari ulasan anime terbaru, tips, trik dan berita game favorit, hingga berbagai pembahasan mengenai pemrograman!' !!}"
     >
+
     {{-- Meta Tags - Sosmed --}}
     <meta property="og:title" content="{!! isset($meta['title']) ? $meta['title'] : 'Kode Fiksi' !!}">
     <meta property="og:description"
@@ -57,7 +58,6 @@
     <script src="/assets/js/highlightjs.js"></script>
 
     {{-- Google Analytics --}}
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1W9MCGQS74"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -67,16 +67,14 @@
         gtag('config', 'G-1W9MCGQS74');
     </script>
 
-    {{-- Google Adsense --}}
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8893101890783934"
-    crossorigin="anonymous"></script>
+    {{-- CMP --}}
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/23e83e4cf1746.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
 </head>
 <body>
     {{-- Navigation Bar --}}
     @include('layout.navbar')
 
     <div class="clearfix"></div>
-
     <div class="container mt-5 pt-5 ps-3 pe-3">
         @yield('content')
     </div>
@@ -94,6 +92,5 @@
         feather.replace();
         hljs.highlightAll();
     </script>
-
 </body>
 </html>
