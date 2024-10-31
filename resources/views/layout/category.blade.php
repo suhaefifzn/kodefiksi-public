@@ -60,7 +60,7 @@
         @php
             $meta = $data['data']['meta'];
         @endphp
-        <div id="paginationWrapper" class="d-flex mt-5 justify-content-end">
+        <div id="paginationWrapper" class="d-flex mt-5 justify-content-center">
             <ul class="pagination">
                 <li class="page-item {!! $meta['prev_page_url'] ? '' : 'disabled' !!}">
                     <div
