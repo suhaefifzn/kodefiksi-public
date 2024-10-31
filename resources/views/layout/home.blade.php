@@ -43,7 +43,7 @@
         @php
             $meta = $data['data']['meta'];
         @endphp
-        <div id="paginationWrapper" class="d-flex mt-5 justify-content-center">
+        <div id="paginationWrapper" class="d-flex mt-5 justify-content-end">
             <ul class="pagination">
                 <li class="page-item {!! $meta['prev_page_url'] ? '' : 'disabled' !!}">
                     <div class="page-link pagination-items" onclick="getPage(this)" data-page="{!! $meta['prev_page_url'] ? $meta['current_page'] - 1 : $meta['current_page'] !!}" data-active="{!! $meta['prev_page_url'] ? 'on' : 'off' !!}">
@@ -71,11 +71,9 @@
 <script>
     const getPage = (element) => {
         const { active, page } = element.dataset;
-
         if (active === 'off') {
             return;
         }
-
         const query = page == 1 ? '' : '?page=' + page;
         location.href = @json(route('home')) + query;
     }

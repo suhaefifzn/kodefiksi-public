@@ -1,6 +1,6 @@
 @extends('layout.main', [
     'meta' => [
-        'author' => 'kodefiksi',
+        'author' => 'suhaefi21',
         'title' => 'Contact Us',
         'url' => config('app.url') . '/contact',
         'description' => 'Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal yang ingin Anda sampaikan, bisa melalui alamat email suhaefi21@gmail.com atau Instagram suhaefi.ig.'
@@ -30,7 +30,7 @@
 
                 <div class="mt-4" id="articleBody">
                     <p style="text-align: justify">
-                        Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal yang ingin Anda sampaikan, bisa melalui alamat email <strong>suhaefi21@gmail.com</strong> atau Instagram <strong>suhaefi.ig</strong>.
+                        Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal yang ingin Anda sampaikan, hubungi kami melalui Instagram <a href="https://instagram.com/kodefiksi.ig" target="_blank">kodefiksi.ig</a>. Terima kasih atas pengertiaannya.
                     </p>
                 </div>
             </article>

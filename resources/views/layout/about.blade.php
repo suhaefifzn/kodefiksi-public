@@ -1,9 +1,9 @@
 @extends('layout.main', [
     'meta' => [
-        'author' => 'kodefiksi',
+        'author' => 'suhaefi21',
         'title' => 'About Us',
         'url' => config('app.url') . '/about',
-        'description' => 'Situs web ini dimiliki dan dibangun oleh Suhaefi Fauzian, dibuat sebagai tujuan dalam mempelajari Framework PHP yaitu Laravel 11 dan situs kodefiksi.com ini adalah proyek yang dikerjakan saat mempelajarinya. Mungkin ibaratnya menyelam sambil minum air, belajar Laravel 11 sekalian dihosting aja gitu buat bagi-bagi pengalaman dalam bentuk tulisan digital.'
+        'description' => 'Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer. Konten yang disediakan dapat berupa berita, ulasan, dan tutorial.'
     ]
 ])
 @section('meta.article')
@@ -32,23 +32,30 @@
                     </div>
                 </div>
 
-                <div class="mt-4" id="articleBody">
-                    <p style="text-align: justify">
-                        Situs web ini dimiliki dan dibangun oleh Suhaefi Fauzian, dibuat sebagai tujuan dalam mempelajari Framework PHP yaitu Laravel 11 dan situs kodefiksi.com ini adalah proyek yang dikerjakan saat mempelajarinya. Mungkin ibaratnya menyelam sambil minum air, belajar Laravel 11 sekalian dihosting aja gitu buat bagi-bagi pengalaman dalam bentuk tulisan digital.
-                    </p>
-                    <p style="text-align: justify">
-                        Saya memiliki minat pada pemrograman web, tapi saya belum menguasainya. Sampai saat ini saya masih belajar dan metode pembelajaran yang saya terima banyak didapat dari menjelajah di internet, entah itu YouTube, Web, E-Book, media sosial, hingga diskusi dengan AI seperti ChatGPT dan lainnya. Beberapa hal yang pernah saya temui dan dirasa bermanfaat mengenai pemrograman akan saja bagikan di web ini.
-                    </p>
-                    <p style="text-align: justify">
-                        Untuk kategori pemrograman, utamanya akan membahas mengenai pemrograman web seputar PHP, JavaScript, HTML, dan CSS. Tetapi, tidak menutup kemungkinan akan membahas di luar pemrograman web meskipun tidak begitu banyak. Pada kategori anime isinya adalah artikel mengenai berita, review, hingga bahasan waifu. Untuk kategori game akan membahas mengenai berita, tips dan trik pada game-game yang saya mainkan.
-                    </p>
-                    <p style="text-align: justify">
-                        Hobi saya adalah menonton anime dan bermain game, jadi wajar saja jika kamu melihat topik pembahasan mengenai keduanya. Anime yang saya minati cukup bervariasi, genrenya bisa berbagai macam. Untuk game ada beberapa yang masih saya mainkan diantaranya adalah beberapa game dari HoyoVerse dan Riot, dan yang lainnya saat ini adalah The Witcher 3.
-                    </p>
-                    <p style="text-align: justify">
-                        Sampai sekarang, kodefiksi.com masih dikelola oleh saya sendiri. Semoga kedepannya web ini dapat berkembang baik dari segi kualitas konten, kualitas penulis, kualitas aplikasi, hingga kualitas dari pembacanya.
-                    </p
+                <div class="row d-flex align-items-start mt-4 rounded overflow-hidden border-top mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0 p-0" style="height: 325px;">
+                      <img src="/assets/logo_square.png" alt="Logo Kode Fiksi" style="width:100%;height:100%;object-position:center;object-fit:cover;">
+                    </div>
+                    <div class="col-md-6">
+                      <h2 class="fs-4 fw-bold mt-3">Tentang Kode Fiksi</h2>
+                      <p style="text-align: justify">
+                        Kode Fiksi merupakan web personal yang dibangun dan dikembangkan oleh Suhaefi Fauzian dengan menggunakan teknologi Laravel 11. Tujuan dari pengembangan web ini awalnya hanya untuk mempelajari framework PHP yang populer, kemudian terlintas pada pikiran untuk meninggalkan bukti pernah belajar pemrograman dan duduk di kelas Kuliah Teknik Informatika, maka dirilislah website ini dengan nama Kode Fiksi yang merupakan perpaduan dari kata 'Kode' untuk mewakili pemrograman dan 'Fiksi' untuk mewakili kesenangan terhadap dunia anime dan game.
+                      </p>
+                    </div>
                 </div>
+
+                <p style="text-align: justify">
+                    Meski dibangun menggunakan framework yang ditujukan untuk kemudahan pengembangan aplikasi full-stack, Kode Fiksi tidak dibangun demikian. Aplikasi Front-End dan Back-End dibuat terpisah, sehingga memungkinkan pengembangan pada sisi client menjadi lebih luas atau tidak terbatas pada teknologi tertentu di masa yang akan datang. Baik selama pengembangan dan juga pembaruan konten, Kode Fiksi selalu ditemani oleh AI untuk membantu memaksimalkan hasil yang diinginkan.
+                </p>
+
+                <p style="text-align: justify">
+                    Sebenarnya, pengembang (Suhaefi Fauzian) lebih dulu belajar JavaScript dengan NodeJS dan sudah ada beberapa proyek yang dibuat juga, baik itu proyek sendiri atau kelompok. Lantas kenapa mempelajari dan menggunakan Laravel? melihat dari pengalaman saat magang dan biaya deployment, perusahaan yang menggunakan PHP masih banyak di sekitar saya dan lebih murah daripada NodeJS. Tapi jika memiliki rezeki lebih mungkin Kode Fiksi akan pindah teknologi, itu pun jika aplikasi sekarang tidak dapat menghandle permintaan yang masuk dan memang sudah waktunya untuk terjun ke pasar yang lebih luas.
+                </p>
+
+                <h2 class="fs-4 fw-bold">Harapan</h2>
+                <p style="text-align: justify">
+                    Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer. Konten yang disediakan dapat berupa berita, ulasan, dan tutorial. Hadirnya web ini juga diharapkan menjadi motivasi bagi penulis untuk terus belajar dan tidak bosan dalam membaca serta berbagi karya, dan juga dapat menjadi media pengembangan diri.
+                </p>
             </article>
         </div>
     </div>

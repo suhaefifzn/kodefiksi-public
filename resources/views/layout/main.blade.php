@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <title>{!! isset($title) ? $title : 'Kode Fiksi' !!}</title>
-    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    {{-- Favicons --}}
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
     {{-- Meta Tags --}}
     <meta charset="UTF-8">
@@ -63,7 +69,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-1W9MCGQS74');
     </script>
 

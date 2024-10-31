@@ -1,21 +1,34 @@
-<aside class="sticky-top p-3 bg-secondary-subtle rounded" style="top: 70px" id="sidebar">
-    <div class="badge p-2 bg-secondary mb-3">
-        <h2 class="fs-6 fw-bold m-0">Artikel Terbaru</h2>
-    </div>
-    <div class="widget-content">
-        <ul class="d-flex flex-column gap-2">
-            @foreach ($data as $row)
-                <li class="d-flex gap-2 rounded overflow-hidden bg-light">
-                    <div class="item-thumbnail">
-                        <img src="{!! $row['img_thumbnail'] !!}" alt="Thumbnail {!! $row['title'] !!}">
-                    </div>
+<aside class="sticky-top p-3 bg-custom-3 rounded" style="top: 70px" id="sidebar">
+    <div class="sidebar-article-list">
+        <div class="badge p-2 bg-custom-2 mb-3">
+            <h2 class="fs-6 fw-bold m-0">Featured</h2>
+        </div>
+        <div class="widget-content">
+            <ul class="d-flex flex-column gap-2">
+                @foreach ($data as $row)
+                <li class="d-flex rounded overflow-hidden bg-light px-3">
                     <div class="item-title d-flex align-items-center">
                         <a href="{!! route('article', $row['slug']) !!}" class="text-decoration-none text-dark small">
                             {!! $row['title'] !!}
                         </a>
                     </div>
                 </li>
-            @endforeach
-        </ul>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar-media-list">
+        <div class="badge p-2 bg-custom-2">
+            <h2 class="fs-6 fw-bold m-0">Socializer</h2>
+        </div>
+        <div class="social-media-list">
+            <a href="https://www.youtube.com/@kodefiksi21" target="_blank" class="social-icon youtube" title="Kode Fiksi on YouTube">
+                <i data-feather="youtube"></i>
+            </a>
+
+            <a href="https://instagram.com/kodefiksi.ig" target="_blank" class="social-icon instagram" title="Kode Fiksi on Instagram">
+                <i data-feather="instagram"></i>
+            </a>
+        </div>
     </div>
 </aside>

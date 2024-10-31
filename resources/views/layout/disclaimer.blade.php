@@ -1,6 +1,6 @@
 @extends('layout.main', [
     'meta' => [
-        'author' => 'kodefiksi',
+        'author' => 'suhaefi21',
         'title' => 'Disclaimer',
         'url' => config('app.url') . '/disclaimer',
         'description' => 'All the information on this website is published in good faith and for general information purpose only. kodefiksi.com does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (kodefiksi.com), is strictly at your own risk.'

@@ -55,7 +55,7 @@
                         <div class="text-center mt-1" id="articleTitle">
                             <h1>{!! $data['data']['title'] !!}</h1>
                         </div>
-                        <div class="mt-3" id="articleThumbnail">
+                        <div class="mt-5" id="articleThumbnail">
                             <img src="{!! $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid">
                         </div>
                     </div>
@@ -65,19 +65,9 @@
                     </div>
                 </article>
 
-                {{-- AddToAny Social Media Share --}}
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style d-flex justify-content-center my-3">
-                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                    <a class="a2a_button_facebook"></a>
-                    <a class="a2a_button_whatsapp"></a>
-                    <a class="a2a_button_x"></a>
-                    <a class="a2a_button_telegram"></a>
-                    <a class="a2a_button_copy_link"></a>
-                </div>
-
-                <div class="col-12 col-xl-12 mt-3 bg-secondary-subtle rounded p-3" id="articleRelated">
-                    <div class="related-title badge bg-secondary p-2 mb-3">
-                        <span class="fw-bold fs-6">Artikel Terkait</span>
+                <div class="col-12 col-xl-12 mt-3 bg-custom-3 rounded p-3" id="articleRelated">
+                    <div class="related-title badge bg-custom-2 p-2 mb-3">
+                        <span class="fw-bold fs-6">Related</span>
                     </div>
                     <div class="card-wrapper row gap-3 justify-content-center">
                         @foreach ($data['data']['related_articles'] as $article)
@@ -109,8 +99,4 @@
             Artikel tidak ditemukan.
         </div>
     @endif
-@endsection
-@section('scripts')
-    {{-- AddToAny Social Media Share --}}
-    <script async src="https://static.addtoany.com/menu/page.js"></script>
 @endsection
