@@ -40,10 +40,10 @@
 
         <div class="row">
             <div class="article-wrapper d-flex flex-column col-xl-8">
-                <article class="d-flex flex-column col-12 col-xl-12">
+                <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
                     <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                         <div id="identity" class="small d-flex gap-3">
-                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Kategori" href="{!! route('category', $data['data']['category']['slug']) !!}">
+                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Kategori" href="{!! route('category', $data['data']['category']['slug']) !!}" itemprop="articleSection">
                                 <i data-feather="bookmark" class="thumbnail-icon"></i>
                                 <span>{!! $data['data']['category']['name'] !!}</span>
                             </a>
@@ -52,22 +52,22 @@
                                     $formattedDate = (new DateTime($data['data']['created_at']))->format('d/m/Y');
                                 @endphp
                                 <i data-feather="calendar" class="thumbnail-icon"></i>
-                                <span>{!! $formattedDate !!}</span>
+                                <span itemprop="datePublished" content="{{ (new DateTime($data['data']['created_at']))->format('Y-m-d') }}">{!! $formattedDate !!}</span>
                             </div>
-                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Penulis" href="{!! route('author', $data['data']['user']['username']) !!}">
+                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Penulis" href="{!! route('author', $data['data']['user']['username']) !!}" itemprop="author" itemscope itemtype="https://schema.org/Person">
                                 <i data-feather="user" class="thumbnail-icon"></i>
-                                <span>{!! $data['data']['user']['username'] !!}</span>
+                                <span itemprop="name">{!! $data['data']['user']['username'] !!}</span>
                             </a>
                         </div>
                         <div class="text-center mt-1" id="articleTitle">
-                            <h1>{!! $data['data']['title'] !!}</h1>
+                            <h1 itemprop="headline">{!! $data['data']['title'] !!}</h1>
                         </div>
                         <div class="mt-5" id="articleThumbnail">
-                            <img src="{!! $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid">
+                            <img src="{!! $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid" itemprop="image">
                         </div>
                     </div>
 
-                    <div class="mt-4" id="articleBody">
+                    <div class="mt-4" id="articleBody" itemprop="articleBody">
                         {!! $data['data']['body'] !!}
                     </div>
                 </article>
@@ -78,13 +78,13 @@
                     </div>
                     <div class="card-wrapper row gap-3 justify-content-center">
                         @foreach ($data['data']['related_articles'] as $article)
-                            <div class="card col-10 col-xl-3 p-0">
-                                <div class="wrapper-thumbail">
-                                    <img src="{!! $article['img_thumbnail'] !!}" alt="Thumbnail {!! $article['title'] !!}" class="card-img-top" loading="lazy">
+                            <div class="card col-10 col-xl-3 p-0" itemscope itemtype="https://schema.org/BlogPosting">
+                                <div class="wrapper-thumbnail">
+                                    <img src="{!! $article['img_thumbnail'] !!}" alt="Thumbnail {!! $article['title'] !!}" class="card-img-top" loading="lazy" itemprop="image">
                                 </div>
                                 <div class="card-body">
-                                    <h3 class="card-title fs-6 fw-bold">
-                                        <a href="{!! route('article', $article['slug']) !!}" class="text-dark text-decoration-none">
+                                    <h3 class="card-title fs-6 fw-bold" itemprop="headline">
+                                        <a href="{!! route('article', $article['slug']) !!}" class="text-dark text-decoration-none" itemprop="url">
                                             {!! $article['title'] !!}
                                         </a>
                                     </h3>
