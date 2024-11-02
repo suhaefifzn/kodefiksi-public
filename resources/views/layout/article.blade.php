@@ -95,6 +95,20 @@
                 </div>
 
                 <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = @json(config('app.url') . '/' . $data['data']['slug']);
+                        this.page.identifier = @json($data['data']['slug']);
+                    };
+
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://kode-fiksi.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
 
             <div class="col-12 mt-3 col-xl-4 mt-xl-0">
@@ -108,15 +122,4 @@
             Artikel tidak ditemukan.
         </div>
     @endif
-@endsection
-@section('scripts')
-<script>
-    (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kode-fiksi.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 @endsection
