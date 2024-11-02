@@ -82,7 +82,7 @@
         }
         const searchTerm = @json($query);
         document.getElementById('searchInput').value = searchTerm;
-        const query = page == 1 ? '' : '?page=' + page;
+        const query = page == 1 ? '/search?q=' + searchTerm + '&page=1' : '/search?q=' + searchTerm + '&page=' + page;
         location.href = @json(route('home')) + query;
     }
 </script>
