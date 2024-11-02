@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 // ? Service
 use App\Services\ArticleService;
@@ -86,6 +87,37 @@ class ArticleController extends Controller
     public function privacyPolicy() {
         return view('layout.privacy', [
             'title' => 'Privacy Policy'
+        ]);
+    }
+
+    public function search(Request $request) {
+        $validator = Validator::make($request->all(), [
+            'q' => 'required|string|min:3|max:100|regex:/^[a-zA-Z0-9\s]+$/',
+            'page' => 'integer|min:1|max:100|regex:/^[a-zA-Z0-9\s]+$/'
+        ]);
+
+        $page = $request->query('page');
+        $query = htmlspecialchars($request->input('q'));
+        $data = ['title' => 'Search results for ' .  $query];
+
+        if ($validator->fails()) {
+            return view('layout.search', $data);
+        }
+
+        $response = $page ? $this->articleService->getArticlesBySearch($query, $page)
+            : $this->articleService->getArticlesBySearch($query);
+        $results = $this->decodeJsonResponse($response);
+        $data['data']['articles'] = $results['data']['articles'];
+        $data['data']['meta'] = $results['data']['meta'];
+        $data['status'] = $results['status'];
+
+        if (count($results['data']['articles']) < 1 || $results['status'] !== 'success') {
+            return view('layout.search', $data);
+        }
+
+        return view('layout.search', [
+            'data' => $data,
+            'title' => $data['title']
         ]);
     }
 }

@@ -106,13 +106,13 @@
 
                 <div id="disqus_thread" class="mt-5"></div>
                 <script>
-                    var disqus_config = function () {
+                    let disqus_config = function () {
                         this.page.url = @json(config('app.url') . '/' . $data['data']['slug']);
                         this.page.identifier = @json($data['data']['slug']);
                     };
 
                     (function() {
-                        var d = document, s = d.createElement('script');
+                        let d = document, s = d.createElement('script');
                         s.src = 'https://kode-fiksi.disqus.com/embed.js';
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);

@@ -22,4 +22,8 @@ class ArticleService extends MyWebService {
     public function getArticleBySlug($slug) {
         return $this->get("/$slug");
     }
+
+    public function getArticlesBySearch($query, $page = 1) {
+        return $this->get("?page=$page&search=$query");
+    }
 }
