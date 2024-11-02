@@ -98,7 +98,10 @@ class ArticleController extends Controller
 
         $page = $request->query('page');
         $query = htmlspecialchars($request->input('q'));
-        $data = ['title' => 'Search results for ' .  $query];
+        $data = [
+            'title' => 'Search results for ' .  $query,
+            'query' => $query
+        ];
 
         if ($validator->fails()) {
             return view('layout.search', $data);
