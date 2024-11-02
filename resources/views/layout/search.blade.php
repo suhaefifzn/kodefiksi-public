@@ -80,6 +80,8 @@
         if (active === 'off') {
             return;
         }
+        const searchTerm = @json($query);
+        document.getElementById('searchInput').value = searchTerm;
         const query = page == 1 ? '' : '?page=' + page;
         location.href = @json(route('home')) + query;
     }

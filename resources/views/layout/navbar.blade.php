@@ -35,7 +35,7 @@
                 <form class="d-flex ms-auto" role="search" itemscope itemtype="https://schema.org/SearchAction" action="/search" method="get">
                     <meta itemprop="target" content="{{ config('app.url') }}/search?q={search_term_string}" />
                     <div class="input-group">
-                        <input type="search" name="q" class="form-control" placeholder="Cari..." aria-label="Cari" itemprop="query-input" required>
+                        <input type="search" name="q" class="form-control" placeholder="Cari..." aria-label="Cari" itemprop="query-input" required id="searchInput">
                         <input type="search" name="page" value="1" hidden required>
                         <button class="btn btn-outline-light" type="submit" aria-label="Search">
                             <i data-feather="search"></i>

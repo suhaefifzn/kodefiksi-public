@@ -117,7 +117,8 @@ class ArticleController extends Controller
 
         return view('layout.search', [
             'data' => $data,
-            'title' => $data['title']
+            'title' => $data['title'],
+            'query' => $query
         ]);
     }
 }
