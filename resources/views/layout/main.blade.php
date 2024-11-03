@@ -74,6 +74,21 @@
 
     {{-- CMP --}}
     <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/23e83e4cf1746.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+
+    {{-- Searc Action --}}
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "{{ config('app.url') }}",
+          "name": "Kode Fiksi",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{{ config('app.url') }}/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+    </script>
 </head>
 <body>
     {{-- Navigation Bar --}}
