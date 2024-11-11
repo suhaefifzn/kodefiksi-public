@@ -179,3 +179,32 @@
     width: 24px;
     height: 24px;
 }
+
+/* Cookie Consent Banner */
+#cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+#cookie-consent-banner p {
+    display: inline;
+    margin: 0;
+    padding-right: 10px;
+}
+
+#accept-cookie {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
