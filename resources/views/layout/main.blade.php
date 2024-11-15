@@ -124,13 +124,17 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
+        // Google Analytics
+        gtag('js', new Date());
+        gtag('config', 'G-1W9MCGQS74');
+
         document.addEventListener("DOMContentLoaded", function() {
             if (!localStorage.getItem("cookieConsent")) {
                 gtag('consent', 'default', {
-                    'ad_storage': 'denied',
+                    'ad_storage': 'granted',
                     'ad_user_data': 'denied',
                     'ad_personalization': 'denied',
-                    'analytics_storage': 'denied'
+                    'analytics_storage': 'granted'
                 });
                 document.getElementById("cookie-consent-banner").style.display = "block";
             } else {
@@ -151,8 +155,6 @@
                 'ad_personalization': 'granted',
                 'analytics_storage': 'granted'
             });
-            gtag('js', new Date());
-            gtag('config', 'G-1W9MCGQS74');
         }
     </script>
 </body>

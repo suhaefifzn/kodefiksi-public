@@ -46,6 +46,10 @@
     transition: color 0.3s ease-in-out;
 }
 
+.card p.card-text {
+    text-align: justify!important;
+}
+
 .thumbnail-icon {
     width: 1em;
 }
