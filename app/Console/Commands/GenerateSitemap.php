@@ -33,16 +33,6 @@ class GenerateSitemap extends Command
         try {
             $sitemap = Sitemap::create();
 
-            // statis URLs
-            $sitemap->add(Url::create('/')->setPriority(1.0)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
-            $sitemap->add(Url::create('/about')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-            $sitemap->add(Url::create('/contact')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-            $sitemap->add(Url::create('/disclaimer')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-            $sitemap->add(Url::create('/privacy-policy')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-            $sitemap->add(Url::create('/category/anime')->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
-            $sitemap->add(Url::create('/category/game')->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
-            $sitemap->add(Url::create('/category/pemrograman')->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
-
             // articles from API
             $articleService = new ArticleService();
             $page = 1; // initialize page
@@ -76,6 +66,16 @@ class GenerateSitemap extends Command
             foreach ($authorsArr as $author) {
                 $sitemap->add(Url::create("/author/$author")->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
             }
+
+            // statis URLs
+            $sitemap->add(Url::create('/')->setPriority(1.0)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
+            $sitemap->add(Url::create('/about')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            $sitemap->add(Url::create('/contact')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            $sitemap->add(Url::create('/disclaimer')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            $sitemap->add(Url::create('/privacy-policy')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            $sitemap->add(Url::create('/category/anime')->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
+            $sitemap->add(Url::create('/category/game')->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
+            $sitemap->add(Url::create('/category/pemrograman')->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
 
             // Simpan sitemap ke file
             $publicHtmlPath = realpath(__DIR__ . '/../../../../../public_html/sitemap.xml');
