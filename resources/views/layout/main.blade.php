@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" dir="ltr">
 <head>
     <title>{!! isset($title) ? $title : 'Kode Fiksi' !!}</title>
 
