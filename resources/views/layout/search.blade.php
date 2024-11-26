@@ -60,8 +60,22 @@
             'query' => $query
         ])
     @else
-        <div class="d-flex flex-wrap justify-content-center gap-4 my-5" id="contentWrapper">
-            <span class="text-center">Maaf, sepertinya artikel yang Anda cari tidak tersedia.</span>
+        <div class="d-flex flex-column justify-content-center justify-content-center my-5" id="contentWrapper" style="min-height: 460px">
+            <p>Maaf, sepertinya artikel yang Anda cari tidak tersedia.</p>
+            <div class="table-of-content">
+                <h2 class="fs-5 fw-bold">Rekomendasi</h2>
+                <ul>
+                    <li>
+                        <a href="/category/anime">Anime</a>
+                    </li>
+                    <li>
+                        <a href="/category/game">Game</a>
+                    </li>
+                    <li>
+                        <a href="/category/pemrograman">Pemrograman</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     @endif
 @endsection

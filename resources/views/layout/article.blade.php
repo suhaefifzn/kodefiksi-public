@@ -78,7 +78,7 @@
                     <div class="related-title badge bg-custom-2 p-2 mb-3">
                         <span class="fw-bold fs-6">Related</span>
                     </div>
-                    <div class="card-wrapper row gap-3 p-5 p-md-3 justify-content-md-center justify-content-lg-around">
+                    <div class="card-wrapper row gap-3 p-4 p-md-3 justify-content-md-center justify-content-lg-around">
                         @foreach ($data['data']['related_articles'] as $article)
                             <div class="card col-12 col-md-5 col-lg-3 col-xl-3 p-0" itemscope itemtype="https://schema.org/BlogPosting">
                                 <div class="wrapper-thumbnail" style="height: 160px">

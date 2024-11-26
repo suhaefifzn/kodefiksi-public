@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="min-height: 560px">
         <div class="article-wrapper d-flex flex-column col-xl-8">
             <article class="d-flex flex-column col-12 col-xl-12">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
@@ -37,7 +37,7 @@
 
                 <div class="mt-4" id="articleBody">
                     <p style="text-align: justify">
-                        Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal yang ingin Anda sampaikan, hubungi kami melalui Instagram <a href="https://instagram.com/kodefiksi.ig" target="_blank">kodefiksi.ig</a>. Terima kasih atas pengertiaannya.
+                        Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal penting yang ingin Anda sampaikan, hubungi kami melalui alamat email <a href="mailto:kodefiksi@gmail.com">kodefiksi@gmail.com</a>. Terima kasih atas pengertiannya.
                     </p>
                 </div>
             </article>

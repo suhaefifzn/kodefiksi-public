@@ -237,3 +237,25 @@
 .table-of-content a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 1028px) {
+    #breadcrumbWrapper .active {
+        width: 175px!important;
+        overflow: hidden!important;
+        white-space: nowrap!important;
+        text-overflow: ellipsis!important;
+    }
+
+    #breadcrumbWrapper .breadcrumb {
+        display: -webkit-inline-box!important;
+        flex-wrap: nowrap!important;
+    }
+}
+
+.img-wrapper-404 {
+    text-align: center;
+}
+
+.img-wrapper-404 img {
+    max-height: 420px;
+}
