@@ -69,13 +69,13 @@ class GenerateSitemap extends Command
 
             // statis URLs
             $sitemap->add(Url::create('/')->setPriority(1.0)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
-            $sitemap->add(Url::create('/about')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-            $sitemap->add(Url::create('/contact')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-            $sitemap->add(Url::create('/disclaimer')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-            $sitemap->add(Url::create('/privacy-policy')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-            $sitemap->add(Url::create('/category/anime')->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
-            $sitemap->add(Url::create('/category/game')->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
-            $sitemap->add(Url::create('/category/pemrograman')->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
+            $sitemap->add(Url::create('/about')->setPriority(0.4)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            $sitemap->add(Url::create('/contact')->setPriority(0.4)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            $sitemap->add(Url::create('/disclaimer')->setPriority(0.4)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            $sitemap->add(Url::create('/privacy-policy')->setPriority(0.4)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            $sitemap->add(Url::create('/category/anime')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
+            $sitemap->add(Url::create('/category/game')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
+            $sitemap->add(Url::create('/category/pemrograman')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
 
             // Simpan sitemap ke file
             $publicHtmlPath = realpath(__DIR__ . '/../../../../../public_html/sitemap.xml');

@@ -1,11 +1,37 @@
 @extends('layout.main', [
     'meta' => [
-        'url' => config('app.url') . '/search'
+        'url' => config('app.url') . '/search',
+        'keywords' => $query,
+        'description' => 'Hasil pencarian untuk ' . $query,
+        'need_canonical' => false,
     ]
 ])
+
+@section('meta.article')
+    <meta name="robots" content="noindex, nofollow">
+@endsection
+
 @section('content')
     {{-- Wrapper untuk article cards --}}
     @if (isset($data['data']['articles']) && count($data['data']['articles']) > 0 && $data['status'] === 'success')
+        @php
+            $meta = $data['data']['meta'];
+            $prevNumber = is_null($meta['current_page']) ?  1 : $meta['current_page'] - 1;
+            $nextNumber = is_null($meta['current_page']) ?  $meta['current_page'] : $meta['current_page'] + 1;
+            $last_page = ceil($meta['total_items'] / $meta['item_per_page']);
+        @endphp
+
+        {{-- Meta For Specific Pages --}}
+        @section('meta.article')
+            {{--  SEO for Pagination --}}
+            @if($meta['prev_page_url'])
+                <link rel="prev" href="{!! route('home', ['page' => $meta['current_page'] - 1]) !!}">
+            @endif
+            @if($meta['next_page_url'])
+                <link rel="next" href="{!! route('home', ['page' => $meta['current_page'] + 1]) !!}">
+            @endif
+        @endsection
+
         <div class="d-flex flex-wrap justify-content-center gap-4 mt-5" id="contentWrapper">
             @foreach ($data['data']['articles'] as $article)
                 <article class="card overflow-hidden col-12 col-md-5 col-lg-4 col-xl-3 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
@@ -45,45 +71,15 @@
                 </article>
             @endforeach
         </div>
-        {{-- Wrapper untuk pagination --}}
-        @php
-            $meta = $data['data']['meta'];
-        @endphp
-        <div id="paginationWrapper" class="d-flex mt-5 justify-content-center">
-            <ul class="pagination">
-                <li class="page-item {!! $meta['prev_page_url'] ? '' : 'disabled' !!}">
-                    <div class="page-link pagination-items" onclick="getPage(this)" data-page="{!! $meta['prev_page_url'] ? $meta['current_page'] - 1 : $meta['current_page'] !!}" data-active="{!! $meta['prev_page_url'] ? 'on' : 'off' !!}">
-                        <span>&laquo;</span>
-                    </div>
-                </li>
-                <li class="page-item">
-                    <div class="page-link active" id="currPage">{!! $meta['current_page'] !!}</div>
-                </li>
-                <li class="page-item {!! $meta['next_page_url'] ? '' : 'disabled' !!}">
-                    <div class="page-link pagination-items" onclick="getPage(this)" data-page="{!! $meta['next_page_url'] ? $meta['current_page'] + 1 : $meta['current_page'] !!}" data-active="{!! $meta['next_page_url'] ? 'on' : 'off' !!}">
-                        <span>&raquo;</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
+        @include('layout.pagination', [
+            'data' => $data,
+            'url' => config('app.url') . '/search',
+            'query' => $query
+        ])
     @else
-        <div class="d-flex flex-wrap justify-content-center gap-4 mt-5" id="contentWrapper">
-            <span class="text-center">Artikel tidak ditemukan.</span>
+        <div class="d-flex flex-wrap justify-content-center gap-4 my-5" id="contentWrapper">
+            <span class="text-center">Maaf, sepertinya artikel yang Anda cari tidak tersedia.</span>
         </div>
     @endif
-@endsection
-
-@section('scripts')
-<script>
-    const getPage = (element) => {
-        const { active, page } = element.dataset;
-        if (active === 'off') {
-            return;
-        }
-        const searchTerm = @json($query);
-        document.getElementById('searchInput').value = searchTerm;
-        const query = page == 1 ? '/search?q=' + searchTerm + '&page=1' : '/search?q=' + searchTerm + '&page=' + page;
-        location.href = @json(route('home')) + query;
-    }
-</script>
 @endsection

@@ -134,7 +134,7 @@
 }
 
 .credit-text, .nav-link {
-    color: #DDF2FD!important;
+    color: #ffffff!important;
 }
 
 #articleBody a {
@@ -211,4 +211,29 @@
     padding: 10px 15px;
     cursor: pointer;
     font-size: 14px;
+}
+
+/* Gaya CSS untuk daftar isi */
+.table-of-content {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+.table-of-content ul {
+    list-style: none;
+    padding: 0;
+}
+.table-of-content li {
+    margin: 5px 0;
+}
+.table-of-content ul ul {
+    margin-left: 20px; /* Indentasi untuk nested list */
+}
+.table-of-content a {
+    text-decoration: none;
+    color: #007BFF;
+}
+.table-of-content a:hover {
+    text-decoration: underline;
 }

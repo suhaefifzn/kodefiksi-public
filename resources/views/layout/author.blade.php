@@ -1,8 +1,9 @@
 @extends('layout.main', [
     'meta' => [
-        'description' => 'Temukan berbagai macam artikel yang ditulis oleh ' . $author . '.',
         'url' => $url,
-        'keywords' => 'Artikel yang ditulis oleh ' . $author
+        'keywords' => 'Artikel yang ditulis oleh ' . $author,
+        'description' => 'Temukan berbagai macam artikel yang ditulis oleh ' . $author . '.',
+        'need_canonical' => true
     ]
 ])
 @section('content')
@@ -65,54 +66,9 @@
             @endforeach
         </div>
 
-    {{-- Wrapper untuk pagination --}}
-    @php
-        $meta = $data['data']['meta'];
-    @endphp
-        <div id="paginationWrapper" class="d-flex mt-5 justify-content-center">
-            <ul class="pagination">
-                <li class="page-item {!! $meta['prev_page_url'] ? '' : 'disabled' !!}">
-                    <div
-                        class="page-link pagination-items"
-                        onclick="getPage(this)"
-                        data-page="{!! $meta['prev_page_url'] ? $meta['current_page'] - 1 : $meta['current_page'] !!}"
-                        data-active="{!! $meta['prev_page_url'] ? 'on' : 'off' !!}"
-                        data-author="{!! $author !!}"
-                    >
-                        <span>&laquo;</span>
-                    </div>
-                </li>
-                <li class="page-item">
-                    <div class="page-link active" id="currPage">{!! $meta['current_page'] !!}</div>
-                </li>
-                <li class="page-item {!! $meta['next_page_url'] ? '' : 'disabled' !!}">
-                    <div
-                        class="page-link pagination-items"
-                        onclick="getPage(this)"
-                        data-page="{!! $meta['next_page_url'] ? $meta['current_page'] + 1 : $meta['current_page'] !!}"
-                        data-active="{!! $meta['next_page_url'] ? 'on' : 'off' !!}"
-                        data-author="{!! $author !!}"
-                    >
-                        <span>&raquo;</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    @else
-        <div class="d-flex flex-wrap justify-content-center gap-4 mt-5" id="contentWrapper">
-            <span class="text-center">Artikel tidak ditemukan.</span>
-        </div>
+        @include('layout.pagination', [
+            'data' => $data,
+            'url' => $url
+        ])
     @endif
-@endsection
-@section('scripts')
-    <script>
-        const getPage = (element) => {
-            const { active, page, author } = element.dataset;
-            if (active === 'off') {
-                return;
-            }
-            const query = page == 1 ? '' : '?page=' + page;
-            location.href = '/author/' + author + query;
-        }
-    </script>
 @endsection

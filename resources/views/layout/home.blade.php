@@ -1,4 +1,8 @@
-@extends('layout.main')
+@extends('layout.main', [
+    'meta' => [
+        'need_canonical' => true
+    ]
+])
 @section('content')
     {{-- Wrapper untuk article cards --}}
     @if (isset($data['data']['articles']) && count($data['data']['articles']) > 0 && $data['status'] === 'success')
@@ -41,44 +45,10 @@
                 </article>
             @endforeach
         </div>
-        {{-- Wrapper untuk pagination --}}
-        @php
-            $meta = $data['data']['meta'];
-        @endphp
-        <div id="paginationWrapper" class="d-flex mt-5 justify-content-center">
-            <ul class="pagination">
-                <li class="page-item {!! $meta['prev_page_url'] ? '' : 'disabled' !!}">
-                    <div class="page-link pagination-items" onclick="getPage(this)" data-page="{!! $meta['prev_page_url'] ? $meta['current_page'] - 1 : $meta['current_page'] !!}" data-active="{!! $meta['prev_page_url'] ? 'on' : 'off' !!}">
-                        <span>&laquo;</span>
-                    </div>
-                </li>
-                <li class="page-item">
-                    <div class="page-link active" id="currPage">{!! $meta['current_page'] !!}</div>
-                </li>
-                <li class="page-item {!! $meta['next_page_url'] ? '' : 'disabled' !!}">
-                    <div class="page-link pagination-items" onclick="getPage(this)" data-page="{!! $meta['next_page_url'] ? $meta['current_page'] + 1 : $meta['current_page'] !!}" data-active="{!! $meta['next_page_url'] ? 'on' : 'off' !!}">
-                        <span>&raquo;</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    @else
-        <div class="d-flex flex-wrap justify-content-center gap-4 mt-5" id="contentWrapper">
-            <span class="text-center">Artikel tidak ditemukan.</span>
-        </div>
+
+        @include('layout.pagination', [
+            'data' => $data,
+            'url' => config('app.url')
+        ])
     @endif
-@endsection
-
-
-@section('scripts')
-<script>
-    const getPage = (element) => {
-        const { active, page } = element.dataset;
-        if (active === 'off') {
-            return;
-        }
-        const query = page == 1 ? '' : '?page=' + page;
-        location.href = @json(route('home')) + query;
-    }
-</script>
 @endsection

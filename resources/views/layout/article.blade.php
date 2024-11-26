@@ -1,11 +1,12 @@
 @extends('layout.main', [
     'meta' => [
-        'author' => isset($data['data']) ? $data['data']['user']['username'] : 'kodefiksi',
-        'title' => isset($data['data']) ? $data['data']['title'] : 'Kode Fiksi',
-        'keywords' => isset($data['data']) ? $data['data']['title'] : 'Anime, Manga, Game, Pemrograman, Tutorial Pemrograman',
-        'description' => isset($data['data']) ? $data['data']['excerpt'] : 'Artikel tidak ditemukan',
         'url' => isset($data['data']) ? config('app.url') . '/' . $data['data']['slug'] : config('app.url'),
-        'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['data']['img_thumbnail'] : '/assets/favicon.png'
+        'title' => isset($data['data']) ? $data['data']['title'] : 'Kode Fiksi',
+        'author' => isset($data['data']) ? $data['data']['user']['username'] : 'kodefiksi',
+        'keywords' => isset($data['data']) ? $data['data']['title'] : 'Anime, Manga, Game, Pemrograman, Tutorial Pemrograman',
+        'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['data']['img_thumbnail'] : '/assets/logo_square.png',
+        'description' => isset($data['data']) ? $data['data']['excerpt'] : 'Artikel tidak ditemukan',
+        'need_canonical' => true
     ]
 ])
 @section('content')
@@ -77,14 +78,14 @@
                     <div class="related-title badge bg-custom-2 p-2 mb-3">
                         <span class="fw-bold fs-6">Related</span>
                     </div>
-                    <div class="card-wrapper row gap-3 justify-content-center">
+                    <div class="card-wrapper row gap-3 p-5 p-md-3 justify-content-md-center justify-content-lg-around">
                         @foreach ($data['data']['related_articles'] as $article)
-                            <div class="card col-10 col-xl-3 p-0" itemscope itemtype="https://schema.org/BlogPosting">
-                                <div class="wrapper-thumbnail">
+                            <div class="card col-12 col-md-5 col-lg-3 col-xl-3 p-0" itemscope itemtype="https://schema.org/BlogPosting">
+                                <div class="wrapper-thumbnail" style="height: 160px">
                                     <img src="{!! $article['img_thumbnail'] !!}" alt="Thumbnail {!! $article['title'] !!}" class="card-img-top" loading="lazy" itemprop="image">
                                 </div>
                                 <div class="card-body">
-                                    <h3 class="card-title fs-6 fw-bold" itemprop="headline">
+                                    <h3 class="card-title fs-6" itemprop="headline">
                                         <a href="{!! route('article', $article['slug']) !!}" class="text-dark text-decoration-none" itemprop="url">
                                             {!! $article['title'] !!}
                                         </a>
@@ -118,10 +119,6 @@
                     'data' => $data['data']['newest_articles']
                 ])
             </div>
-        </div>
-    @else
-        <div class="text-center">
-            Artikel tidak ditemukan.
         </div>
     @endif
 @endsection

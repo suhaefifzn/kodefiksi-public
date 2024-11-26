@@ -22,8 +22,12 @@ class ArticleController extends Controller
             : $this->articleService->getArticles();
         $data = $this->decodeJsonResponse($response);
 
+        if (is_null($data['data']) || count($data['data']['articles']) === 0) {
+            abort(404);
+        }
+
         return view('layout.home', [
-            'title' => 'Kode Fiksi',
+            'title' => !is_null($data['data']) ? (count($data['data']['articles']) > 0 ? 'Kode Fiksi' : '404 Page Not Found') : '404 Page Not Found',
             'data' => $data
         ]);
     }
@@ -60,8 +64,12 @@ class ArticleController extends Controller
         $response = $this->articleService->getArticleBySlug($articleSlug);
         $decodedResponse = $this->decodeJsonResponse($response);
 
+        if (!isset($decodedResponse['data']['title'])) {
+            abort(404);
+        }
+
         return view('layout.article', [
-            'title' => isset($decodedResponse['data']['title']) ? $decodedResponse['data']['title'] : 'Artikel tidak ditemukan',
+            'title' => $decodedResponse['data']['title'],
             'data' => $decodedResponse
         ]);
     }

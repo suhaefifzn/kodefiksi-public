@@ -11,11 +11,11 @@
                 <span class="navbar-brand fw-bold d-none" itemprop="name">Kode Fiksi</span>
                 @endif
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggle">
-                <ul class="navbar-nav me-auto mb-2 ms-2 ms-lg-0 mb-lg-0">
+                <ul class="navbar-nav me-auto my-3 my-lg-0">
                     <li class="nav-item" itemprop="about" itemscope itemtype="https://schema.org/Thing">
                         <a class="nav-link" href="{!! route('category', 'anime') !!}" title="Anime" itemprop="url">
                             <span itemprop="name">Anime</span>
