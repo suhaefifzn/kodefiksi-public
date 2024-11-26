@@ -21,13 +21,15 @@
     <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Anime, Manga, Game, Pemrograman, Tutorial Pemrograman' !!}">
     <meta name="description"
         content="{!! isset($meta['description']) ? $meta['description']
-            : "Temukan dunia anime, game, dan pemrograman dalam satu tempat! Jelajahi beragam konten menarik mulai dari ulasan anime terbaru, tips, trik dan berita game favorit, hingga berbagai pembahasan mengenai pemrograman!" !!}"
+            : "Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit, hingga tutorial pemrograman untuk pemula dalam satu tempat." !!}"
     >
+
     {{-- Meta Tags - Sosmed --}}
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="{!! isset($meta['title']) ? $meta['title'] : 'Kode Fiksi' !!}">
     <meta property="og:description"
         content="{!! isset($meta['description']) ? $meta['description']
-            : "Temukan dunia anime, game, dan pemrograman dalam satu tempat! Jelajahi beragam konten menarik mulai dari ulasan anime terbaru, tips, trik dan berita game favorit, hingga berbagai pembahasan mengenai pemrograman!" !!}"
+            : "Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit, hingga tutorial pemrograman untuk pemula dalam satu tempat." !!}"
     >
     <meta property="og:url" content="{!! isset($meta['url']) ? $meta['url'] : Request::fullUrl() !!}">
     <meta property="og:image" content="{!! isset($meta['thumbnail']) ? $meta['thumbnail'] : '/assets/logo_square.png' !!}">
@@ -37,7 +39,7 @@
     <meta property="twitter:title" content="{!! isset($meta['title']) ? $meta['title'] : 'Kode Fiksi' !!}">
     <meta property="twitter:description"
         content="{!! isset($meta['description']) ? $meta['description']
-            : "Temukan dunia anime, game, dan pemrograman dalam satu tempat! Jelajahi beragam konten menarik mulai dari ulasan anime terbaru, tips, trik dan berita game favorit, hingga berbagai pembahasan mengenai pemrograman!" !!}"
+            : "Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit, hingga tutorial pemrograman untuk pemula dalam satu tempat." !!}"
     >
     <meta property="twitter:image" content="{!! isset($meta['thumbnail']) ? $meta['thumbnail'] : '/assets/logo_square.png' !!}">
 
