@@ -3,7 +3,8 @@
         'author' => 'suhaefi21',
         'title' => 'Contact Us',
         'url' => config('app.url') . '/contact',
-        'description' => 'Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal yang ingin Anda sampaikan, bisa melalui alamat email suhaefi21@gmail.com atau Instagram suhaefi.ig.'
+        'description' => 'Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal yang ingin Anda sampaikan, bisa melalui alamat email suhaefi21@gmail.com atau Instagram suhaefi.ig.',
+        'need_canonical' => true
     ]
 ])
 @section('content')

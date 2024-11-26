@@ -3,7 +3,8 @@
         'author' => 'suhaefi21',
         'title' => 'About Us',
         'url' => config('app.url') . '/about',
-        'description' => 'Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer. Konten yang disediakan dapat berupa berita, ulasan, dan tutorial.'
+        'description' => 'Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer. Konten yang disediakan dapat berupa berita, ulasan, dan tutorial.',
+        'need_canonical' => true
     ]
 ])
 @section('meta.article')

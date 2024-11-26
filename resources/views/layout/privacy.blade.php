@@ -4,6 +4,7 @@
         'title' => 'Privacy Policy',
         'url' => config('app.url') . '/privacy-policy',
         'description' => 'At kodefiksi.com we consider the privacy of our visitors to be extremely important. This privacy policy document describes in detail the types of personal information is collected and recorded by kodefiksi.com and how we use it.',
+        'need_canonical' => true
     ]
 ])
 @section('meta.article')
