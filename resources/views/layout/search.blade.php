@@ -14,24 +14,6 @@
 @section('content')
     {{-- Wrapper untuk article cards --}}
     @if (isset($data['data']['articles']) && count($data['data']['articles']) > 0 && $data['status'] === 'success')
-        @php
-            $meta = $data['data']['meta'];
-            $prevNumber = is_null($meta['current_page']) ?  1 : $meta['current_page'] - 1;
-            $nextNumber = is_null($meta['current_page']) ?  $meta['current_page'] : $meta['current_page'] + 1;
-            $last_page = ceil($meta['total_items'] / $meta['item_per_page']);
-        @endphp
-
-        {{-- Meta For Specific Pages --}}
-        @section('meta.article')
-            {{--  SEO for Pagination --}}
-            @if($meta['prev_page_url'])
-                <link rel="prev" href="{!! route('home', ['page' => $meta['current_page'] - 1]) !!}">
-            @endif
-            @if($meta['next_page_url'])
-                <link rel="next" href="{!! route('home', ['page' => $meta['current_page'] + 1]) !!}">
-            @endif
-        @endsection
-
         <div class="d-flex flex-wrap justify-content-center gap-4 mt-5" id="contentWrapper">
             @foreach ($data['data']['articles'] as $article)
                 <article class="card overflow-hidden col-12 col-md-5 col-lg-4 col-xl-3 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
