@@ -32,7 +32,7 @@
         {{-- Tombol Prev --}}
         <li class="page-item {!! $meta['prev_page_url'] ? '' : 'disabled' !!}">
             <a href="{!! $meta['prev_page_url']
-                ? ($meta['current_page'] > 1 ? (isset($query) ? ($url . $prevNumber) : $url . '?page=' . $prevNumber) : $url )
+                ? isset($query) ? ($url . $prevNumber) : ($meta['current_page'] > 2 ? ($url . '?page=' . $prevNumber) : $url)
                 : '#' !!}"
             class="page-link {!! $meta['prev_page_url'] ? '' : 'disabled' !!}"
             aria-disabled="{!! $meta['prev_page_url'] ? 'false' : 'true' !!}"
@@ -44,7 +44,7 @@
         {{-- Tombol Page 1 --}}
         @if ($meta['current_page'] > 1)
         <li class="page-item">
-            <a href="{{ route('home') }}" class="page-link" aria-label="Page 1">1</a>
+            <a href="{{ isset($query) ? ($url . '1') : $url  }}" class="page-link" aria-label="Page 1">1</a>
         </li>
         @endif
 
