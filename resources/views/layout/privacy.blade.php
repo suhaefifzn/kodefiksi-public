@@ -3,7 +3,7 @@
         'author' => 'suhaefi21',
         'title' => 'Privacy Policy',
         'url' => config('app.url') . '/privacy-policy',
-        'description' => 'At kodefiksi.com we consider the privacy of our visitors to be extremely important. This privacy policy document describes in detail the types of personal information is collected and recorded by kodefiksi.com and how we use it.',
+        'description' => 'At kodefiksi.com we consider the privacy of our visitors to be extremely important',
         'need_canonical' => true
     ]
 ])
@@ -29,7 +29,6 @@
             </ol>
         </div>
     </div>
-
     <div class="row">
         <div class="article-wrapper d-flex flex-column col-xl-8">
             <article class="d-flex flex-column col-12 col-xl-12">

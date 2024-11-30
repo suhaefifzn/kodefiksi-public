@@ -3,7 +3,7 @@
         'author' => 'suhaefi21',
         'title' => 'About Us',
         'url' => config('app.url') . '/about',
-        'description' => 'Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer. Konten yang disediakan dapat berupa berita, ulasan, dan tutorial.',
+        'description' => 'Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer.',
         'need_canonical' => true
     ]
 ])
@@ -29,7 +29,6 @@
             </ol>
         </div>
     </div>
-
     <div class="row">
         <div class="article-wrapper d-flex flex-column col-xl-8">
             <article class="d-flex flex-column col-12 col-xl-12">
@@ -38,10 +37,9 @@
                         <h1>About Us</h1>
                     </div>
                 </div>
-
                 <div class="row d-flex align-items-start mt-4 rounded overflow-hidden border-top mb-3">
                     <div class="col-md-6 mb-3 mb-md-0 p-0" style="height: 325px;">
-                      <img src="/assets/logo_square.png" alt="Logo Kode Fiksi" style="width:100%;height:100%;object-position:center;object-fit:cover;">
+                      <img src="/assets/logo_square.webp" alt="Logo Kode Fiksi" style="width:100%;height:100%;object-position:center;object-fit:cover;">
                     </div>
                     <div class="col-md-6">
                       <h2 class="fs-4 fw-bold mt-3">Tentang Kode Fiksi</h2>
@@ -50,15 +48,12 @@
                       </p>
                     </div>
                 </div>
-
                 <p style="text-align: justify">
                     Meski dibangun menggunakan framework yang ditujukan untuk kemudahan pengembangan aplikasi full-stack, Kode Fiksi tidak dibangun demikian. Aplikasi Front-End dan Back-End dibuat terpisah, sehingga memungkinkan pengembangan pada sisi client menjadi lebih luas atau tidak terbatas pada teknologi tertentu di masa yang akan datang. Baik selama pengembangan dan juga pembaruan konten, Kode Fiksi selalu ditemani oleh AI untuk membantu memaksimalkan hasil yang diinginkan.
                 </p>
-
                 <p style="text-align: justify">
                     Sebenarnya, pengembang (Suhaefi Fauzian) lebih dulu belajar JavaScript dengan NodeJS dan sudah ada beberapa proyek yang dibuat juga, baik itu proyek sendiri atau kelompok. Lantas kenapa mempelajari dan menggunakan Laravel? melihat dari pengalaman saat magang dan biaya deployment, perusahaan yang menggunakan PHP masih banyak di sekitar saya dan lebih murah daripada NodeJS. Tapi jika memiliki rezeki lebih mungkin Kode Fiksi akan pindah teknologi, itu pun jika aplikasi sekarang tidak dapat menghandle permintaan yang masuk dan memang sudah waktunya untuk terjun ke pasar yang lebih luas.
                 </p>
-
                 <h2 class="fs-4 fw-bold">Harapan</h2>
                 <p style="text-align: justify">
                     Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer. Konten yang disediakan dapat berupa berita, ulasan, dan tutorial. Hadirnya web ini juga diharapkan menjadi motivasi bagi penulis untuk terus belajar dan tidak bosan dalam membaca serta berbagi karya, dan juga dapat menjadi media pengembangan diri.

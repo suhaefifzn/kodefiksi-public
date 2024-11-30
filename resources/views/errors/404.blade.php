@@ -11,7 +11,7 @@
 @section('content')
 <div class="d-flex flex-column align-items-center justify-content-center gap-4 mt-5" id="contentWrapper">
     <div class="img-wrapper-404" class="col-12">
-        <img src="/assets/404.png" alt="404 Page Not Found" class="img-fluid">
+        <img src="/assets/404.webp" alt="404 Page Not Found - Icon by storyset.com" class="img-fluid">
     </div>
     <h1>404 NOT FOUND</h1>
     <p style="text-align: center; padding: 10px">

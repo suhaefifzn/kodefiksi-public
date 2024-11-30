@@ -3,7 +3,7 @@
         'author' => 'suhaefi21',
         'title' => 'Disclaimer',
         'url' => config('app.url') . '/disclaimer',
-        'description' => 'All the information on this website is published in good faith and for general information purpose only. kodefiksi.com does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (kodefiksi.com), is strictly at your own risk.',
+        'description' => 'All the information on this website is published in good faith and for general information purpose only.',
         'need_canonical' => true
     ]
 ])
@@ -29,7 +29,6 @@
             </ol>
         </div>
     </div>
-
     <div class="row">
         <div class="article-wrapper d-flex flex-column col-xl-8">
             <article class="d-flex flex-column col-12 col-xl-12">
@@ -38,7 +37,6 @@
                         <h1>Disclaimer</h1>
                     </div>
                 </div>
-
                 <div class="mt-4" id="articleBody">
                     <h2 class="fw-bold fs-4">Disclaimer for Kode Fiksi</h2>
                     <p>

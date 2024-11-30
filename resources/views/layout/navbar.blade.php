@@ -1,8 +1,8 @@
-<header class="position-fixed w-100" style="z-index: 9999" itemscope itemtype="https://schema.org/WPHeader">
+<header class="position-fixed w-100" style="z-index: 99999" itemscope itemtype="https://schema.org/WPHeader">
     <nav class="navbar bg-custom-1 fixed-top navbar-expand-lg" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Main navigation">
         <div class="container gap-0 gap-lg-4">
             <a href="/" class="text-decoration-none" itemprop="url">
-                <img src="/assets/logo.png" alt="Logo" width="36" class="d-inline-block align-text-top" itemprop="logo">
+                <img src="/assets/logo.webp" alt="Logo" width="36" class="d-inline-block align-text-top" itemprop="logo">
                 @if (Request::is('/'))
                 <h1 class="navbar-brand m-0 p-0 fw-bold d-none" itemprop="name">
                     Kode Fiksi

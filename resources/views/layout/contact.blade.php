@@ -3,7 +3,7 @@
         'author' => 'suhaefi21',
         'title' => 'Contact Us',
         'url' => config('app.url') . '/contact',
-        'description' => 'Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal yang ingin Anda sampaikan, bisa melalui alamat email suhaefi21@gmail.com atau Instagram suhaefi.ig.',
+        'description' => 'Apabila ada hal yang ingin Anda sampaikan, kirimkan ke alamat email kodefiksi@gmail.com.',
         'need_canonical' => true
     ]
 ])
@@ -25,7 +25,6 @@
             </ol>
         </div>
     </div>
-
     <div class="row" style="min-height: 560px">
         <div class="article-wrapper d-flex flex-column col-xl-8">
             <article class="d-flex flex-column col-12 col-xl-12">
@@ -34,7 +33,6 @@
                         <h1>Contact Us</h1>
                     </div>
                 </div>
-
                 <div class="mt-4" id="articleBody">
                     <p style="text-align: justify">
                         Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal penting yang ingin Anda sampaikan, hubungi kami melalui alamat email <a href="mailto:kodefiksi@gmail.com">kodefiksi@gmail.com</a>. Terima kasih atas pengertiannya.

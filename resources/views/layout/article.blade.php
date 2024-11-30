@@ -4,7 +4,7 @@
         'title' => isset($data['data']) ? $data['data']['title'] : 'Kode Fiksi',
         'author' => isset($data['data']) ? $data['data']['user']['username'] : 'kodefiksi',
         'keywords' => isset($data['data']) ? $data['data']['title'] : 'Anime, Manga, Game, Pemrograman, Tutorial Pemrograman',
-        'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['data']['img_thumbnail'] : '/assets/logo_square.png',
+        'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['data']['img_thumbnail'] : '/assets/logo_square.webp',
         'description' => isset($data['data']) ? $data['data']['excerpt'] : 'Artikel tidak ditemukan',
         'need_canonical' => true
     ]
@@ -38,7 +38,7 @@
                 </ol>
             </div>
         </div>
-
+        {{-- Article Content --}}
         <div class="row">
             <div class="article-wrapper d-flex flex-column col-xl-8">
                 <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
@@ -67,12 +67,11 @@
                             <img src="{!! $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid" itemprop="image">
                         </div>
                     </div>
-
+                    {{-- Article Content - Body --}}
                     <div class="mt-4" id="articleBody" itemprop="articleBody">
                         {!! $data['data']['body'] !!}
                     </div>
                 </article>
-
                 {{-- Related Articles --}}
                 <div class="col-12 col-xl-12 mt-3 bg-custom-3 rounded p-3" id="articleRelated">
                     <div class="related-title badge bg-custom-2 p-2 mb-3">
@@ -95,7 +94,8 @@
                         @endforeach
                     </div>
                 </div>
-
+                {{-- ShareThis --}}
+                <div class="sharethis-sticky-share-buttons"></div>
                 {{-- Disqus Comments --}}
                 <div id="disqus_thread" class="mt-5"></div>
                 <script>
@@ -113,7 +113,6 @@
                 </script>
                 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
-
             <div class="col-12 mt-3 col-xl-4 mt-xl-0">
                 @include('layout.sidebar', [
                     'data' => $data['data']['newest_articles']
