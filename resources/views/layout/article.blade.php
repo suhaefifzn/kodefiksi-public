@@ -73,7 +73,7 @@
                     </div>
                 </article>
                 {{-- ShareThis --}}
-                <div class="sharethis-sticky-share-buttons"></div>
+                <div class="sharethis-inline-share-buttons"></div>
                 {{-- Related Articles --}}
                 <div class="col-12 col-xl-12 mt-3 bg-custom-3 rounded p-3" id="articleRelated">
                     <div class="related-title badge bg-custom-2 p-2 mb-3">

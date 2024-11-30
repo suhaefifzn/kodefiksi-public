@@ -63,7 +63,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MSPM58JB');</script>
     {{-- ShareThis --}}
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=674ac9384d98db0019732bc7&product=sticky-share-buttons&source=platform" async="async"></script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=674ac9384d98db0019732bc7&product=inline-share-buttons&source=platform" async="async"></script>
     {{-- Search Action --}}
     <script type="application/ld+json">
         {
