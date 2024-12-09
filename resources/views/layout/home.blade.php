@@ -5,7 +5,7 @@
 ])
 @section('content')
 {{-- Hero --}}
-<div class="container-fluid py-5 mb-4 d-none d-md-flex justify-content-center"
+<div class="container-fluid py-5 mb-4 d-flex justify-content-center"
      style="background-image: url('{!! $data['articles']['latest']['img_thumbnail'] !!}');
             background-position: center;
             background-size: cover;
