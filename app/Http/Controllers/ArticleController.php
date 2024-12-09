@@ -16,10 +16,8 @@ class ArticleController extends Controller
         $this->articleService = new ArticleService();
     }
 
-    public function home(Request $request) {
-        $page = $request->query('page');
-        $response = $page ? $this->articleService->getArticles($page)
-            : $this->articleService->getArticles();
+    public function home() {
+        $response = $this->articleService->getArticlesHome();
         $data = $this->decodeJsonResponse($response);
 
         if (is_null($data['data']) || count($data['data']['articles']) === 0) {
@@ -28,7 +26,7 @@ class ArticleController extends Controller
 
         return view('layout.home', [
             'title' => !is_null($data['data']) ? (count($data['data']['articles']) > 0 ? 'Kode Fiksi' : '404 Page Not Found') : '404 Page Not Found',
-            'data' => $data
+            'data' => $data['data']
         ]);
     }
 

@@ -26,4 +26,8 @@ class ArticleService extends MyWebService {
     public function getArticlesBySearch($query, $page = 1) {
         return $this->get("?page=$page&search=$query");
     }
+
+    public function getArticlesHome() {
+        return $this->get('/home');
+    }
 }

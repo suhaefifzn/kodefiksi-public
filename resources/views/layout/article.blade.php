@@ -43,7 +43,10 @@
             <div class="article-wrapper d-flex flex-column col-xl-8">
                 <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
                     <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
-                        <div id="identity" class="small d-flex gap-3">
+                        <div class="align-self-start mt-1" id="articleTitle">
+                            <h1 itemprop="headline" class="fs-2">{!! $data['data']['title'] !!}</h1>
+                        </div>
+                        <div id="identity" class="small d-flex align-self-start gap-3">
                             <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Kategori" href="{!! route('category', $data['data']['category']['slug']) !!}" itemprop="articleSection">
                                 <i data-feather="bookmark" class="thumbnail-icon"></i>
                                 <span>{!! $data['data']['category']['name'] !!}</span>
@@ -59,9 +62,6 @@
                                 <i data-feather="user" class="thumbnail-icon"></i>
                                 <span itemprop="name">{!! $data['data']['user']['username'] !!}</span>
                             </a>
-                        </div>
-                        <div class="text-center mt-1" id="articleTitle">
-                            <h1 itemprop="headline">{!! $data['data']['title'] !!}</h1>
                         </div>
                         <div class="mt-5" id="articleThumbnail">
                             <img src="{!! $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid" itemprop="image">
