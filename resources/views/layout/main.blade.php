@@ -16,7 +16,7 @@
         <link rel="canonical" href="{!! Request::is('/') ? config('app.url') : $meta['url'] !!}">
     @endif
     <meta name="author" content="{!! isset($meta['author']) ? $meta['author'] : 'kodefiksi' !!}">
-    <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Anime, Manga, Game, Pemrograman, Tutorial Pemrograman' !!}">
+    <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Berita anime, review anime, berita game, tips dan tricks game,panduan game, Genshin Impact, Honkai: Star Rail, pemrograman, tutorial pemrograman, ngoding, kode, kode fiksi, kodefiksi.com' !!}">
     <meta name="description"
         content="{!! isset($meta['description']) ? $meta['description']
             : "Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit, hingga tutorial pemrograman untuk pemula dalam satu tempat." !!}"

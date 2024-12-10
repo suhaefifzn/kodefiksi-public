@@ -35,9 +35,18 @@ class ArticleController extends Controller
         $response = $page ? $this->articleService->getArticlesByCategory($categorySlug, $page)
             : $this->articleService->getArticlesByCategory($categorySlug);
         $data = $this->decodeJsonResponse($response);
+        $title = 'Kategori ' . ucfirst($categorySlug) . ($page ? ' - Page ' . $page : '');
+
+        if (empty($data['data']['articles'])) {
+            abort(404);
+        }
+
+        if ($page == '1') {
+            return redirect()->route('category', $categorySlug);
+        }
 
         return view('layout.category', [
-            'title' => 'Kategori - ' . ucfirst($categorySlug),
+            'title' => $title,
             'data' => $data,
             'category' => $categorySlug,
             'url' => config('app.url') . '/category/' . $categorySlug,
@@ -49,9 +58,18 @@ class ArticleController extends Controller
         $response = $page ? $this->articleService->getArticlesByAuthor($username, $page)
             : $this->articleService->getArticlesByAuthor($username);
         $data = $this->decodeJsonResponse($response);
+        $title = 'Penulis ' . $username . ($page ? ' - Page ' . $page : '');
+
+        if (is_null($data['data']) || empty($data['data']['articles'])) {
+            abort(404);
+        }
+
+        if ($page == '1') {
+            return redirect()->route('author', $username);
+        }
 
         return view('layout.author', [
-            'title' => 'Penulis - ' . $username,
+            'title' => $title,
             'data' => $data,
             'author' => $username,
             'url' => config('app.url') .'/author/' .  $username,
