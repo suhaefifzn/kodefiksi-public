@@ -31,14 +31,14 @@
     </div>
     <div class="row justify-content-center">
         <div class="article-wrapper d-flex flex-column col-xl-8">
-            <article class="d-flex flex-column col-12 col-xl-12">
+            <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                     <div class="text-center mt-1" id="articleTitle">
-                        <h1 class="fs-3 fw-bold">Privacy Policy</h1>
+                        <h1 class="fs-3 fw-bold" itemprop="name">Privacy Policy</h1>
                     </div>
                 </div>
 
-                <div class="mt-4" id="articleBody">
+                <div class="mt-4" id="articleBody" itemprop="articleBody">
                     <h2 class="fw-bold fs-4">Privacy Policy for Kode Fiksi</h2>
                     <p>
                         If you require any more information or have any questions about our privacy policy.

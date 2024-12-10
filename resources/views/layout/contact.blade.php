@@ -27,13 +27,13 @@
     </div>
     <div class="row justify-content-center" style="min-height: 580px">
         <div class="article-wrapper d-flex flex-column col-xl-8">
-            <article class="d-flex flex-column col-12 col-xl-12">
+            <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                     <div class="text-center mt-1" id="articleTitle">
-                        <h1 class="fs-3 fw-bold">Contact Us</h1>
+                        <h1 class="fs-3 fw-bold" itemprop="name">Contact Us</h1>
                     </div>
                 </div>
-                <div class="mt-4" id="articleBody">
+                <div class="mt-4" id="articleBody" itemprop="articleBody">
                     <p style="text-align: justify">
                         Saat ini kami belum memiliki kontak resmi untuk dihubungi perihal situs web ini. Namun bila ada pertanyaan atau hal penting yang ingin Anda sampaikan, hubungi kami melalui alamat email <a href="mailto:kodefiksi@gmail.com">kodefiksi@gmail.com</a>. Terima kasih atas pengertiannya.
                     </p>

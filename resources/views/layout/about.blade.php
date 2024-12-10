@@ -31,15 +31,15 @@
     </div>
     <div class="row justify-content-center">
         <div class="article-wrapper d-flex flex-column col-xl-8">
-            <article class="d-flex flex-column col-12 col-xl-12">
+            <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                     <div class="text-center mt-1" id="articleTitle">
-                        <h1 class="fs-3 fw-bold">About Us</h1>
+                        <h1 class="fs-3 fw-bold" itemprop="name">About Us</h1>
                     </div>
                 </div>
-                <div class="row d-flex align-items-start mt-4 rounded overflow-hidden border-top mb-3">
+                <div class="row d-flex align-items-start mt-4 rounded overflow-hidden border-top mb-3" itemprop="articleBody">
                     <div class="col-md-6 mb-3 mb-md-0 p-0" style="height: 325px;">
-                      <img src="/assets/logo_square.webp" alt="Logo Kode Fiksi" style="width:100%;height:100%;object-position:center;object-fit:cover;">
+                      <img src="/assets/logo_square.webp" alt="Logo Kode Fiksi" style="width:100%;height:100%;object-position:center;object-fit:cover;" itemprop="image">
                     </div>
                     <div class="col-md-6">
                       <h2 class="fs-4 fw-bold mt-3">Tentang Kode Fiksi</h2>
