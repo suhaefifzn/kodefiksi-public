@@ -14,7 +14,7 @@
      itemtype="https://schema.org/BlogPosting">
     {{-- Meta untuk itemprop image --}}
     <meta itemprop="image" content="{!! $data['articles']['latest']['img_thumbnail'] !!}">
-    <div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12"
+    <div class="p-3 p-md-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12"
          style="backdrop-filter: blur(6px) saturate(102%);
                 -webkit-backdrop-filter: blur(6px) saturate(102%);
                 background-color: rgba(255, 255, 255, 0.45);
@@ -23,7 +23,7 @@
         <div>
             <h2 class="fs-2 fw-bold display-3" itemprop="headline">{!! $data['articles']['latest']['title'] !!}</h2>
         </div>
-        <div class="d-flex gap-4 mb-2" id="thumbnailItems">
+        <div class="d-flex gap-2 mb-2 overflow-x-hidden" id="thumbnailItems">
             <div class="d-flex align-items-center gap-1" title="Kategori">
                 <i data-feather="bookmark" class="thumbnail-icon"></i>
                 <span itemprop="articleSection">{!! $data['articles']['latest']['category']['name'] !!}</span>
