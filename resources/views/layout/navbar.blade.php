@@ -2,7 +2,7 @@
     <nav class="navbar bg-custom-1 fixed-top navbar-expand-lg" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Main navigation">
         <div class="container gap-0 gap-lg-4">
             <a href="/" class="text-decoration-none" itemprop="url">
-                <img src="/assets/logo.webp" alt="Logo" width="36" class="d-inline-block align-text-top" itemprop="logo">
+                <img src="/assets/logo.webp" alt="Logo Kode Fiksi" width="36" class="d-inline-block align-text-top" itemprop="brand">
                 @if (Request::is('/'))
                 <h1 class="navbar-brand m-0 p-0 fw-bold d-none" itemprop="name">
                     Kode Fiksi
