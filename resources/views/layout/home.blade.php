@@ -55,20 +55,20 @@
     </div>
 </div>
 {{-- Cards per Category --}}
-<div class="container mt-3">
+<div class="row justify-content-center mt-3">
     @foreach($data['articles']['per_categories'] as $category)
         @if(count($category['articles']) > 0)
             <div class="text-center mb-4">
                 <span class="fs-3 fw-bold">{!! $category['name'] !!}</span>
             </div>
-            <div class="d-flex flex-wrap justify-content-center gap-4" id="contentWrapper">
+            <div class="d-flex flex-wrap col-12 gap-4 gap-xl-0 justify-content-center px-md-0 px-xl-3" id="contentWrapper">
                 @foreach($category['articles'] as $article)
-                <article class="card overflow-hidden col-12 col-md-5 col-lg-4 col-xl-3 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
+                <article class="card overflow-hidden col-12 col-md-8 col-lg-5 col-xl-4 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
                     <div class="wrapper-thumbnail">
                         <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}" itemprop="image">
                     </div>
-                    <div class="card-body">
-                        <h2 class="card-title fs-5 text-align-justify col-12" itemprop="headline">
+                    <div class="card-body p-2 p-xl-3">
+                        <h2 class="card-title fs-5" itemprop="headline">
                             <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-dark fw-bold" itemprop="url">
                                 {!! $article['title'] !!}
                             </a>

@@ -14,13 +14,13 @@
 @section('content')
     {{-- Wrapper untuk article cards --}}
     @if (isset($data['data']['articles']) && count($data['data']['articles']) > 0 && $data['status'] === 'success')
-        <div class="d-flex flex-wrap justify-content-center gap-4 mt-5" id="contentWrapper">
+        <div class="d-flex flex-wrap col-12 gap-4 gap-xl-0 justify-content-center px-md-0 px-xl-3 mt-5" id="contentWrapper">
             @foreach ($data['data']['articles'] as $article)
-                <article class="card overflow-hidden col-12 col-md-5 col-lg-4 col-xl-3 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
+                <article class="card overflow-hidden col-12 col-md-8 col-lg-5 col-xl-4 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
                     <div class="wrapper-thumbnail">
                         <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}" itemprop="image">
                     </div>
-                    <div class="card-body">
+                    <div class="card-body p-2 p-xl-3">
                         <h2 class="card-title fs-5 text-align-justify col-12" itemprop="headline">
                             <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-dark fw-bold" itemprop="url">
                                 {!! $article['title'] !!}

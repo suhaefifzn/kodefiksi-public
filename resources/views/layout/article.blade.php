@@ -75,15 +75,15 @@
                 {{-- ShareThis --}}
                 <div class="sharethis-inline-share-buttons my-3"></div>
                 {{-- Related Articles --}}
-                <div class="col-12 col-xl-12 mt-3 bg-custom-3 rounded p-3" id="articleRelated">
+                <div class="col-12 mt-3 bg-custom-3 rounded p-3" id="articleRelated">
                     <div class="related-title badge bg-custom-2 p-2 mb-3">
                         <span class="fw-bold fs-6">Related</span>
                     </div>
-                    <div class="card-wrapper row gap-3 p-4 p-md-3 justify-content-md-center justify-content-lg-around">
+                    <div class="card-wrapper row gap-3 gap-md-4 gap-xl-0 p-4 p-md-3 py-lg-4 px-lg-5 p-xl-0 m-xl-0 justify-content-center justify-content-xl-around">
                         @foreach ($data['data']['related_articles'] as $article)
-                            <div class="card col-12 col-md-5 col-lg-3 col-xl-3 p-0" itemscope itemtype="https://schema.org/BlogPosting">
-                                <div class="wrapper-thumbnail" style="height: 160px">
-                                    <img src="{!! $article['img_thumbnail'] !!}" alt="Thumbnail {!! $article['title'] !!}" class="card-img-top" loading="lazy" itemprop="image">
+                            <div class="card overflow-hidden col-10 col-md-5 col-xl-3 m-0 p-0 border-0" itemscope itemtype="https://schema.org/BlogPosting">
+                                <div class="wrapper-thumbnail" style="height:165px">
+                                    <img src="{!! $article['img_thumbnail'] !!}" alt="Thumbnail {!! $article['title'] !!}" class="card-img-top img-fluid" loading="lazy" itemprop="image">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="card-title fs-6" itemprop="headline">
