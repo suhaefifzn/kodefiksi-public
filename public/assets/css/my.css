@@ -169,6 +169,10 @@
     background: linear-gradient(135deg, #e1306c, #bc2a8d);
 }
 
+.social-icon.github:hover {
+    background: linear-gradient(135deg, #000000, #4b4949);
+}
+
 /* Default colors */
 .social-icon.youtube {
     background-color: #ff0000;
@@ -176,6 +180,10 @@
 
 .social-icon.instagram {
     background-color: #e1306c;
+}
+
+.social-icon.github {
+    background-color: #000000;
 }
 
 /* Icon size */
@@ -195,7 +203,7 @@
     text-align: center;
     padding: 15px;
     font-size: 14px;
-    z-index: 1000;
+    z-index: 94035;
 }
 
 #cookie-consent-banner p {

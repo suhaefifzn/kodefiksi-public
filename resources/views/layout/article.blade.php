@@ -77,23 +77,20 @@
                 {{-- Related Articles --}}
                 <div class="col-12 mt-3 bg-custom-3 rounded p-3" id="articleRelated">
                     <div class="related-title badge bg-custom-2 p-2 mb-3">
-                        <span class="fw-bold fs-6">Related</span>
+                        <h2 class="fs-6 fw-bold m-0">Related Articles</h2>
                     </div>
-                    <div class="card-wrapper row gap-3 gap-md-4 gap-xl-0 p-4 p-md-3 py-lg-4 px-lg-5 p-xl-0 m-xl-0 justify-content-center justify-content-xl-around">
-                        @foreach ($data['data']['related_articles'] as $article)
-                            <div class="card overflow-hidden col-10 col-md-5 col-xl-3 m-0 p-0 border-0" itemscope itemtype="https://schema.org/BlogPosting">
-                                <div class="wrapper-thumbnail" style="height:165px">
-                                    <img src="{!! $article['img_thumbnail'] !!}" alt="Thumbnail {!! $article['title'] !!}" class="card-img-top img-fluid" loading="lazy" itemprop="image">
-                                </div>
-                                <div class="card-body">
+                    <div class="card-wrapper col-12">
+                        <ul class="list-group list-group-flush rounded">
+                            @foreach ($data['data']['related_articles'] as $article)
+                                <li class="list-group-item text-break p-3" itemscope itemtype="https://schema.org/BlogPosting">
                                     <h3 class="card-title fs-6" itemprop="headline">
-                                        <a href="{!! route('article', $article['slug']) !!}" class="text-dark text-decoration-none" itemprop="url">
+                                        <a href="{!! route('article', $article['slug']) !!}" class="text-dark text-decoration-none link-primary link-underline-primary" itemprop="url">
                                             {!! $article['title'] !!}
                                         </a>
                                     </h3>
-                                </div>
-                            </div>
-                        @endforeach
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
                 {{-- Disqus Comments --}}
