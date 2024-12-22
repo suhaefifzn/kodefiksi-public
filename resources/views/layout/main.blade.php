@@ -78,6 +78,9 @@
           }
         }
     </script>
+    {{-- Adsense --}}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4725921226122209"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     {{-- Google Tag Manager --}}
