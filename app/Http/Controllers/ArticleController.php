@@ -116,16 +116,18 @@ class ArticleController extends Controller
 
     public function search(Request $request) {
         $validator = Validator::make($request->all(), [
-            'q' => 'required|string|min:3|max:100|regex:/^[a-zA-Z0-9\s]+$/',
+            'q' => 'required|string|min:3|max:100|regex:/^[a-zA-Z0-9\s:?!,\.@#\$%&\*\-]+$/',
             'page' => 'integer|min:1|max:100|regex:/^[a-zA-Z0-9\s]+$/'
         ]);
 
         $page = $request->query('page');
         $query = htmlspecialchars($request->input('q'));
+
         $data = [
             'title' => 'Search results for ' .  $query,
             'query' => $query
         ];
+
 
         if ($validator->fails()) {
             return view('layout.search', $data);
