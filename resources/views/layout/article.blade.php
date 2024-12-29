@@ -41,7 +41,7 @@
         {{-- Article Content --}}
         <div class="row">
             <div class="article-wrapper d-flex flex-column col-xl-8">
-                <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
+                <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/BlogPosting">
                     <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                         <div class="align-self-start mt-1" id="articleTitle">
                             <h1 itemprop="headline" class="fs-2">{!! $data['data']['title'] !!}</h1>
