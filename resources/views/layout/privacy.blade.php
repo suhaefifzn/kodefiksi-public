@@ -8,8 +8,8 @@
     ]
 ])
 @section('meta.article')
-<meta property="article:published_time" content="2024-10-10T02:05:41.003Z">
-<meta property="article:modified_time" content="2024-10-10T02:05:41.003Z">
+<meta property="article:published_time" content="2024-12-31T02:00:00.000Z">
+<meta property="article:modified_time" content="2024-12-31T02:00:00.000Z">
 @endsection
 @section('content')
     {{-- Wrapper untuk breadcrumb --}}
@@ -31,7 +31,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="article-wrapper d-flex flex-column col-xl-8">
-            <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
+            <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/BlogPosting">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                     <div class="text-center mt-1" id="articleTitle">
                         <h1 class="fs-3 fw-bold" itemprop="name">Privacy Policy</h1>
@@ -39,109 +39,101 @@
                 </div>
 
                 <div class="mt-4" id="articleBody" itemprop="articleBody">
-                    <h2 class="fw-bold fs-4">Privacy Policy for Kode Fiksi</h2>
-                    <p>
-                        If you require any more information or have any questions about our privacy policy.
+                    <p style="text-align: justify">
+                        Jika Anda membutuhkan informasi lebih lanjut atau memiliki pertanyaan terkait kebijakan privasi kami, jangan ragu untuk menghubungi kami.
                     </p>
-                    <p>
-                        At kodefiksi.com we consider the privacy of our visitors to be extremely important. This privacy policy document describes in detail the types of personal information is collected and recorded by kodefiksi.com and how we use it.
+                    <h2 class="fs-4">
+                        <strong>
+                            Kebijakan Privasi untuk Kode Fiksi
+                        </strong>
+                    </h2>
+                    <p style="text-align: justify">
+                        Di kodefiksi.com, privasi pengunjung kami sangat penting. Dokumen kebijakan privasi ini menjelaskan secara rinci jenis informasi pribadi yang dikumpulkan dan dicatat oleh kodefiksi.com serta bagaimana kami menggunakannya.
                     </p>
                     <strong class="fs-5">
-                        Log Files
+                        File Log
                     </strong>
-                    <p>
-                        Like many other Web sites, kodefiksi.com makes use of log files. These files merely logs visitors to the site - usually a standard procedure for hosting companies and a part of hosting services's analytics. The information inside the log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and possibly the number of clicks. This information is used to analyze trends, administer the site, track user's movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.
+                    <p style="text-align: justify">
+                        Seperti banyak situs web lainnya, kodefiksi.com menggunakan file log. File ini mencatat pengunjung ke situs – biasanya merupakan prosedur standar untuk perusahaan hosting dan bagian dari analisis layanan hosting. Informasi dalam file log mencakup alamat protokol internet (IP), jenis browser, Penyedia Layanan Internet (ISP), stempel tanggal/waktu, halaman rujukan/keluar, dan kemungkinan jumlah klik. Informasi ini digunakan untuk menganalisis tren, mengelola situs, melacak pergerakan pengguna di sekitar situs, dan mengumpulkan informasi demografis. Alamat IP dan informasi lainnya tidak terhubung dengan informasi yang dapat mengidentifikasi identitas pribadi.
                     </p>
                     <strong class="fs-5">
-                        Cookies and Web Beacons
+                        Cookies dan Web Beacon
                     </strong>
-                    <p>
-                        kodefiksi.com uses cookies to store information about visitors' preferences, to record user-specific information on which pages the site visitor accesses or visits, and to personalize or customize our web page content based upon visitors' browser type or other information that the visitor sends via their browser.
+                    <p style="text-align: justify">
+                        kodefiksi.com menggunakan cookies untuk menyimpan informasi tentang preferensi pengunjung, mencatat informasi spesifik pengguna pada halaman mana yang diakses atau dikunjungi, serta untuk mempersonalisasi atau menyesuaikan konten halaman web kami berdasarkan jenis browser pengunjung atau informasi lain yang dikirimkan melalui browser mereka.
                     </p>
                     <strong class="fs-5">
-                        DoubleClick DART Cookie
+                        Cookie DART DoubleClick
                     </strong>
                     <ul>
-                        <li>
-                            <p>
-                                Google, as a third party vendor, uses cookies to serve ads kodefiksi.com.
-                            </p>
+                        <li class="text-break">
+                            Google, sebagai vendor pihak ketiga, menggunakan cookies untuk menayangkan iklan di kodefiksi.com.
                         </li>
-                        <li>
-                            <p>
-                                Google's use of the DART cookie enables it to serve ads to our site's visitors based upon their visit to kodefiksi.com and other sites on the Internet.
-                            </p>
+                        <li class="text-break">
+                            Penggunaan cookie DART oleh Google memungkinkannya menayangkan iklan kepada pengunjung situs kami berdasarkan kunjungan mereka ke kodefiksi.com dan situs lainnya di internet.
                         </li>
-                        <li>
-                            <p>
-                                Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL - <a href="https://www.google.com/privacy_ads.html" title="Opt out of the Dart Cookie">https://www.google.com/privacy_ads.html</a>.
-                            </p>
+                        <li class="text-break">
+                            Pengguna dapat memilih untuk menonaktifkan penggunaan cookie DART dengan mengunjungi kebijakan privasi jaringan iklan dan konten Google di URL berikut: <a href="https://www.google.com/privacy_ads.html" title="Opt out of the Dart Cookie" target="_blank" rel="noreferrer noopener">https://www.google.com/privacy_ads.html</a>.
                         </li>
                     </ul>
                     <strong class="fs-5">
-                        Our Advertising Partners
+                        Mitra Iklan Kami
                     </strong>
-                    <p>
-                        Some of our advertising partners may use cookies and web beacons on our site. Our advertising partners include .......
+                    <p style="text-align: justify">
+                        Beberapa mitra periklanan kami mungkin menggunakan cookies dan web beacon di situs kami. Mitra periklanan kami meliputi:
                     </p>
                     <ul>
                         <li>Google</li>
-                        <li>Other</li>
+                        <li>Lainnya</li>
                     </ul>
-                    <p>
-                        <em>While each of these advertising partners has their own Privacy Policy for their site, an updated and hyperlinked resource is maintained here: <a href="http://www.privacypolicyonline.com/privacy-policies">Privacy Policies</a>.</em>
+                    <p style="text-align: justify">
+                        <em>Setiap mitra periklanan memiliki Kebijakan Privasi sendiri untuk situs mereka. Sumber daya yang diperbarui dan berisi tautan hypertext dapat ditemukan di sini: <a href="http://www.privacypolicyonline.com/privacy-policies" target="_blank" rel="noreferrer noopener">Kebijakan Privasi</a></em>.
                     </p>
-                    <p>
-                        <em>You may consult this listing to find the privacy policy for each of the advertising partners of kodefiksi.com.</em>
-                        <br>
-                        These third-party ad servers or ad networks use technology in their respective advertisements and links that appear on kodefiksi.com and which are sent directly to your browser. They automatically receive your IP address when this occurs. Other technologies (such as cookies, JavaScript, or Web Beacons) may also be used by our site's third-party ad networks to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on the site.
+                    <p style="text-align: justify">
+                        Anda dapat melihat daftar ini untuk menemukan kebijakan privasi masing-masing mitra periklanan kodefiksi.com. Server iklan pihak ketiga atau jaringan iklan menggunakan teknologi dalam iklan dan tautan mereka yang muncul di kodefiksi.com dan dikirim langsung ke browser Anda. Mereka secara otomatis menerima alamat IP Anda ketika ini terjadi. Teknologi lain (seperti cookies, JavaScript, atau Web Beacons) juga dapat digunakan oleh jaringan iklan pihak ketiga di situs kami untuk mengukur efektivitas kampanye iklan mereka dan/atau untuk mempersonalisasi konten iklan yang Anda lihat di situs.
                     </p>
-                    <p>
-                        kodefiksi.com has no access to or control over these cookies that are used by third-party advertisers.
+                    <p style="text-align: justify">
+                        kodefiksi.com tidak memiliki akses atau kontrol atas cookies yang digunakan oleh pengiklan pihak ketiga.
                     </p>
                     <strong class="fs-5">
-                        Third Party Privacy Policies
+                        Kebijakan Privasi Pihak Ketiga
                     </strong>
-                    <p>
-                        You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices.
+                    <p style="text-align: justify">
+                        Anda harus berkonsultasi dengan kebijakan privasi masing-masing server iklan pihak ketiga untuk informasi lebih rinci tentang praktik mereka serta untuk instruksi tentang cara memilih keluar dari praktik tertentu.
                     </p>
-                    <p>
-                        kodefiksi.com's privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites. You may find a comprehensive listing of these privacy policies and their links here: <a href="https://www.privacypolicyonline.com/privacy-policy-links" title="Privacy Policy Links">Privacy Policy Links</a>.
+                    <p style="text-align: justify">
+                        Kebijakan privasi kodefiksi.com tidak berlaku untuk, dan kami tidak dapat mengontrol aktivitas, pengiklan atau situs web lain tersebut. Anda dapat menemukan daftar lengkap kebijakan privasi ini beserta tautannya di sini: <a href="https://www.privacypolicyonline.com/privacy-policy-links" title="Privacy Policy Links" target="_blank" rel="noreferrer noopener">Tautan Kebijakan Privasi</a>.
                     </p>
-                    <p>
-                        If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers' respective websites. <a href="http://www.privacypolicyonline.com/what-are-cookies">What Are Cookies?</a>
+                    <p style="text-align: justify">
+                        Jika Anda ingin menonaktifkan cookies, Anda dapat melakukannya melalui opsi browser masing-masing. Informasi lebih rinci tentang pengelolaan cookies dengan browser tertentu dapat ditemukan di situs web browser masing-masing. <a href="http://www.privacypolicyonline.com/what-are-cookies" target="_blank" rel="noreferrer noopener">Apa Itu Cookies?</a>
                     </p>
                     <strong class="fs-5">
-                        Children's Information
+                        Informasi Anak
                     </strong>
-                    <p>
-                        We believe it is important to provide added protection for children online. We encourage parents and guardians to spend time online with their children to observe, participate in and/or monitor and guide their online activity.
-                        kodefiksi.com does not knowingly collect any personally identifiable information from children under the age of 13. If a parent or guardian believes that kodefiksi.com has in its database the personally-identifiable information of a child under the age of 13, please contact us immediately (using the contact in the first paragraph) and we will use our best efforts to promptly remove such information from our records.
+                    <p style="text-align: justify">
+                        Kami percaya penting untuk memberikan perlindungan tambahan bagi anak-anak secara online. Kami mendorong orang tua dan wali untuk menghabiskan waktu online bersama anak-anak mereka untuk mengamati, berpartisipasi, dan/atau memantau serta membimbing aktivitas online mereka. kodefiksi.com tidak dengan sengaja mengumpulkan informasi yang dapat diidentifikasi secara pribadi dari anak-anak di bawah usia 13 tahun. Jika orang tua atau wali percaya bahwa kodefiksi.com memiliki informasi pribadi anak di bawah usia 13 tahun dalam basis data kami, harap segera hubungi kami (menggunakan kontak di paragraf pertama), dan kami akan melakukan upaya terbaik kami untuk segera menghapus informasi tersebut dari catatan kami.
                     </p>
                     <strong class="fs-5">
-                        Online Privacy Policy Only
+                        Kebijakan Privasi Online Saja
                     </strong>
-                    <p>
-                        This privacy policy applies only to our online activities and is valid for visitors to our website and regarding information shared and/or collected there.
+                    <p style="text-align: justify">
+                        Kebijakan privasi ini hanya berlaku untuk aktivitas online kami dan berlaku untuk pengunjung situs web kami serta terkait dengan informasi yang dibagikan dan/atau dikumpulkan di sana.
                     </p>
-                    <p>
-                        This policy does not apply to any information collected offline or via channels other than this website.
+                    <p style="text-align: justify">
+                        Kebijakan ini tidak berlaku untuk informasi apa pun yang dikumpulkan secara offline atau melalui saluran selain situs web ini.
                     </p>
                     <strong class="fs-5">
-                        Consent
+                        Persetujuan
                     </strong>
-                    <p>
-                        By using our website, you hereby consent to our privacy policy and agree to its terms.
+                    <p style="text-align: justify">
+                        Dengan menggunakan situs web kami, Anda dengan ini menyetujui kebijakan privasi kami dan menyetujui ketentuan-ketentuannya.
                     </p>
                     <strong class="fs-5">
-                        Update
+                        Pembaruan
                     </strong>
-                    <p>
-                        This Privacy Policy was last updated on: October 10, 2024.
+                    <p style="text-align: justify">
+                        Kebijakan Privasi ini terakhir diperbarui pada: 31 Desember 2024. Jika kami memperbarui, mengubah, atau membuat perubahan apa pun pada kebijakan privasi kami, perubahan tersebut akan dipublikasikan di sini.
                     </p>
-                    <em>
-                        Should we update, amend or make any changes to our privacy policy, those changes will be posted here.
-                    </em>
                 </div>
             </article>
         </div>

@@ -3,13 +3,13 @@
         'author' => 'suhaefi21',
         'title' => 'Disclaimer',
         'url' => config('app.url') . '/disclaimer',
-        'description' => 'All the information on this website is published in good faith and for general information purpose only.',
+        'description' => 'Semua informasi yang tersedia di situs ini dipublikasikan dengan itikad baik dan hanya untuk tujuan informasi umum.',
         'need_canonical' => true
     ]
 ])
 @section('meta.article')
-<meta property="article:published_time" content="2024-10-10T02:05:41.003Z">
-<meta property="article:modified_time" content="2024-10-10T02:05:41.003Z">
+<meta property="article:published_time" content="2024-12-31T02:00:00.000Z">
+<meta property="article:modified_time" content="2024-12-31T02:00:00.000Z">
 @endsection
 @section('content')
     {{-- Wrapper untuk breadcrumb --}}
@@ -31,44 +31,42 @@
     </div>
     <div class="row justify-content-center">
         <div class="article-wrapper d-flex flex-column col-xl-8">
-            <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
+            <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/BlogPosting">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                     <div class="text-center mt-1" id="articleTitle">
                         <h1 class="fs-3 fw-bold" itemprop="name">Disclaimer</h1>
                     </div>
                 </div>
                 <div class="mt-4" id="articleBody" itemprop="articleBody">
-                    <h2 class="fw-bold fs-4">Disclaimer for Kode Fiksi</h2>
-                    <p>
-                        If you require any more information or have any questions about our site's disclaimer.
+                    <p style="text-align: justify">
+                        Jika Anda membutuhkan informasi lebih lanjut atau memiliki pertanyaan terkait disclaimer di situs kami, jangan ragu untuk menghubungi kami.
+                    </p>
+                    <h2 class="fs-4">
+                        <strong>
+                            Disclaimer untuk kodefiksi.com
+                        </strong>
+                    </h2>
+                    <p style="text-align: justify">
+                        Semua informasi yang tersedia di situs ini dipublikasikan dengan itikad baik dan hanya untuk tujuan informasi umum. kodefiksi.com tidak memberikan jaminan apa pun mengenai kelengkapan, keandalan, dan akurasi informasi tersebut. Segala tindakan yang Anda lakukan berdasarkan informasi yang Anda temukan di situs ini (kodefiksi.com) sepenuhnya merupakan risiko Anda sendiri. kodefiksi.com tidak bertanggung jawab atas kerugian dan/atau kerusakan sehubungan dengan penggunaan situs kami.
+                    </p>
+                    <p style="text-align: justify">
+                        Melalui situs kami, Anda dapat mengunjungi situs lain dengan mengikuti tautan ke situs eksternal tersebut. Meskipun kami berusaha menyediakan tautan berkualitas ke situs yang berguna dan etis, kami tidak memiliki kendali atas konten dan sifat situs-situs tersebut. Tautan ke situs lain tidak berarti kami merekomendasikan semua konten yang ditemukan di situs tersebut. Pemilik situs dan kontennya dapat berubah tanpa pemberitahuan sebelumnya, yang mungkin terjadi sebelum kami memiliki kesempatan untuk menghapus tautan yang mungkin sudah tidak relevan atau bermasalah.
+                    </p>
+                    <p style="text-align: justify">
+                        Harap disadari juga bahwa ketika Anda meninggalkan situs kami, situs lain mungkin memiliki kebijakan privasi dan ketentuan layanan yang berbeda, yang berada di luar kendali kami. Pastikan untuk memeriksa Kebijakan Privasi serta "Ketentuan Layanan" dari situs-situs tersebut sebelum melakukan bisnis apa pun atau mengunggah informasi apa pun.
                     </p>
                     <strong class="fs-5">
-                        Disclaimers for kodefiksi.com
+                        Persetujuan
                     </strong>
-                    <p>
-                        All the information on this website is published in good faith and for general information purpose only. kodefiksi.com does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (kodefiksi.com), is strictly at your own risk. kodefiksi.com will not be liable for any losses and/or damages in connection with the use of our website.
-                    </p>
-                    <p>
-                        From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone 'bad'.
-                    </p>
-                    <p>
-                        Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.
+                    <p style="text-align: justify">
+                        Dengan menggunakan situs kami, Anda dengan ini menyetujui disclaimer kami dan setuju dengan ketentuan-ketentuannya.
                     </p>
                     <strong class="fs-5">
-                        Consent
+                        Pembaruan
                     </strong>
-                    <p>
-                        By using our website, you hereby consent to our disclaimer and agree to its terms.
+                    <p style="text-align: justify">
+                        Disclaimer ini terakhir diperbarui pada: 31 Desember 2024. Jika kami memperbarui, mengubah, atau membuat perubahan apa pun pada dokumen ini, perubahan tersebut akan dipublikasikan secara jelas di sini.
                     </p>
-                    <strong class="fs-5">
-                        Update
-                    </strong>
-                    <p>
-                        This site disclaimer was last updated on: October 10, 2024.
-                    </p>
-                    <em>
-                        Should we update, amend or make any changes to this document, those changes will be prominently posted here.
-                    </em>
                 </div>
             </article>
         </div>

@@ -31,7 +31,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="article-wrapper d-flex flex-column col-xl-8">
-            <article class="d-flex flex-column col-12 col-xl-12" itemscope itemtype="https://schema.org/BlogPosting">
+            <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/BlogPosting">
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                     <div class="text-center mt-1" id="articleTitle">
                         <h1 class="fs-3 fw-bold" itemprop="name">About Us</h1>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <p style="text-align: justify">
-                    Meski dibangun menggunakan framework yang ditujukan untuk kemudahan pengembangan aplikasi full-stack, Kode Fiksi tidak dibangun demikian. Aplikasi Front-End dan Back-End dibuat terpisah, sehingga memungkinkan pengembangan pada sisi client menjadi lebih luas atau tidak terbatas pada teknologi tertentu di masa yang akan datang. Baik selama pengembangan dan juga pembaruan konten, Kode Fiksi selalu ditemani oleh AI untuk membantu memaksimalkan hasil yang diinginkan.
+                    Meski dibangun menggunakan framework yang ditujukan untuk kemudahan pengembangan aplikasi full-stack, Kode Fiksi tidak dibangun demikian. Aplikasi Front-End dan Back-End dibuat terpisah, sehingga memungkinkan pengembangan pada sisi client menjadi lebih luas atau tidak terbatas pada teknologi tertentu di masa yang akan datang.
                 </p>
                 <p style="text-align: justify">
                     Sebenarnya, saya lebih dulu belajar JavaScript dengan NodeJS dan sudah ada beberapa proyek yang dibuat juga, baik itu proyek sendiri atau kelompok. Lantas kenapa mempelajari dan menggunakan Laravel? melihat dari pengalaman saat magang dan biaya deployment, perusahaan yang menggunakan PHP masih banyak di sekitar saya dan lebih murah daripada NodeJS. Tapi jika memiliki rezeki lebih mungkin Kode Fiksi akan pindah teknologi, itu pun jika aplikasi sekarang tidak dapat menghandle permintaan yang masuk dan memang sudah waktunya untuk terjun ke pasar yang lebih luas.
