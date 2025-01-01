@@ -3,7 +3,7 @@
         'author' => 'suhaefi21',
         'title' => 'Privacy Policy',
         'url' => config('app.url') . '/privacy-policy',
-        'description' => 'At kodefiksi.com we consider the privacy of our visitors to be extremely important',
+        'description' => 'Di kodefiksi.com, privasi pengunjung kami sangat penting. Dokumen kebijakan privasi ini menjelaskan secara rinci jenis informasi pribadi yang dikumpulkan dan dicatat oleh kodefiksi.com serta bagaimana kami menggunakannya.',
         'need_canonical' => true
     ]
 ])
