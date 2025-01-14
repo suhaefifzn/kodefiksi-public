@@ -25,9 +25,9 @@
             <a href="https://www.youtube.com/@kodefiksi21" target="_blank" rel="noreferrer noopener" class="social-icon youtube" title="Kode Fiksi on YouTube">
                 <i data-feather="youtube"></i>
             </a>
-            <a href="https://instagram.com/kodefiksi.ig" target="_blank" rel="noreferrer noopener" class="social-icon instagram" title="Kode Fiksi on Instagram">
+            {{-- <a href="https://instagram.com/kodefiksi.ig" target="_blank" rel="noreferrer noopener" class="social-icon instagram" title="Kode Fiksi on Instagram">
                 <i data-feather="instagram"></i>
-            </a>
+            </a> --}}
             <a href="https://github.com/kodefiksi" target="_blank" rel="noreferrer noopener" class="social-icon github" title="Kode Fiksi on GitHub">
                 <i data-feather="github"></i>
             </a>

@@ -21,18 +21,18 @@
                 <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                     <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                         <a href="{!! route('home') !!}" class="text-decoration-none" itemprop="item">
-                            <span itemprop="name">Home</span>
+                            <span itemprop="name" title="Home">Home</span>
                         </a>
                         <meta itemprop="position" content="1" />
                     </li>
                     <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                         <a href="{!! route('category', $data['data']['category']['slug']) !!}" class="text-decoration-none" itemprop="item">
-                            <span itemprop="name">{!! $data['data']['category']['name'] !!}</span>
+                            <span itemprop="name" title="{!! $data['data']['category']['name'] !!}">{!! $data['data']['category']['name'] !!}</span>
                         </a>
                         <meta itemprop="position" content="2" />
                     </li>
                     <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <span itemprop="name">{!! $data['data']['title'] !!}</span>
+                        <span itemprop="name" title="{!! $data['data']['title'] !!}">{!! $data['data']['title'] !!}</span>
                         <meta itemprop="position" content="3" />
                     </li>
                 </ol>
@@ -63,7 +63,7 @@
                                 <span itemprop="name">{!! $data['data']['user']['username'] !!}</span>
                             </a>
                         </div>
-                        <div class="mt-5" id="articleThumbnail">
+                        <div class="mt-3" id="articleThumbnail">
                             <img src="{!! $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid" itemprop="image">
                         </div>
                     </div>
