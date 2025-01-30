@@ -78,9 +78,6 @@
           }
         }
     </script>
-    {{-- Adsense --}}
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4725921226122209"
-     crossorigin="anonymous"></script>
 </head>
 <body>
     {{-- Google Tag Manager --}}
@@ -95,14 +92,6 @@
     </div>
     {{-- Footer --}}
     @include('layout.footer')
-    {{-- Cookie Consent Banner --}}
-    <div id="cookie-consent-banner" style="display: none;">
-        <p>Website ini menggunakan cookie untuk meningkatkan pengalaman Anda.
-           Dengan melanjutkan, Anda menyetujui kebijakan kami.
-           <a href="/privacy-policy" target="_blank">Pelajari lebih lanjut</a>.
-        </p>
-        <button id="accept-cookie">Saya Setuju</button>
-    </div>
     {{-- Scripts --}}
     {{-- Bootstrap 5 --}}
     <script src="/assets/js/bootstrap.min.js"></script>
@@ -118,35 +107,12 @@
         // Google Analytics
         gtag('js', new Date());
         gtag('config', 'G-1W9MCGQS74');
-
-        document.addEventListener("DOMContentLoaded", function() {
-            if (!localStorage.getItem("cookieConsent")) {
-                gtag('consent', 'default', {
-                    'ad_storage': 'granted',
-                    'ad_user_data': 'denied',
-                    'ad_personalization': 'denied',
-                    'analytics_storage': 'granted'
-                });
-                document.getElementById("cookie-consent-banner").style.display = "block";
-            } else {
-                activateAnalytics();
-            }
-
-            document.getElementById("accept-cookie").addEventListener("click", function() {
-                localStorage.setItem("cookieConsent", "accepted");
-                document.getElementById("cookie-consent-banner").style.display = "none";
-                activateAnalytics();
-            });
+        gtag('consent', 'default', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
         });
-
-        function activateAnalytics() {
-            gtag('consent', 'update', {
-                'ad_storage': 'granted',
-                'ad_user_data': 'granted',
-                'ad_personalization': 'granted',
-                'analytics_storage': 'granted'
-            });
-        }
     </script>
 </body>
 </html>
