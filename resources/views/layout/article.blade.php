@@ -72,7 +72,7 @@
                         {!! $data['data']['body'] !!}
                     </div>
                 </article>
-                {{-- Related Articles --}}
+                {{-- Featured Articles --}}
                 <div class="col-12 mt-3 bg-custom-3 rounded p-3" id="articleRelated">
                     <div class="related-title badge bg-custom-2 p-2 mb-3">
                         <h2 class="fs-6 fw-bold m-0">Featured Articles</h2>
