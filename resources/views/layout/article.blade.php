@@ -21,18 +21,18 @@
                 <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                     <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                         <a href="{!! route('home') !!}" class="text-decoration-none" itemprop="item">
-                            <span itemprop="name" title="Home">Home</span>
+                            <span itemprop="name">Home</span>
                         </a>
                         <meta itemprop="position" content="1" />
                     </li>
                     <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                         <a href="{!! route('category', $data['data']['category']['slug']) !!}" class="text-decoration-none" itemprop="item">
-                            <span itemprop="name" title="{!! $data['data']['category']['name'] !!}">{!! $data['data']['category']['name'] !!}</span>
+                            <span itemprop="name">{!! $data['data']['category']['name'] !!}</span>
                         </a>
                         <meta itemprop="position" content="2" />
                     </li>
                     <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <span itemprop="name" title="{!! $data['data']['title'] !!}">{!! $data['data']['title'] !!}</span>
+                        <span itemprop="name">{!! $data['data']['title'] !!}</span>
                         <meta itemprop="position" content="3" />
                     </li>
                 </ol>
@@ -75,7 +75,7 @@
                 {{-- Related Articles --}}
                 <div class="col-12 mt-3 bg-custom-3 rounded p-3" id="articleRelated">
                     <div class="related-title badge bg-custom-2 p-2 mb-3">
-                        <h2 class="fs-6 fw-bold m-0">Related Articles</h2>
+                        <h2 class="fs-6 fw-bold m-0">Featured Articles</h2>
                     </div>
                     <div class="card-wrapper col-12">
                         <ul class="list-group list-group-flush rounded">
