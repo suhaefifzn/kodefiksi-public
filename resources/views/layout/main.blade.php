@@ -16,7 +16,7 @@
         <link rel="canonical" href="{!! Request::is('/') ? config('app.url') : $meta['url'] !!}">
     @endif
     <meta name="author" content="{!! isset($meta['author']) ? $meta['author'] : 'kodefiksi' !!}">
-    <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Berita anime, review anime, berita game, tips dan tricks game,panduan game, Genshin Impact, Honkai: Star Rail, pemrograman, tutorial pemrograman, ngoding, kode, kode fiksi, kodefiksi.com' !!}">
+    <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Anime, Game, Pemrograman, Kode Fiksi, kodefiksi.com' !!}">
     <meta name="description"
         content="{!! isset($meta['description']) ? $meta['description']
             : "Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit, hingga tutorial pemrograman untuk pemula dalam satu tempat." !!}"
@@ -62,8 +62,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MSPM58JB');</script>
-    {{-- ShareThis --}}
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=674ac9384d98db0019732bc7&product=inline-share-buttons&source=platform" async="async"></script>
     {{-- Search Action --}}
     <script type="application/ld+json">
         {
@@ -80,10 +78,10 @@
     </script>
 </head>
 <body>
-    {{-- Google Tag Manager --}}
+    {{-- Google Tag Manager
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSPM58JB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
+    </noscript> --}}
     {{-- Navigation Bar --}}
     @include('layout.navbar')
     <div class="clearfix"></div>

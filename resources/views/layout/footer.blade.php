@@ -31,7 +31,7 @@
 
         <div class="kodefiksi-credit bg-custom-1 d-flex justify-content-center text-center py-3">
             <span class="small credit-text" itemprop="copyrightHolder">
-                &copy; {{ date('Y') == 2024 ? date('Y') : '2024 - ' . date('Y') }} <b>Kode Fiksi</b> All Rights Reserved
+                <b>&copy; {{ date('Y') == 2024 ? date('Y') : '2024 - ' . date('Y') }} Kode Fiksi</b>. All Rights Reserved.
             </span>
         </div>
     </div>
