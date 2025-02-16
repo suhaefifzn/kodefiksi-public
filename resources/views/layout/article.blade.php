@@ -81,11 +81,11 @@
                         <ul class="list-group list-group-flush rounded">
                             @foreach ($data['data']['related_articles'] as $article)
                                 <li class="list-group-item text-break p-3" itemscope itemtype="https://schema.org/BlogPosting">
-                                    <h3 class="card-title fs-6" itemprop="headline">
+                                    <span class="card-title" itemprop="headline">
                                         <a href="{!! route('article', $article['slug']) !!}" class="text-dark text-decoration-none link-primary link-underline-primary" itemprop="url">
                                             {!! $article['title'] !!}
                                         </a>
-                                    </h3>
+                                    </span>
                                 </li>
                             @endforeach
                         </ul>
