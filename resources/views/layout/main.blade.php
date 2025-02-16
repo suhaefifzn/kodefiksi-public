@@ -78,8 +78,8 @@
     </script>
 </head>
 <body>
-    {{-- Google Tag Manager
-    <noscript>
+    {{-- Google Tag Manager --}}
+    {{-- <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSPM58JB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript> --}}
     {{-- Navigation Bar --}}
@@ -96,7 +96,6 @@
     @yield('scripts')
     <script>
         feather.replace();
-        hljs.highlightAll();
 
         // Define dataLayer and gtag function
         window.dataLayer = window.dataLayer || [];
