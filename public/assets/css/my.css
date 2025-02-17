@@ -247,7 +247,7 @@
 
 @media (max-width: 1028px) {
     #breadcrumbWrapper .active {
-        width: 175px!important;
+        width: 120px!important;
         overflow: hidden!important;
         white-space: nowrap!important;
         text-overflow: ellipsis!important;

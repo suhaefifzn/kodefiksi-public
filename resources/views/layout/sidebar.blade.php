@@ -4,7 +4,7 @@
             <h2 class="fs-6 fw-bold m-0">Latest Articles</h2>
         </div>
         <div class="widget-content">
-            <ul class="d-flex flex-column gap-2">
+            <ul class="d-flex flex-column gap-1">
                 @foreach ($data as $row)
                 <li class="d-flex rounded overflow-hidden bg-light px-3">
                     <div class="item-title d-flex align-items-center">

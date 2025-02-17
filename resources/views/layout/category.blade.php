@@ -17,9 +17,15 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="{!! route('category.index') !!}" class="text-decoration-none" itemprop="item">
+                        <span itemprop="name">Category</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
                 <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <span itemprop="name">{!! ucfirst($category) !!}</span>
-                    <meta itemprop="position" content="2" />
+                    <meta itemprop="position" content="3" />
                 </li>
             </ol>
         </div>

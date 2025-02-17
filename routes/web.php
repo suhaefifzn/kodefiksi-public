@@ -11,6 +11,8 @@ Route::controller(ArticleController::class)
         Route::get('/disclaimer', 'disclaimer')->name('disclaimer');
         Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
         Route::get('/search', 'search')->name('search')->middleware('throttle:10,1');
+        Route::get('/category', 'categoryIndex')->name('category.index');
+        Route::get('/author', 'authorIndex')->name('author.index');
         Route::get('/category/{slug}', 'category')->name('category');
         Route::get('/author/{slug}', 'author')->name('author');
         Route::get('/{slug}', 'article')->name('article');

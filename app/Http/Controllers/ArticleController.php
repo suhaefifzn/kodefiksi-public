@@ -150,4 +150,27 @@ class ArticleController extends Controller
             'query' => $query
         ]);
     }
+
+    public function categoryIndex() {
+        $data = [
+            'slug' => 'category',
+            'title' => 'List Kategori'
+        ];
+
+        return view('layout.category_index', [
+            'title' => $data['title'],
+            'data' => $data,
+        ]);
+    }
+    public function authorIndex() {
+        $data = [
+            'slug' => 'author',
+            'title' => 'List Penulis'
+        ];
+
+        return view('layout.author_index', [
+            'title' => $data['title'],
+            'data' => $data,
+        ]);
+    }
 }
