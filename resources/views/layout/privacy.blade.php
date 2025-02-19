@@ -102,10 +102,10 @@
                         Anda harus berkonsultasi dengan kebijakan privasi masing-masing server iklan pihak ketiga untuk informasi lebih rinci tentang praktik mereka serta untuk instruksi tentang cara memilih keluar dari praktik tertentu.
                     </p>
                     <p style="text-align: justify">
-                        Kebijakan privasi kodefiksi.com tidak berlaku untuk, dan kami tidak dapat mengontrol aktivitas, pengiklan atau situs web lain tersebut. Anda dapat menemukan daftar lengkap kebijakan privasi ini beserta tautannya di sini: <a href="https://www.privacypolicyonline.com/privacy-policy-links" title="Privacy Policy Links" target="_blank" rel="noreferrer noopener">Tautan Kebijakan Privasi</a>.
+                        Kebijakan privasi kodefiksi.com tidak berlaku untuk, dan kami tidak dapat mengontrol aktivitas, pengiklan atau situs web lain tersebut. Anda dapat menemukan daftar lengkap kebijakan privasi ini beserta tautannya di sini: <a href="https://www.privacypolicyonline.com/privacy-policy-links/" title="Privacy Policy Links" target="_blank" rel="noreferrer noopener">Tautan Kebijakan Privasi</a>.
                     </p>
                     <p style="text-align: justify">
-                        Jika Anda ingin menonaktifkan cookies, Anda dapat melakukannya melalui opsi browser masing-masing. Informasi lebih rinci tentang pengelolaan cookies dengan browser tertentu dapat ditemukan di situs web browser masing-masing. <a href="http://www.privacypolicyonline.com/what-are-cookies" target="_blank" rel="noreferrer noopener">Apa Itu Cookies?</a>
+                        Jika Anda ingin menonaktifkan cookies, Anda dapat melakukannya melalui opsi browser masing-masing. Informasi lebih rinci tentang pengelolaan cookies dengan browser tertentu dapat ditemukan di situs web browser masing-masing. <a href="http://www.privacypolicyonline.com/what-are-cookies/" target="_blank" rel="noreferrer noopener">Apa Itu Cookies?</a>
                     </p>
                     <strong class="fs-5">
                         Informasi Anak
