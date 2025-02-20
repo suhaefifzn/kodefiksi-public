@@ -21,14 +21,14 @@
                 border-radius: 12px;
                 border: 1px solid rgba(209, 213, 219, 0.3);">
         <div>
-            <h2 class="fs-2 fw-bold display-3" itemprop="headline">{!! $data['articles']['latest']['title'] !!}</h2>
+            <h2 class="fs-2 fw-bold display-3 text-dark" itemprop="headline">{!! $data['articles']['latest']['title'] !!}</h2>
         </div>
         <div class="d-flex gap-2 mb-2 overflow-x-hidden" id="thumbnailItems">
-            <div class="d-flex align-items-center gap-1" title="Kategori">
+            <div class="d-flex align-items-center gap-1 text-dark" title="Kategori">
                 <i data-feather="bookmark" class="thumbnail-icon"></i>
                 <span itemprop="articleSection">{!! $data['articles']['latest']['category']['name'] !!}</span>
             </div>
-            <div class="d-flex align-items-center gap-1" title="Tanggal Dibuat">
+            <div class="d-flex align-items-center gap-1 text-dark" title="Tanggal Dibuat">
                 <i data-feather="calendar" class="thumbnail-icon"></i>
                 @php
                     $date = new DateTime($data['articles']['latest']['created_at']);
@@ -36,7 +36,7 @@
                 @endphp
                 <span itemprop="datePublished" content="{{ $date->format('Y-m-d') }}">{!! $formattedDate !!}</span>
             </div>
-            <div class="d-flex align-items-center gap-1" title="Penulis">
+            <div class="d-flex align-items-center gap-1 text-dark" title="Penulis">
                 <i data-feather="user" class="thumbnail-icon"></i>
                 <span itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <span itemprop="name">{{ $data['articles']['latest']['user']['username'] }}</span>
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="lc-block col-md-8">
-            <p itemprop="description">{!! $data['articles']['latest']['excerpt'] !!}</p>
+            <p itemprop="description" class="text-dark">{!! $data['articles']['latest']['excerpt'] !!}</p>
         </div>
         <div>
             <a class="btn btn-dark bg-custom-1"
@@ -69,7 +69,7 @@
                     </div>
                     <div class="card-body p-2 p-xl-3">
                         <h2 class="card-title fs-5" itemprop="headline">
-                            <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-dark fw-bold" itemprop="url">
+                            <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-light fw-bold" itemprop="url">
                                 {!! $article['title'] !!}
                             </a>
                         </h2>

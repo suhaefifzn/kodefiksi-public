@@ -41,7 +41,7 @@
                     </div>
                     <div class="card-body p-2 p-xl-3">
                         <h2 class="card-title fs-5 col-12" itemprop="headline">
-                            <a href="{!! '/' . $article['slug'] !!}" class="text-decoration-none text-dark fw-bold" itemprop="url">
+                            <a href="{!! '/' . $article['slug'] !!}" class="text-decoration-none text-light fw-bold" itemprop="url">
                                 {!! $article['title'] !!}
                             </a>
                         </h2>

@@ -53,7 +53,7 @@
                             <h1 itemprop="headline" class="fs-2">{!! $data['data']['title'] !!}</h1>
                         </div>
                         <div id="identity" class="small d-flex align-self-start gap-3">
-                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Kategori" href="{!! route('category', $data['data']['category']['slug']) !!}" itemprop="articleSection">
+                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-light" title="Kategori" href="{!! route('category', $data['data']['category']['slug']) !!}" itemprop="articleSection">
                                 <i data-feather="bookmark" class="thumbnail-icon"></i>
                                 <span>{!! $data['data']['category']['name'] !!}</span>
                             </a>
@@ -64,7 +64,7 @@
                                 <i data-feather="calendar" class="thumbnail-icon"></i>
                                 <span itemprop="datePublished" content="{{ (new DateTime($data['data']['created_at']))->format('Y-m-d') }}">{!! $formattedDate !!}</span>
                             </div>
-                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-dark" title="Penulis" href="{!! route('author', $data['data']['user']['username']) !!}" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-light" title="Penulis" href="{!! route('author', $data['data']['user']['username']) !!}" itemprop="author" itemscope itemtype="https://schema.org/Person">
                                 <i data-feather="user" class="thumbnail-icon"></i>
                                 <span itemprop="name">{!! $data['data']['user']['username'] !!}</span>
                             </a>
@@ -88,7 +88,7 @@
                             @foreach ($data['data']['related_articles'] as $article)
                                 <li class="list-group-item text-break p-3" itemscope itemtype="https://schema.org/BlogPosting">
                                     <span class="card-title small" itemprop="headline">
-                                        <a href="{!! route('article', $article['slug']) !!}" class="text-dark text-decoration-none link-primary link-underline-primary" itemprop="url">
+                                        <a href="{!! route('article', $article['slug']) !!}" class="text-light text-decoration-none link-primary link-underline-primary" itemprop="url">
                                             {!! $article['title'] !!}
                                         </a>
                                     </span>

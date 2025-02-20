@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" dir="ltr">
+<html lang="id" dir="ltr" data-bs-theme="dark">
 <head>
     <title>{!! isset($title) ? $title : 'Kode Fiksi' !!}</title>
     {{-- Meta Tags --}}

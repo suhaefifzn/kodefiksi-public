@@ -22,7 +22,7 @@
                     </div>
                     <div class="card-body p-2 p-xl-3">
                         <h2 class="card-title fs-5 text-align-justify col-12" itemprop="headline">
-                            <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-dark fw-bold" itemprop="url">
+                            <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-light fw-bold" itemprop="url">
                                 {!! $article['title'] !!}
                             </a>
                         </h2>
@@ -60,19 +60,19 @@
             'query' => $query
         ])
     @else
-        <div class="d-flex flex-column justify-content-center justify-content-center my-5" id="contentWrapper" style="min-height: 460px">
+        <div class="d-flex flex-column justify-content-center justify-content-center my-5 bg-dark" id="contentWrapper" style="min-height: 460px">
             <p>Maaf, sepertinya artikel yang Anda cari tidak tersedia.</p>
-            <div class="table-of-content">
+            <div class="bg-dark">
                 <h2 class="fs-5 fw-bold">Rekomendasi</h2>
-                <ul>
-                    <li>
-                        <a href="/category/anime">Anime</a>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="/category/anime" class="text-decoration-none">Anime</a>
                     </li>
-                    <li>
-                        <a href="/category/game">Game</a>
+                    <li class="list-group-item">
+                        <a href="/category/game" class="text-decoration-none">Game</a>
                     </li>
-                    <li>
-                        <a href="/category/pemrograman">Pemrograman</a>
+                    <li class="list-group-item">
+                        <a href="/category/pemrograman" class="text-decoration-none">Pemrograman</a>
                     </li>
                 </ul>
             </div>
