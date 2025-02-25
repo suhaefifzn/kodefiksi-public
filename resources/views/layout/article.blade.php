@@ -86,9 +86,9 @@
                     <div class="card-wrapper col-12">
                         <ul class="list-group list-group-flush rounded">
                             @foreach ($data['data']['related_articles'] as $article)
-                                <li class="list-group-item text-break p-3" itemscope itemtype="https://schema.org/BlogPosting">
-                                    <span class="card-title small" itemprop="headline">
-                                        <a href="{!! route('article', $article['slug']) !!}" class="text-light text-decoration-none link-primary link-underline-primary" itemprop="url">
+                                <li class="list-group-item text-break p-3">
+                                    <span class="card-title small">
+                                        <a href="{!! route('article', $article['slug']) !!}" class="text-light text-decoration-none link-primary link-underline-primary">
                                             {!! $article['title'] !!}
                                         </a>
                                     </span>
