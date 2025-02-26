@@ -87,9 +87,6 @@
                         <li>Lainnya</li>
                     </ul>
                     <p style="text-align: justify">
-                        <em>Setiap mitra periklanan memiliki Kebijakan Privasi sendiri untuk situs mereka. Sumber daya yang diperbarui dan berisi tautan hypertext dapat ditemukan di sini: <a href="http://www.privacypolicyonline.com/privacy-policies" target="_blank" rel="noreferrer noopener">Kebijakan Privasi</a></em>.
-                    </p>
-                    <p style="text-align: justify">
                         Anda dapat melihat daftar ini untuk menemukan kebijakan privasi masing-masing mitra periklanan kodefiksi.com. Server iklan pihak ketiga atau jaringan iklan menggunakan teknologi dalam iklan dan tautan mereka yang muncul di kodefiksi.com dan dikirim langsung ke browser Anda. Mereka secara otomatis menerima alamat IP Anda ketika ini terjadi. Teknologi lain (seperti cookies, JavaScript, atau Web Beacons) juga dapat digunakan oleh jaringan iklan pihak ketiga di situs kami untuk mengukur efektivitas kampanye iklan mereka dan/atau untuk mempersonalisasi konten iklan yang Anda lihat di situs.
                     </p>
                     <p style="text-align: justify">
@@ -101,17 +98,11 @@
                     <p style="text-align: justify">
                         Anda harus berkonsultasi dengan kebijakan privasi masing-masing server iklan pihak ketiga untuk informasi lebih rinci tentang praktik mereka serta untuk instruksi tentang cara memilih keluar dari praktik tertentu.
                     </p>
-                    <p style="text-align: justify">
-                        Kebijakan privasi kodefiksi.com tidak berlaku untuk, dan kami tidak dapat mengontrol aktivitas, pengiklan atau situs web lain tersebut. Anda dapat menemukan daftar lengkap kebijakan privasi ini beserta tautannya di sini: <a href="https://www.privacypolicyonline.com/privacy-policy-links/" title="Privacy Policy Links" target="_blank" rel="noreferrer noopener">Tautan Kebijakan Privasi</a>.
-                    </p>
-                    <p style="text-align: justify">
-                        Jika Anda ingin menonaktifkan cookies, Anda dapat melakukannya melalui opsi browser masing-masing. Informasi lebih rinci tentang pengelolaan cookies dengan browser tertentu dapat ditemukan di situs web browser masing-masing. <a href="http://www.privacypolicyonline.com/what-are-cookies/" target="_blank" rel="noreferrer noopener">Apa Itu Cookies?</a>
-                    </p>
                     <strong class="fs-5">
                         Informasi Anak
                     </strong>
                     <p style="text-align: justify">
-                        Kami percaya penting untuk memberikan perlindungan tambahan bagi anak-anak secara online. Kami mendorong orang tua dan wali untuk menghabiskan waktu online bersama anak-anak mereka untuk mengamati, berpartisipasi, dan/atau memantau serta membimbing aktivitas online mereka. kodefiksi.com tidak dengan sengaja mengumpulkan informasi yang dapat diidentifikasi secara pribadi dari anak-anak di bawah usia 13 tahun. Jika orang tua atau wali percaya bahwa kodefiksi.com memiliki informasi pribadi anak di bawah usia 13 tahun dalam basis data kami, harap segera hubungi kami (menggunakan kontak di paragraf pertama), dan kami akan melakukan upaya terbaik kami untuk segera menghapus informasi tersebut dari catatan kami.
+                        Kami percaya penting untuk memberikan perlindungan tambahan bagi anak-anak secara online. Kami mendorong orang tua dan wali untuk menghabiskan waktu online bersama anak-anak mereka untuk mengamati, berpartisipasi, dan/atau memantau serta membimbing aktivitas online mereka. kodefiksi.com dapat tidak sengaja mengumpulkan informasi yang dapat diidentifikasi secara pribadi dari anak-anak di bawah usia 13 tahun yang disebabkan oleh Cookies dan Web Beacon.
                     </p>
                     <strong class="fs-5">
                         Kebijakan Privasi Online Saja
@@ -132,7 +123,7 @@
                         Pembaruan
                     </strong>
                     <p style="text-align: justify">
-                        Kebijakan Privasi ini terakhir diperbarui pada: 31 Desember 2024. Jika kami memperbarui, mengubah, atau membuat perubahan apa pun pada kebijakan privasi kami, perubahan tersebut akan dipublikasikan di sini.
+                        Kebijakan Privasi ini terakhir diperbarui pada: 26 Februari 2025. Jika kami memperbarui, mengubah, atau membuat perubahan apa pun pada kebijakan privasi kami, perubahan tersebut akan dipublikasikan di sini.
                     </p>
                 </div>
             </article>
