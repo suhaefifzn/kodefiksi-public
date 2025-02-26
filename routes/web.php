@@ -10,7 +10,7 @@ Route::controller(ArticleController::class)
         Route::get('/contact', 'contact')->name('contact');
         Route::get('/disclaimer', 'disclaimer')->name('disclaimer');
         Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
-        Route::get('/search', 'search')->name('search')->middleware('throttle:10,1');
+        Route::get('/search', 'search')->name('search');
         Route::get('/category', 'categoryIndex')->name('category.index');
         Route::get('/author', 'authorIndex')->name('author.index');
         Route::get('/category/{slug}', 'category')->name('category');
