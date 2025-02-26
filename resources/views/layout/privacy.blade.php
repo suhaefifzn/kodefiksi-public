@@ -8,8 +8,8 @@
     ]
 ])
 @section('meta.article')
-<meta property="article:published_time" content="2024-12-31T02:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-31T02:00:00.000Z">
+<meta property="article:published_time" content="2024-12-31T02:00:00+07:00">
+<meta property="article:modified_time" content="2025-02-26T07:25:00+07:00">
 @endsection
 @section('content')
     {{-- Wrapper untuk breadcrumb --}}
