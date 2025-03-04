@@ -15,7 +15,7 @@
     @if ($meta['need_canonical'])
         <link rel="canonical" href="{!! Request::is('/') ? config('app.url') : $meta['url'] !!}">
     @endif
-    <meta name="author" content="{!! isset($meta['author']) ? $meta['author'] : 'kodefiksi' !!}">
+    <meta name="author" content="{!! isset($meta['author']) ? $meta['author'] : 'suhaefi21' !!}">
     <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Anime, Game, Pemrograman, Kode Fiksi, kodefiksi.com' !!}">
     <meta name="description"
         content="{!! isset($meta['description']) ? $meta['description']
@@ -62,20 +62,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MSPM58JB');</script>
-    {{-- Search Action --}}
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "url": "{{ config('app.url') }}",
-          "name": "Kode Fiksi",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "{{ config('app.url') }}/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        }
-    </script>
 </head>
 <body>
     {{-- Google Tag Manager --}}

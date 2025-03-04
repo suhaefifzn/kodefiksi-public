@@ -1,10 +1,6 @@
 <footer class="mt-5" itemscope itemtype="https://schema.org/WPFooter">
     <div class="bg-custom-2 px-0">
-        <div class="d-flex justify-content-start justify-content-lg-center px-3 pt-4 px-lg-0">
-            <span class="fs-5 fw-bold credit-text" itemprop="name">Kode Fiksi</span>
-        </div>
-
-        <nav class="navbar justify-content-start navbar-expand-lg justify-content-lg-center px-3 px-lg-0" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Footer navigation">
+        <nav class="navbar justify-content-start navbar-expand-lg justify-content-lg-center px-3 px-lg-0" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Footer navigation" style="min-height: 100px">
             <ul class="navbar-nav">
                 <li class="nav-item" itemprop="about" itemscope itemtype="https://schema.org/Thing">
                     <a href="{!! route('about') !!}" class="nav-link" title="About" itemprop="url">

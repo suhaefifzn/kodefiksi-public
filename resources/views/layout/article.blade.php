@@ -2,7 +2,7 @@
     'meta' => [
         'url' => isset($data['data']) ? config('app.url') . '/' . $data['data']['slug'] : config('app.url'),
         'title' => isset($data['data']) ? $data['data']['title'] : 'Kode Fiksi',
-        'author' => isset($data['data']) ? $data['data']['user']['username'] : 'kodefiksi',
+        'author' => isset($data['data']) ? $data['data']['user']['username'] : 'suhaefi21',
         'keywords' => isset($data['data']) ? $data['data']['title'] : 'Anime, Manga, Game, Pemrograman, Tutorial Pemrograman',
         'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['data']['img_thumbnail'] : '/assets/logo_square.webp',
         'description' => isset($data['data']) ? $data['data']['excerpt'] : 'Artikel tidak ditemukan',
@@ -78,25 +78,6 @@
                         {!! $data['data']['body'] !!}
                     </div>
                 </article>
-                {{-- Featured Articles --}}
-                <div class="col-12 mt-3 bg-custom-3 rounded p-3" id="articleRelated">
-                    <div class="related-title badge bg-custom-2 p-2 mb-3">
-                        <h2 class="fs-6 fw-bold m-0">Featured Articles</h2>
-                    </div>
-                    <div class="card-wrapper col-12">
-                        <ul class="list-group list-group-flush rounded">
-                            @foreach ($data['data']['related_articles'] as $article)
-                                <li class="list-group-item text-break p-3">
-                                    <span class="card-title small">
-                                        <a href="{!! route('article', $article['slug']) !!}" class="text-light text-decoration-none link-primary link-underline-primary">
-                                            {!! $article['title'] !!}
-                                        </a>
-                                    </span>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
             </div>
             <div class="col-12 mt-3 col-xl-4 mt-xl-0">
                 @include('layout.sidebar', [

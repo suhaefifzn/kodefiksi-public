@@ -16,13 +16,13 @@
     <div class="border-bottom mb-4" id="breadcrumbWrapper">
         <div style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <li class="breadcrumb-item small" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="{!! route('home') !!}" class="text-decoration-none" itemprop="item">
                         <span itemprop="name">Home</span>
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <li class="breadcrumb-item small active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <span itemprop="name">About Us</span>
                     <meta itemprop="position" content="2" />
                 </li>
@@ -37,12 +37,12 @@
                         <h1 class="fs-3 fw-bold" itemprop="name">About Us</h1>
                     </div>
                 </div>
-                <div class="row d-flex align-items-start mt-4 rounded overflow-hidden border-top mb-3" itemprop="articleBody">
+                <div class="row d-flex align-items-start mt-4 rounded overflow-hidden mb-3" itemprop="articleBody">
                     <div class="col-md-6 mb-3 mb-md-0 p-0" style="height: 325px;">
                       <img src="/assets/logo_square.webp" alt="Logo Kode Fiksi" style="width:100%;height:100%;object-position:center;object-fit:cover;" itemprop="image">
                     </div>
                     <div class="col-md-6">
-                      <h2 class="fs-4 fw-bold mt-3">Tentang Kode Fiksi</h2>
+                      <h2 class="fs-4 fw-bold mt-3 mt-xl-0">Tentang Kode Fiksi</h2>
                       <p style="text-align: justify">
                         Kode Fiksi merupakan web personal yang dibangun dan dikembangkan oleh Suhaefi Fauzian dengan menggunakan teknologi Laravel 11. Tujuan dari pengembangan web ini awalnya hanya untuk mempelajari framework PHP yang populer, kemudian terlintas pada pikiran untuk meninggalkan bukti pernah belajar pemrograman dan duduk di kelas Kuliah Teknik Informatika, maka dirilislah website ini dengan nama Kode Fiksi yang merupakan perpaduan dari kata 'Kode' untuk mewakili pemrograman dan 'Fiksi' untuk mewakili kesenangan terhadap dunia anime dan game.
                       </p>
