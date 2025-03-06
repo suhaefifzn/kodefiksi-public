@@ -1,29 +1,29 @@
 <footer class="mt-5" itemscope itemtype="https://schema.org/WPFooter">
     <div class="bg-custom-2 px-0">
-        <nav class="navbar justify-content-start navbar-expand-lg justify-content-lg-center px-3 px-lg-0" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Footer navigation" style="min-height: 100px">
+        <div class="navbar justify-content-start navbar-expand-lg justify-content-lg-center px-3 px-lg-0" style="min-height: 100px">
             <ul class="navbar-nav">
-                <li class="nav-item" itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                    <a href="{!! route('about') !!}" class="nav-link" title="About" itemprop="url">
+                <li class="nav-item" itemprop="about">
+                    <a href="{!! route('about') !!}" class="nav-link" title="About">
                         <span itemprop="name">About</span>
                     </a>
                 </li>
-                <li class="nav-item" itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                    <a href="{!! route('contact') !!}" class="nav-link" title="Contact" itemprop="url">
+                <li class="nav-item" itemprop="about">
+                    <a href="{!! route('contact') !!}" class="nav-link" title="Contact">
                         <span itemprop="name">Contact</span>
                     </a>
                 </li>
-                <li class="nav-item" itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                    <a href="{!! route('disclaimer') !!}" class="nav-link" title="Disclaimer" itemprop="url">
+                <li class="nav-item" itemprop="about">
+                    <a href="{!! route('disclaimer') !!}" class="nav-link" title="Disclaimer">
                         <span itemprop="name">Disclaimer</span>
                     </a>
                 </li>
-                <li class="nav-item" itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                    <a href="{!! route('privacy.policy') !!}" class="nav-link" title="Privacy Policy" itemprop="url">
+                <li class="nav-item" itemprop="about">
+                    <a href="{!! route('privacy.policy') !!}" class="nav-link" title="Privacy Policy">
                         <span itemprop="name">Privacy Policy</span>
                     </a>
                 </li>
             </ul>
-        </nav>
+        </div>
 
         <div class="kodefiksi-credit bg-custom-1 d-flex justify-content-center text-center py-3">
             <span class="small credit-text" itemprop="copyrightHolder">
