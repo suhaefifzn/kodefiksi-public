@@ -11,17 +11,17 @@
             </a>
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <ul class="navbar-nav me-auto my-3 my-lg-0">
-                    <li class="nav-item" itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                    <li class="nav-item" itemprop="name" itemscope itemtype="https://schema.org/Thing">
                         <a class="nav-link" href="{!! route('category', 'anime') !!}" title="Anime" itemprop="url">
                             <span itemprop="name">Anime</span>
                         </a>
                     </li>
-                    <li class="nav-item" itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                    <li class="nav-item" itemprop="name" itemscope itemtype="https://schema.org/Thing">
                         <a class="nav-link" href="{!! route('category', 'game') !!}" title="Game" itemprop="url">
                             <span itemprop="name">Game</span>
                         </a>
                     </li>
-                    <li class="nav-item" itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                    <li class="nav-item" itemprop="name" itemscope itemtype="https://schema.org/Thing">
                         <a class="nav-link" href="{!! route('category', 'pemrograman') !!}" title="Pemrograman" itemprop="url">
                             <span itemprop="name">Pemrograman</span>
                         </a>
