@@ -1,7 +1,7 @@
 @extends('layout.main', [
     'meta' => [
         'title' => isset($data['data']) ? $data['data']['title'] : 'Kode Fiksi',
-        'url' => isset($data['data']) ? config('app.url') . '/' . $data['data']['slug'] : config('app.url'),
+        'url' => config('app.url') . '/category',
         'need_canonical' => true
     ]
 ])
