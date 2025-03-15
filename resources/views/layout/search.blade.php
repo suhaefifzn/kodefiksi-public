@@ -17,22 +17,16 @@
     @if (isset($data['data']['articles']) && count($data['data']['articles']) > 0 && $data['status'] === 'success')
         <div class="d-flex flex-wrap col-12 gap-4 gap-xl-0 justify-content-center px-md-0 px-xl-3 mt-5" id="contentWrapper">
             @foreach ($data['data']['articles'] as $article)
-                <article class="card overflow-hidden col-12 col-md-8 col-lg-5 col-xl-4 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
+                <article class="card overflow-hidden col-12 col-md-8 col-lg-5 col-xl-4 m-0 p-0">
                     @php
-                        $datePublished = new DateTime($article['created_at']);
-                        $dateModified = isset($article['updated_at'])
-                            ? new DateTime($article['updated_at'])
-                            : new DateTime($article['created_at']);
+                        $datePublished = (new DateTime($article['created_at']))->format('d/m/Y');
                     @endphp
-                    <meta itemprop="datePublished" content="{!! $datePublished->format('c') !!}">
-                    <meta itemprop="dateModified" content="{!! $dateModified->format('c') !!}">
-                    <meta itemprop="articleSection" content="{!! $article['category']['name'] !!}">
                     <div class="wrapper-thumbnail">
-                        <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}" itemprop="image">
+                        <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}">
                     </div>
                     <div class="card-body p-2 p-xl-3">
-                        <h2 class="card-title fs-5 text-align-justify col-12" itemprop="headline">
-                            <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-light fw-bold" itemprop="url">
+                        <h2 class="card-title fs-5 text-align-justify col-12">
+                            <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-light fw-bold">
                                 {!! $article['title'] !!}
                             </a>
                         </h2>
@@ -43,16 +37,14 @@
                             </div>
                             <div class="d-flex align-items-center gap-1" title="Tanggal Dibuat">
                                 <i data-feather="calendar" class="thumbnail-icon"></i>
-                                <span>{!! $datePublished->format('d/m/Y') !!}</span>
+                                <span>{!! $datePublished !!}</span>
                             </div>
                             <div class="d-flex align-items-center gap-1" title="Penulis">
                                 <i data-feather="user" class="thumbnail-icon"></i>
-                                <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    <span itemprop="name">{{ $article['user']['username'] }}</span>
-                                </span>
+                                <span itemprop="name">{{ $article['user']['username'] }}</span>
                             </div>
                         </div>
-                        <p class="card-text small text-align-justify" itemprop="description">
+                        <p class="card-text small text-align-justify">
                             {!! $article['excerpt'] !!}
                         </p>
                     </div>

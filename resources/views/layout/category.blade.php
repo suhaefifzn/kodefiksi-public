@@ -35,50 +35,43 @@
 
     {{-- Wrapper untuk article cards --}}
     @if (isset($data['data']['articles']) && count($data['data']['articles']) > 0 && $data['status'] === 'success')
-        <div itemscope itemtype="https://schema.org/CollectionPage">
-            <h1 class="fs-4 text-center fw-bold">{!! $title !!}</h1>
-            <div class="d-flex flex-wrap col-12 gap-4 gap-xl-0 justify-content-center px-md-0 px-xl-3 mt-5" id="contentWrapper">
-                @foreach ($data['data']['articles'] as $article)
-                    <article class="card overflow-hidden col-12 col-md-8 col-lg-5 col-xl-4 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
-                        @php
-                            $datePublished = new DateTime($article['created_at']);
-                            $dateModified = isset($article['updated_at'])
-                                ? new DateTime($article['updated_at'])
-                                : new DateTime($article['created_at']);
-                        @endphp
-                        <meta itemprop="datePublished" content="{!! $datePublished->format('c') !!}">
-                        <meta itemprop="dateModified" content="{!! $dateModified->format('c') !!}">
-                        <meta itemprop="articleSection" content="{!! $article['category']['name'] !!}">
-                        <div class="wrapper-thumbnail">
-                            <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}" itemprop="image">
-                        </div>
-                        <div class="card-body p-2 p-xl-3">
-                            <h2 class="card-title fs-5 col-12" itemprop="headline">
-                                <a href="{!! '/' . $article['slug'] !!}" class="text-decoration-none text-light fw-bold" itemprop="url">
-                                    {!! $article['title'] !!}
-                                </a>
-                            </h2>
-                            <div class="d-flex gap-2 border-bottom mb-2" id="thumbnailItems">
-                                <div class="d-flex align-items-center gap-1" title="Kategori">
-                                    <i data-feather="bookmark" class="thumbnail-icon"></i>
-                                    <span>{!! $article['category']['name'] !!}</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-1" title="Tanggal Dibuat">
-                                    <i data-feather="calendar" class="thumbnail-icon"></i>
-                                    <span>{!! $datePublished->format('d/m/Y') !!}</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-1" title="Penulis" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    <i data-feather="user" class="thumbnail-icon"></i>
-                                    <span itemprop="name">{{ $article['user']['username'] }}</span>
-                                </div>
+        <h1 class="fs-4 text-center fw-bold">{!! $title !!}</h1>
+        <div class="d-flex flex-wrap col-12 gap-4 gap-xl-0 justify-content-center px-md-0 px-xl-3 mt-5" id="contentWrapper">
+            @foreach ($data['data']['articles'] as $article)
+                <article class="card overflow-hidden col-12 col-md-8 col-lg-5 col-xl-4 m-0 p-0">
+                    @php
+                        $datePublished = (new DateTime($article['created_at']))->format('d/m/Y');
+                    @endphp
+
+                    <div class="wrapper-thumbnail">
+                        <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}">
+                    </div>
+                    <div class="card-body p-2 p-xl-3">
+                        <h2 class="card-title fs-5 col-12">
+                            <a href="{!! '/' . $article['slug'] !!}" class="text-decoration-none text-light fw-bold">
+                                {!! $article['title'] !!}
+                            </a>
+                        </h2>
+                        <div class="d-flex gap-2 border-bottom mb-2" id="thumbnailItems">
+                            <div class="d-flex align-items-center gap-1" title="Kategori">
+                                <i data-feather="bookmark" class="thumbnail-icon"></i>
+                                <span>{!! $article['category']['name'] !!}</span>
                             </div>
-                            <p class="card-text small text-align-justify" itemprop="description">
-                                {!! $article['excerpt'] !!}
-                            </p>
+                            <div class="d-flex align-items-center gap-1" title="Tanggal Dibuat">
+                                <i data-feather="calendar" class="thumbnail-icon"></i>
+                                <span>{!! $datePublished !!}</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1" title="Penulis">
+                                <i data-feather="user" class="thumbnail-icon"></i>
+                                <span>{{ $article['user']['username'] }}</span>
+                            </div>
                         </div>
-                    </article>
-                @endforeach
-            </div>
+                        <p class="card-text small text-align-justify">
+                            {!! $article['excerpt'] !!}
+                        </p>
+                    </div>
+                </article>
+            @endforeach
         </div>
 
         @include('layout.pagination', [

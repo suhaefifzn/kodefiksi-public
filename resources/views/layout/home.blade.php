@@ -5,7 +5,6 @@
     ]
 ])
 @section('content')
-<div itemscope itemtype="https://schema.org/CollectionPage">
     {{-- Hero --}}
     <div class="container-fluid py-5 mb-4 d-flex justify-content-center"
         style="background-image: url('{!! $data['articles']['latest']['img_thumbnail'] !!}');
@@ -21,19 +20,12 @@
                     background-color: rgba(255, 255, 255, 0.45);
                     border-radius: 12px;
                     border: 1px solid rgba(209, 213, 219, 0.3);"
-            itemscope itemtype="https://schema.org/BlogPosting"
         >
-            {{-- Meta Tag --}}
             @php
-                $datePublished = new DateTime($data['articles']['latest']['created_at']);
-                $dateModified = new DateTime($data['articles']['latest']['updated_at']);
+                $datePublished = (new DateTime($data['articles']['latest']['created_at']));
             @endphp
-            <meta itemprop="mainEntityOfPage" content="{!! config('app.url') . '/' . $data['articles']['latest']['slug'] !!}">
-            <meta itemprop="datePublished" content="{!! $datePublished->format('c') !!}">
-            <meta itemprop="dateModified" content="{!! $dateModified->format('c') !!}">
-            <meta itemprop="articleSection" content="{!! $data['articles']['latest']['category']['name'] !!}">
-            <meta itemprop="image" content="{!! $data['articles']['latest']['img_thumbnail'] !!}">
-            <h3 class="fs-2 fw-bold display-3 text-dark" itemprop="headline">{!! $data['articles']['latest']['title'] !!}</h3>
+
+            <h3 class="fs-2 fw-bold display-3 text-dark">{!! $data['articles']['latest']['title'] !!}</h3>
             <div class="d-flex gap-2 mb-2 overflow-x-hidden" id="thumbnailItems">
                 <div class="d-flex align-items-center gap-1 text-dark" title="Kategori">
                     <i data-feather="bookmark" class="thumbnail-icon"></i>
@@ -45,19 +37,16 @@
                 </div>
                 <div class="d-flex align-items-center gap-1 text-dark" title="Penulis">
                     <i data-feather="user" class="thumbnail-icon"></i>
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <span itemprop="name">{{ $data['articles']['latest']['user']['username'] }}</span>
-                    </span>
+                    <span>{{ $data['articles']['latest']['user']['username'] }}</span>
                 </div>
             </div>
             <div class="lc-block col-md-8">
-                <p itemprop="description" class="text-dark">{!! $data['articles']['latest']['excerpt'] !!}</p>
+                <p class="text-dark">{!! $data['articles']['latest']['excerpt'] !!}</p>
             </div>
             <div>
                 <a class="btn btn-dark bg-custom-1"
                 href="{!! config('app.url') . '/' . $data['articles']['latest']['slug'] !!}"
-                role="button"
-                itemprop="url">Baca Selengkapnya</a>
+                role="button">Baca Selengkapnya</a>
             </div>
         </article>
     </div>
@@ -70,21 +59,16 @@
                 </div>
                 <div class="d-flex flex-wrap col-12 gap-4 gap-xl-0 justify-content-center px-md-0 px-xl-3" id="contentWrapper">
                     @foreach($category['articles'] as $article)
-                    <article class="card overflow-hidden col-12 col-md-8 col-lg-5 col-xl-4 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
+                    <article class="card overflow-hidden col-12 col-md-8 col-lg-5 col-xl-4 m-0 p-0">
                         @php
-                            $datePublished = new DateTime($article['created_at']);
-                            $dateModified = new DateTime($article['updated_at']);
+                            $datePublished = (new DateTime($article['created_at']))->format('d/m/Y');
                         @endphp
-                        <meta itemprop="mainEntityOfPage" content="{!! config('app.url') . '/' . $article['slug'] !!}">
-                        <meta itemprop="datePublished" content="{!! $datePublished->format('c') !!}">
-                        <meta itemprop="dateModified" content="{!! $dateModified->format('c') !!}">
-                        <meta itemprop="articleSection" content="{!! $category['name'] !!}">
                         <div class="wrapper-thumbnail">
-                            <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}" itemprop="image">
+                            <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}">
                         </div>
                         <div class="card-body p-2 p-xl-3">
-                            <h3 class="card-title fs-5" itemprop="headline">
-                                <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-light fw-bold" itemprop="url">
+                            <h3 class="card-title fs-5">
+                                <a href="{!! '/' . $article['slug']  !!}" class="text-decoration-none text-light fw-bold">
                                     {!! $article['title'] !!}
                                 </a>
                             </h3>
@@ -95,16 +79,14 @@
                                 </div>
                                 <div class="d-flex align-items-center gap-1" title="Tanggal Dibuat">
                                     <i data-feather="calendar" class="thumbnail-icon"></i>
-                                    <span>{!! $datePublished->format('d/m/Y') !!}</span>
+                                    <span>{!! $datePublished !!}</span>
                                 </div>
                                 <div class="d-flex align-items-center gap-1" title="Penulis">
                                     <i data-feather="user" class="thumbnail-icon"></i>
-                                    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                        <span itemprop="name">{{ $article['user']['username'] }}</span>
-                                    </span>
+                                    <span>{{ $article['user']['username'] }}</span>
                                 </div>
                             </div>
-                            <p class="card-text small text-align-justify" itemprop="description">
+                            <p class="card-text small text-align-justify">
                                 {!! $article['excerpt'] !!}
                             </p>
                         </div>
@@ -118,5 +100,4 @@
             @endif
         @endforeach
     </div>
-</div>
 @endsection

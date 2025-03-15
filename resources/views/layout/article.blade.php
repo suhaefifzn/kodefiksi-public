@@ -53,16 +53,19 @@
         {{-- Article Content --}}
         <div class="row">
             <div class="article-wrapper d-flex flex-column col-xl-8">
-                <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/BlogPosting">
+                @php
+                    $itemType = $data['data']['category']['name']
+                @endphp
+                <article class="d-flex flex-column col-12 col-xl-12 text-break">
                     <meta itemprop="datePublished" content="{{ $datePublished->format('c') }}">
                     <meta itemprop="dateModified" content="{{ $dateModified->format('c') }}">
                     <meta itemprop="articleSection" content="{!! $data['data']['category']['name'] !!}">
                     <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                         <div class="align-self-start mt-1" id="articleTitle">
-                            <h1 itemprop="headline" class="fs-2">{!! $data['data']['title'] !!}</h1>
+                            <h1 class="fs-2">{!! $data['data']['title'] !!}</h1>
                         </div>
                         <div id="identity" class="small d-flex align-self-start gap-3">
-                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-light" title="Kategori" href="{!! route('category', $data['data']['category']['slug']) !!}" itemprop="articleSection">
+                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-light" title="Kategori" href="{!! route('category', $data['data']['category']['slug']) !!}">
                                 <i data-feather="bookmark" class="thumbnail-icon"></i>
                                 <span>{!! $data['data']['category']['name'] !!}</span>
                             </a>
@@ -70,17 +73,17 @@
                                 <i data-feather="calendar" class="thumbnail-icon"></i>
                                 <span>{!! $datePublished->format('d/m/Y') !!}</span>
                             </div>
-                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-light" title="Penulis" href="{!! route('author', $data['data']['user']['username']) !!}" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-light" title="Penulis" href="{!! route('author', $data['data']['user']['username']) !!}">
                                 <i data-feather="user" class="thumbnail-icon"></i>
-                                <span itemprop="name">{!! $data['data']['user']['username'] !!}</span>
+                                <span>{!! $data['data']['user']['username'] !!}</span>
                             </a>
                         </div>
                         <div class="mt-3" id="articleThumbnail">
-                            <img src="{!! $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid" itemprop="image">
+                            <img src="{!! $data['data']['img_thumbnail'] !!}" alt="Thumbnail {!! $data['data']['title'] !!}" class="img-fluid">
                         </div>
                     </div>
                     {{-- Article Content - Body --}}
-                    <div class="mt-4" id="articleBody" itemprop="articleBody">
+                    <div class="mt-4" id="articleBody">
                         {!! $data['data']['body'] !!}
                     </div>
                 </article>
