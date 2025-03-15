@@ -6,14 +6,19 @@
         'keywords' => isset($data['data']) ? $data['data']['title'] : 'Anime, Manga, Game, Pemrograman, Tutorial Pemrograman',
         'thumbnail' => isset($data['data']) ? config('app.my_config.api_url') . '/' . $data['data']['img_thumbnail'] : '/assets/logo_square.webp',
         'description' => isset($data['data']) ? $data['data']['excerpt'] : 'Artikel tidak ditemukan',
-        'need_canonical' => true
+        'need_canonical' => true,
+        'is_pagination' => false
     ]
 ])
 @section('content')
     @if (isset($data['data']))
+        @php
+            $datePublished = new DateTime($data['data']['created_at']);
+            $dateModified = new DateTime($data['data']['updated_at']);
+        @endphp
         @section('meta.article')
-            <meta property="article:published_time" content="{!! $data['data']['created_at'] !!}">
-            <meta property="article:modified_time" content="{!! $data['data']['updated_at'] !!}">
+            <meta property="article:published_time" content="{!! $datePublished->format('c') !!}">
+            <meta property="article:modified_time" content="{!! $dateModified->format('c') !!}">
         @endsection
         {{-- Wrapper untuk breadcrumb --}}
         <div class="border-bottom mb-2 overflow-hidden" id="breadcrumbWrapper">
@@ -39,6 +44,7 @@
                     </li>
                     <li class="breadcrumb-item small active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                         <span itemprop="name">{!! $data['data']['title'] !!}</span>
+                        <meta itemprop="item" content="{{ config('app.url') . '/' . $data['data']['slug'] }}">
                         <meta itemprop="position" content="4" />
                     </li>
                 </ol>
@@ -48,6 +54,9 @@
         <div class="row">
             <div class="article-wrapper d-flex flex-column col-xl-8">
                 <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/BlogPosting">
+                    <meta itemprop="datePublished" content="{{ $datePublished->format('c') }}">
+                    <meta itemprop="dateModified" content="{{ $dateModified->format('c') }}">
+                    <meta itemprop="articleSection" content="{!! $data['data']['category']['name'] !!}">
                     <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                         <div class="align-self-start mt-1" id="articleTitle">
                             <h1 itemprop="headline" class="fs-2">{!! $data['data']['title'] !!}</h1>
@@ -58,11 +67,8 @@
                                 <span>{!! $data['data']['category']['name'] !!}</span>
                             </a>
                             <div class="identity-category d-flex align-items-center gap-1" title="Tanggal Dibuat">
-                                @php
-                                    $formattedDate = (new DateTime($data['data']['created_at']))->format('d/m/Y');
-                                @endphp
                                 <i data-feather="calendar" class="thumbnail-icon"></i>
-                                <span itemprop="datePublished" content="{{ (new DateTime($data['data']['created_at']))->format('Y-m-d') }}">{!! $formattedDate !!}</span>
+                                <span>{!! $datePublished->format('d/m/Y') !!}</span>
                             </div>
                             <a class="identity-category d-flex align-items-center gap-1 text-decoration-none text-light" title="Penulis" href="{!! route('author', $data['data']['user']['username']) !!}" itemprop="author" itemscope itemtype="https://schema.org/Person">
                                 <i data-feather="user" class="thumbnail-icon"></i>

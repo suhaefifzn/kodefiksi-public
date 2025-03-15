@@ -2,7 +2,8 @@
     'meta' => [
         'title' => isset($data['data']) ? $data['data']['title'] : 'Kode Fiksi',
         'url' => config('app.url') . '/category',
-        'need_canonical' => true
+        'need_canonical' => true,
+        'is_pagination' => false
     ]
 ])
 @section('content')
@@ -16,8 +17,9 @@
                 </a>
                 <meta itemprop="position" content="1" />
             </li>
-            <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <span itemprop="name">Category</span>
+                <meta itemprop="item" content="{{ route('category.index') }}">
                 <meta itemprop="position" content="2" />
             </li>
         </ol>

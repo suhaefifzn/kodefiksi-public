@@ -4,6 +4,7 @@
         'keywords' => $query,
         'description' => 'Hasil pencarian untuk ' . $query,
         'need_canonical' => false,
+        'is_pagination' => false
     ]
 ])
 
@@ -17,6 +18,15 @@
         <div class="d-flex flex-wrap col-12 gap-4 gap-xl-0 justify-content-center px-md-0 px-xl-3 mt-5" id="contentWrapper">
             @foreach ($data['data']['articles'] as $article)
                 <article class="card overflow-hidden col-12 col-md-8 col-lg-5 col-xl-4 m-0 p-0" itemscope itemtype="https://schema.org/BlogPosting">
+                    @php
+                        $datePublished = new DateTime($article['created_at']);
+                        $dateModified = isset($article['updated_at'])
+                            ? new DateTime($article['updated_at'])
+                            : new DateTime($article['created_at']);
+                    @endphp
+                    <meta itemprop="datePublished" content="{!! $datePublished->format('c') !!}">
+                    <meta itemprop="dateModified" content="{!! $dateModified->format('c') !!}">
+                    <meta itemprop="articleSection" content="{!! $article['category']['name'] !!}">
                     <div class="wrapper-thumbnail">
                         <img src="{!! $article['img_thumbnail'] !!}" class="card-img-top" alt="Thumbnail {!! $article['title'] !!}" itemprop="image">
                     </div>
@@ -29,15 +39,11 @@
                         <div class="d-flex gap-2 border-bottom mb-2" id="thumbnailItems">
                             <div class="d-flex align-items-center gap-1" title="Kategori">
                                 <i data-feather="bookmark" class="thumbnail-icon"></i>
-                                <span itemprop="articleSection">{!! $article['category']['name'] !!}</span>
+                                <span>{!! $article['category']['name'] !!}</span>
                             </div>
                             <div class="d-flex align-items-center gap-1" title="Tanggal Dibuat">
                                 <i data-feather="calendar" class="thumbnail-icon"></i>
-                                @php
-                                    $date = new DateTime($article['created_at']);
-                                    $formattedDate = $date->format('d/m/Y');
-                                @endphp
-                                <span itemprop="datePublished" content="{{ $date->format('Y-m-d') }}">{!! $formattedDate !!}</span>
+                                <span>{!! $datePublished->format('d/m/Y') !!}</span>
                             </div>
                             <div class="d-flex align-items-center gap-1" title="Penulis">
                                 <i data-feather="user" class="thumbnail-icon"></i>

@@ -15,6 +15,9 @@
     @if ($meta['need_canonical'])
         <link rel="canonical" href="{!! Request::is('/') ? config('app.url') : $meta['url'] !!}">
     @endif
+    @if ($meta['is_pagination'])
+        <meta name="robots" content="noindex">
+    @endif
     <meta name="author" content="{!! isset($meta['author']) ? $meta['author'] : 'suhaefi21' !!}">
     <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Anime, Game, Pemrograman, Kode Fiksi, kodefiksi.com' !!}">
     <meta name="description"

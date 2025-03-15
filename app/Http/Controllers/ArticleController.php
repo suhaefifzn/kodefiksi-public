@@ -50,6 +50,7 @@ class ArticleController extends Controller
             'data' => $data,
             'category' => $categorySlug,
             'url' => config('app.url') . '/category/' . $categorySlug,
+            'is_pagination' => !is_null($page) ?? true,
         ]);
     }
 
@@ -73,6 +74,7 @@ class ArticleController extends Controller
             'data' => $data,
             'author' => $username,
             'url' => config('app.url') .'/author/' .  $username,
+            'is_pagination' => !is_null($page) ?? true,
         ]);
     }
 

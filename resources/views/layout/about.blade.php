@@ -4,12 +4,13 @@
         'title' => 'About Us',
         'url' => config('app.url') . '/about',
         'description' => 'Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer.',
-        'need_canonical' => true
+        'need_canonical' => true,
+        'is_pagination' => false
     ]
 ])
 @section('meta.article')
-    <meta property="article:published_time" content="2024-10-05T00:00:00.000Z">
-    <meta property="article:modified_time" content="2024-10-05T00:00:00.000Z">
+    <meta property="article:published_time" content="2024-10-05">
+    <meta property="article:modified_time" content="2024-10-05">
 @endsection
 @section('content')
     {{-- Wrapper untuk breadcrumb --}}
@@ -22,8 +23,9 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="breadcrumb-item small active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <li class="breadcrumb-item small active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <span itemprop="name">About Us</span>
+                    <meta itemprop="item" content="{{ route('about') }}">
                     <meta itemprop="position" content="2" />
                 </li>
             </ol>
@@ -31,20 +33,23 @@
     </div>
     <div class="row justify-content-center">
         <div class="article-wrapper d-flex flex-column col-xl-8">
-            <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/BlogPosting">
+            <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/AboutPage">
+                <meta itemprop="mainEntityOfPage" itemscope itemtype="https://schema.org/WebPage" />
+
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                     <div class="text-center mt-1" id="articleTitle">
-                        <h1 class="fs-3 fw-bold" itemprop="name">About Us</h1>
+                        <h1 class="fs-3 fw-bold" itemprop="headline">About Us</h1>
                     </div>
                 </div>
-                <div class="row d-flex align-items-start mt-4 rounded overflow-hidden mb-3" itemprop="articleBody">
+
+                <div class="row d-flex align-items-start mt-4 rounded overflow-hidden mb-3">
                     <div class="col-md-6 mb-3 mb-md-0 p-0" style="height: 325px;">
-                      <img src="/assets/logo_square.webp" alt="Logo Kode Fiksi" style="width:100%;height:100%;object-position:center;object-fit:cover;" itemprop="image">
+                        <img src="/assets/logo_square.webp" alt="Logo Kode Fiksi" style="width:100%;height:100%;object-position:center;object-fit:cover;" itemprop="image">
                     </div>
                     <div class="col-md-6">
                       <h2 class="fs-4 fw-bold mt-3 mt-xl-0">Tentang Kode Fiksi</h2>
                       <p style="text-align: justify">
-                        Kode Fiksi merupakan web personal yang dibangun dan dikembangkan oleh Suhaefi Fauzian dengan menggunakan teknologi Laravel 11. Tujuan dari pengembangan web ini awalnya hanya untuk mempelajari framework PHP yang populer, kemudian terlintas pada pikiran untuk meninggalkan bukti pernah belajar pemrograman dan duduk di kelas Kuliah Teknik Informatika, maka dirilislah website ini dengan nama Kode Fiksi yang merupakan perpaduan dari kata 'Kode' untuk mewakili pemrograman dan 'Fiksi' untuk mewakili kesenangan terhadap dunia anime dan game.
+                        Kode Fiksi merupakan web personal yang dibangun dan dikembangkan oleh <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Suhaefi Fauzian</span></span> dengan menggunakan teknologi Laravel 11. Tujuan dari pengembangan web ini awalnya hanya untuk mempelajari framework PHP yang populer, kemudian terlintas pada pikiran untuk meninggalkan bukti pernah belajar pemrograman dan duduk di kelas Kuliah Teknik Informatika, maka dirilislah website ini dengan nama Kode Fiksi yang merupakan perpaduan dari kata 'Kode' untuk mewakili pemrograman dan 'Fiksi' untuk mewakili kesenangan terhadap dunia anime dan game.
                       </p>
                     </div>
                 </div>
@@ -61,6 +66,15 @@
                 <p style="text-align: justify">
                     Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer. Konten yang disediakan dapat berupa berita, ulasan, dan tutorial. Hadirnya web ini juga diharapkan menjadi motivasi bagi penulis untuk terus belajar dan tidak bosan dalam membaca serta berbagi karya, dan juga dapat menjadi media pengembangan diri.
                 </p>
+
+                {{-- Informasi organisasi --}}
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Kode Fiksi">
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="/assets/logo.webp">
+                    </div>
+                    <meta itemprop="url" content="https://kodefiksi.com">
+                </div>
             </article>
         </div>
     </div>

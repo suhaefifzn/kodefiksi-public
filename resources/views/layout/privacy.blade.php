@@ -3,13 +3,14 @@
         'author' => 'suhaefi21',
         'title' => 'Privacy Policy',
         'url' => config('app.url') . '/privacy-policy',
-        'description' => 'Di kodefiksi.com, privasi pengunjung kami sangat penting. Dokumen kebijakan privasi ini menjelaskan secara rinci jenis informasi pribadi yang dikumpulkan dan dicatat oleh kodefiksi.com serta bagaimana kami menggunakannya.',
-        'need_canonical' => true
+        'description' => 'Halaman kebijakan privasi ini menjelaskan secara rinci jenis informasi pribadi yang dikumpulkan dan dicatat oleh kodefiksi.com serta bagaimana kami menggunakannya.',
+        'need_canonical' => true,
+        'is_pagination' => false
     ]
 ])
 @section('meta.article')
-<meta property="article:published_time" content="2024-12-31T02:00:00+07:00">
-<meta property="article:modified_time" content="2025-02-26T07:25:00+07:00">
+<meta property="article:published_time" content="2024-12-31">
+<meta property="article:modified_time" content="2025-02-26">
 @endsection
 @section('content')
     {{-- Wrapper untuk breadcrumb --}}
@@ -22,8 +23,9 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="breadcrumb-item small active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <li class="breadcrumb-item small active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <span itemprop="name">Privacy Policy</span>
+                    <meta itemprop="item" content="{{ config('privacy.policy') }}">
                     <meta itemprop="position" content="2" />
                 </li>
             </ol>
@@ -31,7 +33,11 @@
     </div>
     <div class="row justify-content-center">
         <div class="article-wrapper d-flex flex-column col-xl-8">
-            <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/BlogPosting">
+            <article class="d-flex flex-column col-12 col-xl-12 text-break" itemscope itemtype="https://schema.org/PrivacyPolicy">
+                <meta itemprop="mainEntityOfPage" content="https://kodefiksi.com/privacy-policy"/>
+                <meta itemprop="datePublished" content="2024-12-31"/>
+                <meta itemprop="dateModified" content="2025-02-26"/>
+
                 <div class="d-flex justify-content-center align-items-center flex-column" id="articleHeader">
                     <div class="text-center mt-1" id="articleTitle">
                         <h1 class="fs-3 fw-bold" itemprop="name">Privacy Policy</h1>
@@ -50,81 +56,100 @@
                     <p style="text-align: justify">
                         Di kodefiksi.com, privasi pengunjung kami sangat penting. Dokumen kebijakan privasi ini menjelaskan secara rinci jenis informasi pribadi yang dikumpulkan dan dicatat oleh kodefiksi.com serta bagaimana kami menggunakannya.
                     </p>
-                    <strong class="fs-5">
-                        File Log
-                    </strong>
-                    <p style="text-align: justify">
-                        Seperti banyak situs web lainnya, kodefiksi.com menggunakan file log. File ini mencatat pengunjung ke situs – biasanya merupakan prosedur standar untuk perusahaan hosting dan bagian dari analisis layanan hosting. Informasi dalam file log mencakup alamat protokol internet (IP), jenis browser, Penyedia Layanan Internet (ISP), stempel tanggal/waktu, halaman rujukan/keluar, dan kemungkinan jumlah klik. Informasi ini digunakan untuk menganalisis tren, mengelola situs, melacak pergerakan pengguna di sekitar situs, dan mengumpulkan informasi demografis. Alamat IP dan informasi lainnya tidak terhubung dengan informasi yang dapat mengidentifikasi identitas pribadi.
-                    </p>
-                    <strong class="fs-5">
-                        Cookies dan Web Beacon
-                    </strong>
-                    <p style="text-align: justify">
-                        kodefiksi.com menggunakan cookies untuk menyimpan informasi tentang preferensi pengunjung, mencatat informasi spesifik pengguna pada halaman mana yang diakses atau dikunjungi, serta untuk mempersonalisasi atau menyesuaikan konten halaman web kami berdasarkan jenis browser pengunjung atau informasi lain yang dikirimkan melalui browser mereka.
-                    </p>
-                    <strong class="fs-5">
-                        Cookie DART DoubleClick
-                    </strong>
-                    <ul>
-                        <li class="text-break">
-                            Google, sebagai vendor pihak ketiga, menggunakan cookies untuk menayangkan iklan di kodefiksi.com.
-                        </li>
-                        <li class="text-break">
-                            Penggunaan cookie DART oleh Google memungkinkannya menayangkan iklan kepada pengunjung situs kami berdasarkan kunjungan mereka ke kodefiksi.com dan situs lainnya di internet.
-                        </li>
-                        <li class="text-break">
-                            Pengguna dapat memilih untuk menonaktifkan penggunaan cookie DART dengan mengunjungi kebijakan privasi jaringan iklan dan konten Google di URL berikut: <a href="https://www.google.com/privacy_ads.html" title="Opt out of the Dart Cookie" target="_blank" rel="noreferrer noopener">https://www.google.com/privacy_ads.html</a>.
-                        </li>
-                    </ul>
-                    <strong class="fs-5">
-                        Mitra Iklan Kami
-                    </strong>
-                    <p style="text-align: justify">
-                        Beberapa mitra periklanan kami mungkin menggunakan cookies dan web beacon di situs kami. Mitra periklanan kami meliputi:
-                    </p>
-                    <ul>
-                        <li>Google</li>
-                        <li>Lainnya</li>
-                    </ul>
-                    <p style="text-align: justify">
-                        Anda dapat melihat daftar ini untuk menemukan kebijakan privasi masing-masing mitra periklanan kodefiksi.com. Server iklan pihak ketiga atau jaringan iklan menggunakan teknologi dalam iklan dan tautan mereka yang muncul di kodefiksi.com dan dikirim langsung ke browser Anda. Mereka secara otomatis menerima alamat IP Anda ketika ini terjadi. Teknologi lain (seperti cookies, JavaScript, atau Web Beacons) juga dapat digunakan oleh jaringan iklan pihak ketiga di situs kami untuk mengukur efektivitas kampanye iklan mereka dan/atau untuk mempersonalisasi konten iklan yang Anda lihat di situs.
-                    </p>
-                    <p style="text-align: justify">
-                        kodefiksi.com tidak memiliki akses atau kontrol atas cookies yang digunakan oleh pengiklan pihak ketiga.
-                    </p>
-                    <strong class="fs-5">
-                        Kebijakan Privasi Pihak Ketiga
-                    </strong>
-                    <p style="text-align: justify">
-                        Anda harus berkonsultasi dengan kebijakan privasi masing-masing server iklan pihak ketiga untuk informasi lebih rinci tentang praktik mereka serta untuk instruksi tentang cara memilih keluar dari praktik tertentu.
-                    </p>
-                    <strong class="fs-5">
-                        Informasi Anak
-                    </strong>
-                    <p style="text-align: justify">
-                        Kami percaya penting untuk memberikan perlindungan tambahan bagi anak-anak secara online. Kami mendorong orang tua dan wali untuk menghabiskan waktu online bersama anak-anak mereka untuk mengamati, berpartisipasi, dan/atau memantau serta membimbing aktivitas online mereka. kodefiksi.com dapat tidak sengaja mengumpulkan informasi yang dapat diidentifikasi secara pribadi dari anak-anak di bawah usia 13 tahun yang disebabkan oleh Cookies dan Web Beacon.
-                    </p>
-                    <strong class="fs-5">
-                        Kebijakan Privasi Online Saja
-                    </strong>
-                    <p style="text-align: justify">
-                        Kebijakan privasi ini hanya berlaku untuk aktivitas online kami dan berlaku untuk pengunjung situs web kami serta terkait dengan informasi yang dibagikan dan/atau dikumpulkan di sana.
-                    </p>
-                    <p style="text-align: justify">
-                        Kebijakan ini tidak berlaku untuk informasi apa pun yang dikumpulkan secara offline atau melalui saluran selain situs web ini.
-                    </p>
-                    <strong class="fs-5">
-                        Persetujuan
-                    </strong>
-                    <p style="text-align: justify">
-                        Dengan menggunakan situs web kami, Anda dengan ini menyetujui kebijakan privasi kami dan menyetujui ketentuan-ketentuannya.
-                    </p>
-                    <strong class="fs-5">
-                        Pembaruan
-                    </strong>
-                    <p style="text-align: justify">
-                        Kebijakan Privasi ini terakhir diperbarui pada: 26 Februari 2025. Jika kami memperbarui, mengubah, atau membuat perubahan apa pun pada kebijakan privasi kami, perubahan tersebut akan dipublikasikan di sini.
-                    </p>
+
+                    {{-- Bagian Informasi Tambahan --}}
+                    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement">
+                        <h3 class="fs-5"><strong>File Log</strong></h3>
+                        <p style="text-align: justify">
+                            Seperti banyak situs web lainnya, kodefiksi.com menggunakan file log. File ini mencatat pengunjung ke situs – biasanya merupakan prosedur standar untuk perusahaan hosting dan bagian dari analisis layanan hosting. Informasi dalam file log mencakup alamat protokol internet (IP), jenis browser, Penyedia Layanan Internet (ISP), stempel tanggal/waktu, halaman rujukan/keluar, dan kemungkinan jumlah klik. Informasi ini digunakan untuk menganalisis tren, mengelola situs, melacak pergerakan pengguna di sekitar situs, dan mengumpulkan informasi demografis. Alamat IP dan informasi lainnya tidak terhubung dengan informasi yang dapat mengidentifikasi identitas pribadi.
+                        </p>
+                    </div>
+
+                    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement">
+                        <h3 class="fs-5"><strong>Cookies dan Web Beacon</strong></h3>
+                        <p style="text-align: justify">
+                            kodefiksi.com menggunakan cookies untuk menyimpan informasi tentang preferensi pengunjung, mencatat informasi spesifik pengguna pada halaman mana yang diakses atau dikunjungi, serta untuk mempersonalisasi atau menyesuaikan konten halaman web kami berdasarkan jenis browser pengunjung atau informasi lain yang dikirimkan melalui browser mereka.
+                        </p>
+                    </div>
+
+                    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement">
+                        <h3 class="fs-5"><strong>Cookie DART DoubleClick</strong></h3>
+                        <ul>
+                            <li class="text-break">
+                                Google, sebagai vendor pihak ketiga, menggunakan cookies untuk menayangkan iklan di kodefiksi.com.
+                            </li>
+                            <li class="text-break">
+                                Penggunaan cookie DART oleh Google memungkinkannya menayangkan iklan kepada pengunjung situs kami berdasarkan kunjungan mereka ke kodefiksi.com dan situs lainnya di internet.
+                            </li>
+                            <li class="text-break">
+                                Pengguna dapat memilih untuk menonaktifkan penggunaan cookie DART dengan mengunjungi kebijakan privasi jaringan iklan dan konten Google di URL berikut: <a href="https://www.google.com/privacy_ads.html" title="Opt out of the Dart Cookie" target="_blank" rel="noreferrer noopener">https://www.google.com/privacy_ads.html</a>.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement">
+                        <h3 class="fs-5"><strong>Mitra Iklan Kami</strong></h3>
+                        <p style="text-align: justify">
+                            Beberapa mitra periklanan kami mungkin menggunakan cookies dan web beacon di situs kami. Mitra periklanan kami meliputi:
+                        </p>
+                        <ul>
+                            <li>Google</li>
+                            <li>Lainnya</li>
+                        </ul>
+                        <p style="text-align: justify">
+                            Anda dapat melihat daftar ini untuk menemukan kebijakan privasi masing-masing mitra periklanan kodefiksi.com. Server iklan pihak ketiga atau jaringan iklan menggunakan teknologi dalam iklan dan tautan mereka yang muncul di kodefiksi.com dan dikirim langsung ke browser Anda. Mereka secara otomatis menerima alamat IP Anda ketika ini terjadi. Teknologi lain (seperti cookies, JavaScript, atau Web Beacons) juga dapat digunakan oleh jaringan iklan pihak ketiga di situs kami untuk mengukur efektivitas kampanye iklan mereka dan/atau untuk mempersonalisasi konten iklan yang Anda lihat di situs.
+                        </p>
+                        <p style="text-align: justify">
+                            kodefiksi.com tidak memiliki akses atau kontrol atas cookies yang digunakan oleh pengiklan pihak ketiga.
+                        </p>
+                    </div>
+
+                    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement">
+                        <h3 class="fs-5"><strong>Kebijakan Privasi Pihak Ketiga</strong></h3>
+                        <p style="text-align: justify">
+                            Anda harus berkonsultasi dengan kebijakan privasi masing-masing server iklan pihak ketiga untuk informasi lebih rinci tentang praktik mereka serta untuk instruksi tentang cara memilih keluar dari praktik tertentu.
+                        </p>
+                    </div>
+
+                    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement">
+                        <h3 class="fs-5"><strong>Informasi Anak</strong></h3>
+                        <p style="text-align: justify">
+                            Kami percaya penting untuk memberikan perlindungan tambahan bagi anak-anak secara online. Kami mendorong orang tua dan wali untuk menghabiskan waktu online bersama anak-anak mereka untuk mengamati, berpartisipasi, dan/atau memantau serta membimbing aktivitas online mereka. kodefiksi.com dapat tidak sengaja mengumpulkan informasi yang dapat diidentifikasi secara pribadi dari anak-anak di bawah usia 13 tahun yang disebabkan oleh Cookies dan Web Beacon.
+                        </p>
+                    </div>
+
+                    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement">
+                        <h3 class="fs-5"><strong>Kebijakan Privasi Online Saja</strong></h3>
+                        <p style="text-align: justify">
+                            Kebijakan privasi ini hanya berlaku untuk aktivitas online kami dan berlaku untuk pengunjung situs web kami serta terkait dengan informasi yang dibagikan dan/atau dikumpulkan di sana.
+                        </p>
+                        <p style="text-align: justify">
+                            Kebijakan ini tidak berlaku untuk informasi apa pun yang dikumpulkan secara offline atau melalui saluran selain situs web ini.
+                        </p>
+                    </div>
+
+                    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement">
+                        <h3 class="fs-5"><strong>Persetujuan</strong></h3>
+                        <p style="text-align: justify">
+                            Dengan menggunakan situs web kami, Anda dengan ini menyetujui kebijakan privasi kami dan menyetujui ketentuan-ketentuannya.
+                        </p>
+                    </div>
+
+                    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement">
+                        <h3 class="fs-5"><strong>Pembaruan</strong></h3>
+                        <p style="text-align: justify">
+                            Kebijakan Privasi ini terakhir diperbarui pada: 26 Februari 2025. Jika kami memperbarui, mengubah, atau membuat perubahan apa pun pada kebijakan privasi kami, perubahan tersebut akan dipublikasikan di sini.
+                        </p>
+                    </div>
+                </div>
+
+                {{-- Informasi organisasi sebagai penerbit kebijakan --}}
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Kode Fiksi"/>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://kodefiksi.com/assets/logo.webp"/>
+                    </div>
+                    <meta itemprop="url" content="https://kodefiksi.com"/>
                 </div>
             </article>
         </div>
