@@ -2,7 +2,8 @@
     'title' => '404 Page Not Found',
     'meta' => [
         'description' => 'Artikel tidak ditemukan.',
-        'need_canonical' => false
+        'need_canonical' => false,
+        'is_pagination' => false
     ]
 ])
 @section('meta.article')

@@ -2,7 +2,8 @@
     'title' => '429 Too Many Requests',
     'meta' => [
         'description' => 'Oops, kami mendeteksi adanya aktivitas mencurigakan.',
-        'need_canonical' => false
+        'need_canonical' => false,
+        'is_pagination' => false
     ]
 ])
 @section('meta.article')
