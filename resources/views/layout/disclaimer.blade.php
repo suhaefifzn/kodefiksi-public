@@ -1,6 +1,6 @@
 @extends('layout.main', [
     'meta' => [
-        'author' => 'suhaefi21',
+        'author' => 'kodefiksi',
         'title' => 'Disclaimer',
         'url' => config('app.url') . '/disclaimer',
         'description' => 'Semua informasi yang tersedia di situs ini dipublikasikan dengan itikad baik dan hanya untuk tujuan informasi umum.',

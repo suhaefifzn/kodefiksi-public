@@ -32,14 +32,14 @@
             <ul class="list-group list-group-flush rounded">
                 <li class="list-group-item text-break p-3">
                     <h2 class="card-title fs-5 mb-2">
-                        Suhaefi Fauzian (suhaefi21)
+                        Jitter (jitter.rand)
                     </h2>
                     <p>
                         Founder dari <a href="/about" class="text-decoration-none">kodefiksi.com</a> yang dibangun dan mulai aktif pada bulan November 2024. Aktif menulis pada setiap
                         <a href="{!! route('category.index') !!}" class="text-decoration-none">kategori</a> yang ada, dan aktif melakukan perawatan dan pengembangan terhadap aplikasi ini.
                     </p>
-                    <a class="btn btn-sm btn-primary" href="{!! route('author', 'suhaefi21') !!}">
-                        Lihat Tulisan suhaefi21
+                    <a class="btn btn-sm btn-primary" href="{!! route('author', 'jitter.rand') !!}">
+                        Lihat Tulisan Jitter
                     </a>
                 </li>
             </ul>

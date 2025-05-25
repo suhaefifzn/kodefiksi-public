@@ -1,6 +1,6 @@
 @extends('layout.main', [
     'meta' => [
-        'author' => 'suhaefi21',
+        'author' => 'kodefiksi',
         'title' => 'Privacy Policy',
         'url' => config('app.url') . '/privacy-policy',
         'description' => 'Halaman kebijakan privasi ini menjelaskan secara rinci jenis informasi pribadi yang dikumpulkan dan dicatat oleh kodefiksi.com serta bagaimana kami menggunakannya.',

@@ -1,6 +1,6 @@
 @extends('layout.main', [
     'meta' => [
-        'author' => 'suhaefi21',
+        'author' => 'kodefiksi',
         'title' => 'Contact Us',
         'url' => config('app.url') . '/contact',
         'description' => 'Apabila ada hal yang ingin Anda sampaikan, kirimkan ke alamat email kodefiksi@gmail.com.',
@@ -49,11 +49,11 @@
                         <meta itemprop="areaServed" content="ID"/>
                         <meta itemprop="availableLanguage" content="Indonesian"/>
                         <p>
-                            📧 Email: <a href="mailto:kodefiksi@gmail.com" itemprop="email">kodefiksi@gmail.com</a>
+                            📧 Email: <a href="mailto:kodefiksi@gmail.com" itemprop="email">kodefiksi@gmail.com</a> atau <a href="mailto:jitter.rand@gmail.com" itemprop="email">jitter.rand@gmail.com</a>
                         </p>
                     </div>
 
-                    <p style="text-align: justify">Terima kasih atas pengertiannya.</p>
+                    <p style="text-align: justify">Terima kasih.</p>
                 </div>
 
                 {{-- Informasi organisasi --}}

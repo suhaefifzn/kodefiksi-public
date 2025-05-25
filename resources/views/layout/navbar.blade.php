@@ -31,11 +31,6 @@
                             <span itemprop="name">Game</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{!! route('category', 'pemrograman') !!}" title="Pemrograman" itemprop="url">
-                            <span itemprop="name">Pemrograman</span>
-                        </a>
-                    </li>
                 </ul>
                 <form class="d-flex ms-auto" role="search" action="/search" method="get">
                     <div class="input-group">

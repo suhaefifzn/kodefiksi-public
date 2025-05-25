@@ -69,9 +69,6 @@
                     <li class="list-group-item">
                         <a href="/category/game" class="text-decoration-none">Game</a>
                     </li>
-                    <li class="list-group-item">
-                        <a href="/category/pemrograman" class="text-decoration-none">Pemrograman</a>
-                    </li>
                 </ul>
             </div>
         </div>

@@ -1,6 +1,6 @@
 @extends('layout.main', [
     'meta' => [
-        'author' => 'suhaefi21',
+        'author' => 'kodefiksi',
         'title' => 'About Us',
         'url' => config('app.url') . '/about',
         'description' => 'Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer.',
@@ -49,22 +49,25 @@
                     <div class="col-md-6">
                       <h2 class="fs-4 fw-bold mt-3 mt-xl-0">Tentang Kode Fiksi</h2>
                       <p style="text-align: justify">
-                        Kode Fiksi merupakan web personal yang dibangun dan dikembangkan oleh <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Suhaefi Fauzian</span></span> dengan menggunakan teknologi Laravel 11. Tujuan dari pengembangan web ini awalnya hanya untuk mempelajari framework PHP yang populer, kemudian terlintas pada pikiran untuk meninggalkan bukti pernah belajar pemrograman dan duduk di kelas Kuliah Teknik Informatika, maka dirilislah website ini dengan nama Kode Fiksi yang merupakan perpaduan dari kata 'Kode' untuk mewakili pemrograman dan 'Fiksi' untuk mewakili kesenangan terhadap dunia anime dan game.
+                        Kode Fiksi merupakan web personal yang dibangun dan dikembangkan oleh <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Jitter</span></span> dengan menggunakan teknologi Laravel 11. Tujuan dari pengembangan web ini awalnya hanya untuk mempelajari framework PHP yang populer, kemudian terlintas pada pikiran untuk meninggalkan bukti pernah belajar pemrograman dan duduk di kelas Kuliah Teknik Informatika, maka dirilislah website ini dengan nama Kode Fiksi yang merupakan perpaduan dari kata 'Kode' untuk mewakili pemrograman dan 'Fiksi' untuk mewakili kesenangan terhadap dunia anime dan game.
                       </p>
                     </div>
                 </div>
                 <p style="text-align: justify">
-                    Meski dibangun menggunakan framework yang ditujukan untuk kemudahan pengembangan aplikasi full-stack, Kode Fiksi tidak dibangun demikian. Aplikasi Front-End dan Back-End dibuat terpisah, sehingga memungkinkan pengembangan pada sisi client menjadi lebih luas atau tidak terbatas pada teknologi tertentu di masa yang akan datang.
+                    Meski dibangun menggunakan framework yang ditujukan untuk kemudahan pengembangan aplikasi full-stack, Kode Fiksi tidak dibangun demikian. Aplikasi Front-End dan Back-End dibuat terpisah, sehingga memungkinkan pengembangan pada sisi client atau server menjadi lebih luas atau tidak terbatas pada teknologi tertentu di masa yang akan datang.
                 </p>
                 <p style="text-align: justify">
-                    Sebenarnya, saya lebih dulu belajar JavaScript dengan NodeJS dan sudah ada beberapa proyek yang dibuat juga, baik itu proyek sendiri atau kelompok. Lantas kenapa mempelajari dan menggunakan Laravel? melihat dari pengalaman saat magang dan biaya deployment, perusahaan yang menggunakan PHP masih banyak di sekitar saya dan lebih murah daripada NodeJS. Tapi jika memiliki rezeki lebih mungkin Kode Fiksi akan pindah teknologi, itu pun jika aplikasi sekarang tidak dapat menghandle permintaan yang masuk dan memang sudah waktunya untuk terjun ke pasar yang lebih luas.
+                    Sebenarnya, saya lebih dulu belajar JavaScript dengan NodeJS dan sudah ada beberapa proyek yang dibuat juga, baik itu proyek sendiri atau kelompok. Lantas kenapa mempelajari dan menggunakan Laravel? melihat dari pengalaman saat magang dan biaya deployment, perusahaan yang menggunakan PHP masih banyak di sekitar saya dibanding Node.js. Tapi jika memiliki rezeki lebih mungkin Kode Fiksi akan pindah teknologi, itu pun jika aplikasi sekarang tidak dapat menghandle permintaan yang masuk dan memang sudah waktunya untuk terjun ke pasar yang lebih luas.
                 </p>
                 <p style="text-align: justify">
-                    Ada pun konten yang ada pada web ini adalah terbagi menjadi tiga kategori yaitu, anime, game, dan pemrograman. Kenapa ada kategori anime dan game? Karena saya menyukai kedua hal tersebut. Pertama, <a href="/category/anime" class="text-decoration-none">Konten dengan kategori anime</a> yang saya buat akan membahas mengenai berita, review, hingga sorotan/<i>spotlight</i> terhadap hal-hal menarik yang ada pada anime. <a href="/category/game" class="text-decoration-none">Untuk konten dengan kategori game</a> berisi mengenai berita, tips dan trik, hingga panduan. Namun, game yang sering dibahas kemungkinannya adalah video game yang sering dan sedang saya mainkan. Terakhir, <a href="/category/pemrograman" class="text-decoration-none">konten dengan kategori pemrograman</a> akan membahas berbagai tutorial pemrograman, khususnya pemrograman web dan untuk pemula.
+                    Ada pun konten yang ada pada web ini adalah terbagi menjadi tiga kategori yaitu, anime, game, <strike>dan pemrograman</strike>. Kenapa ada kategori anime dan game? Karena saya menyukai kedua hal tersebut. Pertama, <a href="/category/anime" class="text-decoration-none">Konten dengan kategori anime</a> yang saya buat akan membahas mengenai berita, review, hingga sorotan/<i>spotlight</i> terhadap hal-hal menarik yang ada pada anime. <a href="/category/game" class="text-decoration-none">Untuk konten dengan kategori game</a> berisi mengenai berita, tips dan trik, hingga panduan. Namun, game yang sering dibahas kemungkinannya adalah video game yang sering dan sedang saya mainkan.
+                </p>
+                <p>
+                    <strong>Note:</strong><br/>Per bulan Mei 2025, Kode Fiksi hanya berfokus pada pembahasan yang berkaitan dengan dunia anime dan game saja.
                 </p>
                 <h2 class="fs-4 fw-bold">Harapan</h2>
                 <p style="text-align: justify">
-                    Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan animer, gamer, dan programmer. Konten yang disediakan dapat berupa berita, ulasan, dan tutorial. Hadirnya web ini juga diharapkan menjadi motivasi bagi penulis untuk terus belajar dan tidak bosan dalam membaca serta berbagi karya, dan juga dapat menjadi media pengembangan diri.
+                    Hadirnya Kode Fiksi diharapkan dapat bermanfaat bagi pembaca dari kalangan penggemar anime dan game. Konten yang disediakan dapat berupa berita, ulasan, hingga tips dan trik. Hadirnya web ini juga diharapkan menjadi motivasi bagi penulis untuk terus belajar dan tidak bosan dalam membaca serta berbagi karya, dan juga dapat menjadi media pengembangan diri.
                 </p>
 
                 {{-- Informasi organisasi --}}

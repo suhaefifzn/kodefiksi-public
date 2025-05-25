@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" dir="ltr" data-bs-theme="dark">
+
 <head>
     <title>{!! isset($title) ? $title : 'Kode Fiksi' !!}</title>
     {{-- Meta Tags --}}
@@ -18,28 +19,25 @@
     @if ($meta['is_pagination'])
         <meta name="robots" content="noindex">
     @endif
-    <meta name="author" content="{!! isset($meta['author']) ? $meta['author'] : 'suhaefi21' !!}">
-    <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Anime, Game, Pemrograman, Kode Fiksi, kodefiksi.com' !!}">
-    <meta name="description"
-        content="{!! isset($meta['description']) ? $meta['description']
-            : "Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit, hingga tutorial pemrograman untuk pemula dalam satu tempat." !!}"
-    >
+    <meta name="author" content="{!! isset($meta['author']) ? $meta['author'] : 'kodefiksi' !!}">
+    <meta name="keywords" content="{!! isset($meta['keywords']) ? $meta['keywords'] : 'Anime, Game' !!}">
+    <meta name="description" content="{!! isset($meta['description'])
+        ? $meta['description']
+        : 'Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit dalam satu tempat.' !!}">
     {{-- Meta Tags - Sosmed --}}
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{!! isset($meta['title']) ? $meta['title'] : 'Kode Fiksi' !!}">
-    <meta property="og:description"
-        content="{!! isset($meta['description']) ? $meta['description']
-            : "Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit, hingga tutorial pemrograman untuk pemula dalam satu tempat." !!}"
-    >
+    <meta property="og:description" content="{!! isset($meta['description'])
+        ? $meta['description']
+        : 'Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit dalam satu tempat.' !!}">
     <meta property="og:url" content="{!! isset($meta['url']) ? $meta['url'] : Request::fullUrl() !!}">
     <meta property="og:image" content="{!! isset($meta['thumbnail']) ? $meta['thumbnail'] : '/assets/logo_square.webp' !!}">
     {{-- Meta Tags - Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="{!! isset($meta['title']) ? $meta['title'] : 'Kode Fiksi' !!}">
-    <meta property="twitter:description"
-        content="{!! isset($meta['description']) ? $meta['description']
-            : "Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit, hingga tutorial pemrograman untuk pemula dalam satu tempat." !!}"
-    >
+    <meta property="twitter:description" content="{!! isset($meta['description'])
+        ? $meta['description']
+        : 'Temukan beragam konten menarik seputar anime, tips, trik dan berita game favorit dalam satu tempat.' !!}">
     <meta property="twitter:image" content="{!! isset($meta['thumbnail']) ? $meta['thumbnail'] : '/assets/logo_square.webp' !!}">
     {{-- Favicons --}}
     <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
@@ -49,23 +47,47 @@
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
     {{-- Bootstrap 5 --}}
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/assets/css/bootstrap.min.css">
-    <noscript><link rel="stylesheet" href="/assets/css/bootstrap.min.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    </noscript>
     {{-- My CSS --}}
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/assets/css/my.css">
-    <noscript><link rel="stylesheet" href="/assets/css/my.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/my.css">
+    </noscript>
     {{-- Feather Icons --}}
     <script src="/assets/js/feather.min.js"></script>
     {{-- Highlightjs --}}
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/assets/css/highlightjs.css">
-    <noscript><link rel="stylesheet" href="/assets/css/highlightjs.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/highlightjs.css">
+    </noscript>
     <script src="/assets/js/highlightjs.js"></script>
     {{-- Google Tag Manager --}}
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});let f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MSPM58JB');</script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            let f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MSPM58JB');
+    </script>
+    {{-- Structured Data --}}
+    @foreach ($structured_data ?? [] as $data)
+        <script type="application/ld+json">
+        {!! json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+        </script>
+    @endforeach
 </head>
+
 <body>
     {{-- Google Tag Manager --}}
     {{-- <noscript>
@@ -88,7 +110,10 @@
 
         // Define dataLayer and gtag function
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
         // Google Analytics
         gtag('js', new Date());
@@ -101,4 +126,5 @@
         });
     </script>
 </body>
+
 </html>

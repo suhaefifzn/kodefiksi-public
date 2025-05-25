@@ -52,17 +52,6 @@
                         Lihat List Artikel Game
                     </a>
                 </li>
-                <li class="list-group-item text-break p-3">
-                    <h2 class="card-title fs-5">
-                        Pemrograman
-                    </h2>
-                    <p>
-                        Temukan beragam tutorial pemrograman untuk pemula hingga menengah, tulisan yang ada pada kategori ini lebih berfokus pada belajar pemrograman web yang sedang atau pernah penulis lakukan.
-                    </p>
-                    <a class="btn btn-sm btn-primary" href="{!! route('category', 'pemrograman') !!}">
-                        Lihat List Artikel Pemrograman
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
